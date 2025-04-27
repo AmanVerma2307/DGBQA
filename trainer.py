@@ -12,6 +12,7 @@ from dataloader import dataLoader
 
 ###### Argument parser
 args = parse()
+wandb.init(project='dgbqaCodebase',name='test_1')
 
 ###### Dataset
 train_dataLoader, test_dataLoader = dataLoader(args)
@@ -62,6 +63,8 @@ print('Total parameters: '+str(total_params))
 
 model = model.to(device)
 
+wandb.watch(model,criterion_id,log="all")
+
 ##### Training and validation loop
 train_metrics, val_metrics = train_val(train_dataLoader,
                                        test_dataLoader,
@@ -72,7 +75,7 @@ train_metrics, val_metrics = train_val(train_dataLoader,
                                        criterion_icgd,
                                        args)
 
-##### Saving
+### Saving
 np.savez_compressed('./Model History/'+args.exp_name+'_trainMetrics.npz',np.array(train_metrics))
 np.savez_compressed('./Model History/'+args.exp_name+'_valMetrics.npz',np.array(val_metrics))
  

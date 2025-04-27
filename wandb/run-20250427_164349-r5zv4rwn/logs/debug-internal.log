@@ -1,0 +1,5 @@
+2025-04-27 16:43:49,916 INFO    StreamThr :14204 [internal.py:wandb_internal():86] W&B internal server running at pid: 14204, started at: 2025-04-27 16:43:49.915648
+2025-04-27 16:43:49,917 DEBUG   HandlerThread:14204 [handler.py:handle_request():146] handle_request: status
+2025-04-27 16:43:49,919 INFO    WriterThread:14204 [datastore.py:open_for_write():85] open: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250427_164349-r5zv4rwn\run-r5zv4rwn.wandb
+2025-04-27 16:43:49,920 DEBUG   SenderThread:14204 [sender.py:send():382] send: header
+2025-04-27 16:43:49,951 DEBUG   SenderThread:14204 [sender.py:send():382] send: run

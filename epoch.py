@@ -1,5 +1,6 @@
 import time
 import tqdm
+import wandb
 import torch
 
 def train_epoch(dataloader, 
@@ -153,6 +154,7 @@ def train_val(train_loader,
                                                                                                                                 obj_icgd,
                                                                                                                                 device,
                                                                                                                                 args)
+
         loss_hgr.append(loss_hgr_train_curr)
         loss_id.append(loss_id_train_curr)
         loss_icgd.append(loss_icgd_train_curr)
@@ -173,7 +175,6 @@ def train_val(train_loader,
             loss_best = loss_val_curr
             torch.save(model.state_dict(),model_path)
 
-        
         val_loss_hgr.append(loss_hgr_val_curr)
         val_loss_id.append(loss_id_val_curr)
         val_loss_icgd.append(loss_icgd_val_curr)
@@ -189,6 +190,21 @@ def train_val(train_loader,
         print('ID Accuracy: '+str(acc_id_train_curr))
         print('Validation HGR Accuracy: '+str(acc_hgr_val_curr))
         print('Validation ID Accuracy: '+str(acc_id_val_curr))
+
+        wandb.log({'epoch':epoch,
+                   'loss_hgr':loss_hgr_train_curr,
+                   'loss_id':loss_id_train_curr,
+                   'loss_icgd':loss_icgd_train_curr,
+                   'loss':loss_train_curr,
+                   'acc_hgr':acc_hgr_train_curr,
+                   'acc_id':acc_id_train_curr,
+                   'val_loss_hgr':loss_hgr_val_curr,
+                   'val_loss_id':loss_id_val_curr,
+                   'val_loss_icgd':loss_icgd_val_curr,
+                   'val_loss':loss_val_curr,
+                   'val_acc_hgr':acc_hgr_val_curr,
+                   'val_acc_id':acc_id_val_curr,
+                   })
 
     ##### Storing
     train_metrics.append(loss_hgr)
