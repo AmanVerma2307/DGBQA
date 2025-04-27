@@ -30,8 +30,6 @@ def dataLoader(args):
         X_train, y_train, y_train_id = shuffle(X_train,y_train,y_train_id,random_state=12)
         X_dev, y_dev, y_dev_id = shuffle(X_dev, y_dev, y_dev_id,random_state=12)
 
-        print()
-
     if(args.dataset == 'scut'):
 
         X_train = np.load('')['arr_0']
@@ -41,6 +39,9 @@ def dataLoader(args):
         y_train_id = np.load('')['arr_0']
         y_dev_id = np.load('')['arr_0']
 
+        X_train, y_train, y_train_id = shuffle(X_train,y_train,y_train_id,random_state=12)
+        X_dev, y_dev, y_dev_id = shuffle(X_dev, y_dev, y_dev_id,random_state=12)
+        
     if(args.dataset == 'tiny'):
 
         X_train = np.load('')['arr_0']
