@@ -12,7 +12,7 @@ from dataloader import dataLoader
 
 ###### Argument parser
 args = parse()
-wandb.init(project='dgbqaCodebase',name='test_1')
+wandb.init(project='dgbqaCodebase',name=args.exp_name)
 
 ###### Dataset
 train_dataLoader, test_dataLoader = dataLoader(args)
@@ -33,6 +33,12 @@ if(args.dataset == 'soli'):
     I = 10
 
 ###### Model
+def init_weights(m): 
+    if (isinstance(m, torch.nn.Linear) or isinstance(m, torch.nn.Conv3d)):
+        torch.nn.init.xavier_normal_(m.weight)
+        m.bias.data.fill_(0.01)
+
+
 if(args.model == 'res3dViViT'):
     model = res3dViViT(input_dim,
                        embed_dim,
@@ -48,6 +54,8 @@ if(args.model == 'res3dViViT'):
                        G,
                        I)
     
+model.apply(init_weights)
+    
 ###### Training and validation
 
 ##### Defining essentials
@@ -62,8 +70,7 @@ total_params = sum(p.numel() for p in model.parameters())
 print('Total parameters: '+str(total_params))
 
 model = model.to(device)
-
-wandb.watch(model,criterion_id,log="all")
+wandb.watch(model,criterion_id,log="all",log_freq=1)
 
 ##### Training and validation loop
 train_metrics, val_metrics = train_val(train_dataLoader,
@@ -75,7 +82,7 @@ train_metrics, val_metrics = train_val(train_dataLoader,
                                        criterion_icgd,
                                        args)
 
-### Saving
-np.savez_compressed('./Model History/'+args.exp_name+'_trainMetrics.npz',np.array(train_metrics))
-np.savez_compressed('./Model History/'+args.exp_name+'_valMetrics.npz',np.array(val_metrics))
+##### Saving
+np.savez_compressed('./model history/'+args.exp_name+'_trainMetrics.npz',np.array(train_metrics.cpu()))
+np.savez_compressed('./model history/'+args.exp_name+'_valMetrics.npz',np.array(val_metrics.cpu()))
  
