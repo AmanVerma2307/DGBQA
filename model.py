@@ -1,5 +1,4 @@
 import torch
-from torchinfo import summary
 class tubeletEmbedding(torch.nn.Module):
 
     def __init__(self,
@@ -49,8 +48,8 @@ class tubeletEmbedding(torch.nn.Module):
         batch_size = x.size(0) # Current batch size
         x = self.emebdding_layer(x)
         x = x.view(batch_size,self.embed_dim,-1) 
-        #x = torch.add(x.permute((0,2,1)),self.pos_embeddings)
-        return x.permute((0,2,1))  # Shape -> [B,T,d_model]
+        x = torch.add(x.permute((0,2,1)),self.pos_embeddings)
+        return x  # Shape -> [B,T,d_model]
 
 class conv3d(torch.nn.Module):
 
@@ -70,6 +69,7 @@ class conv3d(torch.nn.Module):
     def forward(self,x):
         x = self.conv(x)
         return torch.nn.functional.relu(x)
+    
 class posEncoding(torch.nn.Module):
 
     def __init__(self,patch_size,T,H,W,d_model):
@@ -159,25 +159,20 @@ class res3dViViT(torch.nn.Module):
                                                         self.dff,
                                                         self.rate,
                                                         batch_first=True)
-        #torch.nn.init.xavier_uniform(self.encoder1.weight)
         
         self.encoder2 = torch.nn.TransformerEncoderLayer(self.embed_dim,
                                                         self.num_heads,
                                                         self.dff,
                                                         self.rate,
                                                         batch_first=True)
-        #torch.nn.init.xavier_uniform(self.encoder2.weight)
         
         ##### Output layers
         self.dense_op = torch.nn.Linear(self.embed_dim,32)
-        #torch.nn.init.xavier_uniform(self.dense_op.weight)
 
         self.dense_hgr = torch.nn.Linear(self.embed_dim,self.G)
-        #torch.nn.init.xavier_uniform(self.dense_hgr.weight)
         self.softmax_hgr = torch.nn.Softmax(dim=-1)
 
         self.dense_id = torch.nn.Linear(self.embed_dim,self.I)
-        #torch.nn.init.xavier_uniform(self.dense_id.weight)
         self.softmax_id = torch.nn.Softmax(dim=-1)
         
     def forward(self,x):
@@ -285,15 +280,11 @@ if __name__ == "__main__":
                        128,
                        0.3,
                        11,
-                       10)
-    
+                       10)    
 
-    print_model_summary(model,(4, 40, 32, 32))
-    
+    print_model_summary(model,(4, 40, 32, 32))    
     #model.apply(init_weights)
-
     #summary(model, input_size=(4, 40, 32, 32))
-
     model = model.to(device)
     
     dense_hgr, dense_id, f_theta = model(ip_tensor)

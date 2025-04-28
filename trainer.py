@@ -1,14 +1,22 @@
 ###### Importing libraries
-import time
-import tqdm
+import random
 import torch
-import argparse
 import numpy as np
 from model import *
 from epoch import *
 from icgd import icgdLoss
 from parser import parse
 from dataloader import dataLoader
+
+seed = 42
+
+torch.manual_seed(seed)
+torch.cuda.manual_seed(seed)
+torch.cuda.manual_seed_all(seed)
+random.seed(seed)
+np.random.seed(seed)
+torch.backends.cudnn.deterministic = True
+torch.backends.cudnn.benchmark = False
 
 ###### Argument parser
 args = parse()
@@ -38,7 +46,6 @@ def init_weights(m):
         torch.nn.init.xavier_normal_(m.weight)
         m.bias.data.fill_(0.01)
 
-
 if(args.model == 'res3dViViT'):
     model = res3dViViT(input_dim,
                        embed_dim,
@@ -66,6 +73,7 @@ criterion_id = torch.nn.CrossEntropyLoss()
 criterion_icgd = icgdLoss(G,I)
 optimizer = torch.optim.Adam(model.parameters(),lr=1e-4,eps=1e-7)
 
+#print_model_summary(model, (C,T,H,W))
 total_params = sum(p.numel() for p in model.parameters())
 print('Total parameters: '+str(total_params))
 
