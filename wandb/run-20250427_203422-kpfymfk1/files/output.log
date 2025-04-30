@@ -1,0 +1,14 @@
+D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\model.py:68: UserWarning: nn.init.xavier_uniform is now deprecated in favor of nn.init.xavier_uniform_.
+  torch.nn.init.xavier_uniform(self.conv.weight)
+D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\model.py:31: UserWarning: nn.init.xavier_uniform is now deprecated in favor of nn.init.xavier_uniform_.
+  torch.nn.init.xavier_uniform(self.emebdding_layer.weight)
+Traceback (most recent call last):
+  File "D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\trainer.py", line 37, in <module>
+    model = res3dViViT(input_dim,
+            ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\model.py", line 132, in __init__
+    torch.nn.init.xavier_uniform(self.encoder1.weight)
+                                 ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\envs\gpu_torch_5\Lib\site-packages\torch\nn\modules\module.py", line 1688, in __getattr__
+    raise AttributeError(f"'{type(self).__name__}' object has no attribute '{name}'")
+AttributeError: 'TransformerEncoderLayer' object has no attribute 'weight'

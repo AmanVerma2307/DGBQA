@@ -1,0 +1,56 @@
+{
+    "os": "Windows-11-10.0.26100-SP0",
+    "python": "3.12.9",
+    "heartbeatAt": "2025-04-30T06:34:15.149425",
+    "startedAt": "2025-04-30T06:34:11.477316",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--exp_name",
+        "ID_reproTest-7"
+    ],
+    "state": "running",
+    "program": "D:\\IIT Delhi\\Projects\\Adversarial games\\Experimentation\\codeBase\\trainer.py",
+    "codePathLocal": "trainer.py",
+    "codePath": "trainer.py",
+    "git": {
+        "remote": "https://github.com/AmanVerma2307/DGBQA.git",
+        "commit": "1780f786a27b2daff2d87b9d77d42aeecd58a850"
+    },
+    "email": "eez227536@ee.iitd.ac.in",
+    "root": "D:/IIT Delhi/Projects/Adversarial games/Experimentation/codeBase",
+    "host": "LAPTOP-PANL57F2",
+    "username": "ASUS",
+    "executable": "C:\\Users\\ASUS\\anaconda3\\envs\\gpu_torch_5\\python.exe",
+    "cpu_count": 6,
+    "cpu_count_logical": 12,
+    "cpu_freq": {
+        "current": 2592.0,
+        "min": 0.0,
+        "max": 2592.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2592.0,
+            "min": 0.0,
+            "max": 2592.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 238.47265243530273,
+            "used": 71.85419082641602
+        }
+    },
+    "gpu": "NVIDIA GeForce GTX 1660 Ti",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce GTX 1660 Ti",
+            "memory_total": 6442450944
+        }
+    ],
+    "memory": {
+        "total": 15.790397644042969
+    }
+}

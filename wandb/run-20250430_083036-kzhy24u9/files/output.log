@@ -1,0 +1,594 @@
+Total parameters: 249221
+Epoch 1/50
+----------
+ ... (more hidden) ...C:\Users\ASUS\anaconda3\envs\gpu_torch_5\Lib\site-packages\torch\nn\functional.py:5476: UserWarning: 1Torch was not compiled with flash attention. (Triggered internally at C:\cb\pytorch_1000000000000\work\aten\src\ATen\native\transformers\cuda\sdp_utils.cpp:263.)
+  attn_output = scaled_dot_product_attention(q, k, v, attn_mask, dropout_p, is_causal)
+ ... (more hidden) ...
+ ... (more hidden) ...
+Total time:28.79122757911682
+Loss: 2.3158052106337115
+Validation Loss: 2.305423907366666
+ ... (more hidden) ...
+HGR Accuracy: tensor(0.0903, device='cuda:0')
+ID Accuracy: tensor(0.0927, device='cuda:0')
+Validation HGR Accuracy: tensor(0.0909, device='cuda:0')
+Validation ID Accuracy: tensor(0.1000, device='cuda:0')
+Epoch 2/50
+----------
+ ... (more hidden) ...
+Total time:31.035972118377686
+Loss: 2.3050260491804644
+Validation Loss: 2.303096113204956
+HGR Accuracy: tensor(0.0909, device='cuda:0')
+ID Accuracy: tensor(0.1012, device='cuda:0')
+Validation HGR Accuracy: tensor(0.0909, device='cuda:0')
+Validation ID Accuracy: tensor(0.1000, device='cuda:0')
+Epoch 3/50
+----------
+ ... (more hidden) ...
+ ... (more hidden) ...
+Total time:33.9989800453186
+Loss: 2.306633344997059
+Validation Loss: 2.3020917346260763
+HGR Accuracy: tensor(0.0897, device='cuda:0')
+ID Accuracy: tensor(0.0861, device='cuda:0')
+Validation HGR Accuracy: tensor(0.0909, device='cuda:0')
+Validation ID Accuracy: tensor(0.1000, device='cuda:0')
+Epoch 4/50
+----------
+ ... (more hidden) ...
+ ... (more hidden) ...
+Total time:34.47769832611084
+Loss: 2.3062295379060687
+Validation Loss: 2.3012673074548893
+HGR Accuracy: tensor(0.0915, device='cuda:0')
+ID Accuracy: tensor(0.0952, device='cuda:0')
+Validation HGR Accuracy: tensor(0.0682, device='cuda:0')
+Validation ID Accuracy: tensor(0.1000, device='cuda:0')
+Epoch 5/50
+----------
+ ... (more hidden) ...
+ ... (more hidden) ...
+Total time:36.05321431159973
+Loss: 2.303054269732851
+Validation Loss: 2.2976112296364524
+HGR Accuracy: tensor(0.0909, device='cuda:0')
+ID Accuracy: tensor(0.1079, device='cuda:0')
+Validation HGR Accuracy: tensor(0.0909, device='cuda:0')
+Validation ID Accuracy: tensor(0.1291, device='cuda:0')
+Epoch 6/50
+----------
+ ... (more hidden) ...
+ ... (more hidden) ...
+ ... (more hidden) ...
+Total time:36.61372256278992
+Loss: 2.2993202036077327
+Validation Loss: 2.296045572974465
+HGR Accuracy: tensor(0.0903, device='cuda:0')
+ID Accuracy: tensor(0.1194, device='cuda:0')
+Validation HGR Accuracy: tensor(0.0909, device='cuda:0')
+Validation ID Accuracy: tensor(0.1009, device='cuda:0')
+Epoch 7/50
+----------
+ ... (more hidden) ...
+Total time:37.05255651473999
+Loss: 2.279788467233831
+Validation Loss: 2.243864341215654
+HGR Accuracy: tensor(0.0697, device='cuda:0')
+ID Accuracy: tensor(0.1370, device='cuda:0')
+Validation HGR Accuracy: tensor(0.0891, device='cuda:0')
+Validation ID Accuracy: tensor(0.1582, device='cuda:0')
+Epoch 8/50
+----------
+ ... (more hidden) ...
+ ... (more hidden) ...
+ ... (more hidden) ...
+Total time:37.1097514629364
+Loss: 2.2486772652828333
+Validation Loss: 2.2158829498291017
+HGR Accuracy: tensor(0.0897, device='cuda:0')
+ID Accuracy: tensor(0.1533, device='cuda:0')
+Validation HGR Accuracy: tensor(0.0864, device='cuda:0')
+Validation ID Accuracy: tensor(0.1600, device='cuda:0')
+Epoch 9/50
+----------
+ ... (more hidden) ...
+ ... (more hidden) ...
+Total time:38.24137091636658
+Loss: 2.2243943335793235
+Validation Loss: 2.2016878084702927
+HGR Accuracy: tensor(0.0739, device='cuda:0')
+ID Accuracy: tensor(0.1636, device='cuda:0')
+Validation HGR Accuracy: tensor(0.0591, device='cuda:0')
+Validation ID Accuracy: tensor(0.1718, device='cuda:0')
+Epoch 10/50
+----------
+ ... (more hidden) ...
+ ... (more hidden) ...
+Total time:37.90288019180298
+Loss: 2.195151617165768
+Validation Loss: 2.1616659710624
+HGR Accuracy: tensor(0.0624, device='cuda:0')
+ID Accuracy: tensor(0.1794, device='cuda:0')
+Validation HGR Accuracy: tensor(0.0545, device='cuda:0')
+Validation ID Accuracy: tensor(0.2073, device='cuda:0')
+Epoch 11/50
+----------
+ ... (more hidden) ...
+Total time:39.17772364616394
+Loss: 2.1612671886790884
+Validation Loss: 2.1427581015500157
+HGR Accuracy: tensor(0.0509, device='cuda:0')
+ID Accuracy: tensor(0.1952, device='cuda:0')
+Validation HGR Accuracy: tensor(0.0482, device='cuda:0')
+Validation ID Accuracy: tensor(0.2073, device='cuda:0')
+Epoch 12/50
+----------
+ ... (more hidden) ...
+ ... (more hidden) ...
+ ... (more hidden) ...
+Total time:39.22192621231079
+Loss: 2.1313234756932116
+Validation Loss: 2.140070334347812
+HGR Accuracy: tensor(0.0539, device='cuda:0')
+ID Accuracy: tensor(0.2097, device='cuda:0')
+Validation HGR Accuracy: tensor(0.0436, device='cuda:0')
+Validation ID Accuracy: tensor(0.2273, device='cuda:0')
+Epoch 13/50
+----------
+ ... (more hidden) ...
+Total time:39.07236170768738
+Loss: 2.090336370757132
+Validation Loss: 2.1140261884169145
+HGR Accuracy: tensor(0.0515, device='cuda:0')
+ID Accuracy: tensor(0.2297, device='cuda:0')
+Validation HGR Accuracy: tensor(0.0464, device='cuda:0')
+Validation ID Accuracy: tensor(0.2427, device='cuda:0')
+Epoch 14/50
+----------
+ ... (more hidden) ...
+ ... (more hidden) ...
+ ... (more hidden) ...
+Total time:38.421865701675415
+Loss: 2.0390051757928096
+Validation Loss: 2.0836729960008102
+HGR Accuracy: tensor(0.0515, device='cuda:0')
+ID Accuracy: tensor(0.2503, device='cuda:0')
+Validation HGR Accuracy: tensor(0.0436, device='cuda:0')
+Validation ID Accuracy: tensor(0.2418, device='cuda:0')
+Epoch 15/50
+----------
+ ... (more hidden) ...
+ ... (more hidden) ...
+Total time:40.27125597000122
+Loss: 1.984235323270162
+Validation Loss: 2.060070905685425
+HGR Accuracy: tensor(0.0533, device='cuda:0')
+ID Accuracy: tensor(0.2727, device='cuda:0')
+Validation HGR Accuracy: tensor(0.0527, device='cuda:0')
+Validation ID Accuracy: tensor(0.2591, device='cuda:0')
+Epoch 16/50
+----------
+ ... (more hidden) ...
+Total time:39.63779926300049
+Loss: 1.9382078777660023
+Validation Loss: 1.9570856696909125
+HGR Accuracy: tensor(0.0533, device='cuda:0')
+ID Accuracy: tensor(0.2873, device='cuda:0')
+Validation HGR Accuracy: tensor(0.0691, device='cuda:0')
+Validation ID Accuracy: tensor(0.2927, device='cuda:0')
+ ... (more hidden) ...
+Epoch 17/50
+----------
+ ... (more hidden) ...
+Total time:40.05742120742798
+Loss: 1.8808148595058556
+Validation Loss: 1.939094407341697
+HGR Accuracy: tensor(0.0509, device='cuda:0')
+ID Accuracy: tensor(0.3267, device='cuda:0')
+Validation HGR Accuracy: tensor(0.0600, device='cuda:0')
+Validation ID Accuracy: tensor(0.2800, device='cuda:0')
+ ... (more hidden) ...
+Epoch 18/50
+----------
+ ... (more hidden) ...
+Total time:39.79878044128418
+Loss: 1.8350406528241707
+Validation Loss: 1.8867949481443926
+HGR Accuracy: tensor(0.0539, device='cuda:0')
+ID Accuracy: tensor(0.3436, device='cuda:0')
+Validation HGR Accuracy: tensor(0.0527, device='cuda:0')
+Validation ID Accuracy: tensor(0.3155, device='cuda:0')
+Epoch 19/50
+----------
+ ... (more hidden) ...
+ ... (more hidden) ...
+ ... (more hidden) ...
+Total time:40.31896948814392
+Loss: 1.794308573404948
+Validation Loss: 1.8588957079974089
+HGR Accuracy: tensor(0.0606, device='cuda:0')
+ID Accuracy: tensor(0.3721, device='cuda:0')
+Validation HGR Accuracy: tensor(0.0564, device='cuda:0')
+Validation ID Accuracy: tensor(0.3391, device='cuda:0')
+Epoch 20/50
+----------
+
+
+
+ 97%|[32m█████████████████████████████████████████████████▌ [39m| 34/35 [00:06<00:00,  5.86it/s]
+Total time:40.50844597816467
+Loss: 1.7528178212136933
+Validation Loss: 1.841224764477123
+HGR Accuracy: tensor(0.0558, device='cuda:0')
+ID Accuracy: tensor(0.3855, device='cuda:0')
+Validation HGR Accuracy: tensor(0.0600, device='cuda:0')
+Validation ID Accuracy: tensor(0.3418, device='cuda:0')
+Epoch 21/50
+100%|[32m███████████████████████████████████████████████████[39m| 35/35 [00:06<00:00,  5.61it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|[34m███████████████████████████████████████████████████[39m| 52/52 [00:35<00:00,  1.47it/s]
+ ... (more hidden) ...
+ ... (more hidden) ...
+Total time:41.90524983406067
+Loss: 1.6998785452409224
+Validation Loss: 1.7848044018311935
+HGR Accuracy: tensor(0.0600, device='cuda:0')
+ID Accuracy: tensor(0.4145, device='cuda:0')
+Validation HGR Accuracy: tensor(0.0609, device='cuda:0')
+Validation ID Accuracy: tensor(0.3627, device='cuda:0')
+Epoch 22/50
+----------
+ ... (more hidden) ...
+ ... (more hidden) ...
+Total time:41.89920973777771
+Loss: 1.6515202805490206
+Validation Loss: 1.7501598691940308
+HGR Accuracy: tensor(0.0642, device='cuda:0')
+ID Accuracy: tensor(0.4333, device='cuda:0')
+Validation HGR Accuracy: tensor(0.0582, device='cuda:0')
+Validation ID Accuracy: tensor(0.3873, device='cuda:0')
+Epoch 23/50
+----------
+ ... (more hidden) ...
+ ... (more hidden) ...
+Total time:42.11031699180603
+Loss: 1.6023566761883823
+Validation Loss: 1.6890565438704057
+HGR Accuracy: tensor(0.0588, device='cuda:0')
+ID Accuracy: tensor(0.4491, device='cuda:0')
+Validation HGR Accuracy: tensor(0.0618, device='cuda:0')
+Validation ID Accuracy: tensor(0.4173, device='cuda:0')
+Epoch 24/50
+----------
+ ... (more hidden) ...
+ ... (more hidden) ...
+Total time:43.496232748031616
+Loss: 1.5574907958868778
+Validation Loss: 1.6646222656423395
+HGR Accuracy: tensor(0.0630, device='cuda:0')
+ID Accuracy: tensor(0.4715, device='cuda:0')
+Validation HGR Accuracy: tensor(0.0682, device='cuda:0')
+Validation ID Accuracy: tensor(0.4318, device='cuda:0')
+Epoch 25/50
+----------
+ ... (more hidden) ...
+Total time:42.925777196884155
+Loss: 1.5022462882417622
+Validation Loss: 1.6793185845288363
+HGR Accuracy: tensor(0.0594, device='cuda:0')
+ID Accuracy: tensor(0.4873, device='cuda:0')
+Validation HGR Accuracy: tensor(0.0673, device='cuda:0')
+Validation ID Accuracy: tensor(0.4218, device='cuda:0')
+Epoch 26/50
+----------
+ ... (more hidden) ...
+ ... (more hidden) ...
+Total time:42.4856231212616
+Loss: 1.4693555386861166
+Validation Loss: 1.7169044147838246
+HGR Accuracy: tensor(0.0661, device='cuda:0')
+ID Accuracy: tensor(0.5048, device='cuda:0')
+Validation HGR Accuracy: tensor(0.0709, device='cuda:0')
+Validation ID Accuracy: tensor(0.4136, device='cuda:0')
+Epoch 27/50
+----------
+ ... (more hidden) ...
+ ... (more hidden) ...
+Total time:43.05369591712952
+Loss: 1.4485086407805934
+Validation Loss: 1.7420714044570922
+HGR Accuracy: tensor(0.0655, device='cuda:0')
+ID Accuracy: tensor(0.5109, device='cuda:0')
+Validation HGR Accuracy: tensor(0.0682, device='cuda:0')
+Validation ID Accuracy: tensor(0.4036, device='cuda:0')
+Epoch 28/50
+----------
+ ... (more hidden) ...
+ ... (more hidden) ...
+Total time:42.39552879333496
+Loss: 1.402429562770959
+Validation Loss: 1.6963337919928811
+HGR Accuracy: tensor(0.0703, device='cuda:0')
+ID Accuracy: tensor(0.5303, device='cuda:0')
+Validation HGR Accuracy: tensor(0.0809, device='cuda:0')
+Validation ID Accuracy: tensor(0.4327, device='cuda:0')
+Epoch 29/50
+----------
+ ... (more hidden) ...
+ ... (more hidden) ...
+Total time:44.80384278297424
+Loss: 1.3643638704762315
+Validation Loss: 1.6827063005620784
+HGR Accuracy: tensor(0.0727, device='cuda:0')
+ID Accuracy: tensor(0.5388, device='cuda:0')
+Validation HGR Accuracy: tensor(0.0791, device='cuda:0')
+Validation ID Accuracy: tensor(0.4555, device='cuda:0')
+Epoch 30/50
+----------
+ ... (more hidden) ...
+ ... (more hidden) ...
+ ... (more hidden) ...
+Total time:44.416661739349365
+Loss: 1.342989852211692
+Validation Loss: 1.6477743551947854
+HGR Accuracy: tensor(0.0727, device='cuda:0')
+ID Accuracy: tensor(0.5485, device='cuda:0')
+Validation HGR Accuracy: tensor(0.0791, device='cuda:0')
+Validation ID Accuracy: tensor(0.4536, device='cuda:0')
+Epoch 31/50
+----------
+ ... (more hidden) ...
+Total time:44.505950927734375
+Loss: 1.3139635114958792
+Validation Loss: 1.6519652405652132
+HGR Accuracy: tensor(0.0788, device='cuda:0')
+ID Accuracy: tensor(0.5576, device='cuda:0')
+Validation HGR Accuracy: tensor(0.0809, device='cuda:0')
+Validation ID Accuracy: tensor(0.4455, device='cuda:0')
+Epoch 32/50
+----------
+ ... (more hidden) ...
+ ... (more hidden) ...
+ ... (more hidden) ...
+Total time:44.95838236808777
+Loss: 1.2698985787593957
+Validation Loss: 1.6235349468751388
+HGR Accuracy: tensor(0.0812, device='cuda:0')
+ID Accuracy: tensor(0.5685, device='cuda:0')
+Validation HGR Accuracy: tensor(0.0800, device='cuda:0')
+Validation ID Accuracy: tensor(0.4655, device='cuda:0')
+Epoch 33/50
+----------
+ ... (more hidden) ...
+ ... (more hidden) ...
+Total time:44.45114469528198
+Loss: 1.2170002151258064
+Validation Loss: 1.6580070530284534
+HGR Accuracy: tensor(0.0812, device='cuda:0')
+ID Accuracy: tensor(0.5812, device='cuda:0')
+Validation HGR Accuracy: tensor(0.0755, device='cuda:0')
+Validation ID Accuracy: tensor(0.4627, device='cuda:0')
+Epoch 34/50
+----------
+ ... (more hidden) ...
+Total time:45.11390161514282
+Loss: 1.188843114014828
+Validation Loss: 1.6536160555752841
+HGR Accuracy: tensor(0.0794, device='cuda:0')
+ID Accuracy: tensor(0.5964, device='cuda:0')
+Validation HGR Accuracy: tensor(0.0764, device='cuda:0')
+Validation ID Accuracy: tensor(0.4700, device='cuda:0')
+Epoch 35/50
+----------
+ ... (more hidden) ...
+ ... (more hidden) ...
+Total time:44.52668046951294
+Loss: 1.1616896747820304
+Validation Loss: 1.5925416786020452
+HGR Accuracy: tensor(0.0733, device='cuda:0')
+ID Accuracy: tensor(0.6212, device='cuda:0')
+Validation HGR Accuracy: tensor(0.0764, device='cuda:0')
+Validation ID Accuracy: tensor(0.4864, device='cuda:0')
+ ... (more hidden) ...
+Epoch 36/50
+----------
+ ... (more hidden) ...
+Total time:43.74613547325134
+Loss: 1.1256432517369588
+Validation Loss: 1.55919198252938
+HGR Accuracy: tensor(0.0788, device='cuda:0')
+ID Accuracy: tensor(0.6382, device='cuda:0')
+Validation HGR Accuracy: tensor(0.0809, device='cuda:0')
+Validation ID Accuracy: tensor(0.5073, device='cuda:0')
+Epoch 37/50
+----------
+ ... (more hidden) ...
+ ... (more hidden) ...
+Total time:43.798563957214355
+Loss: 1.101800704724861
+Validation Loss: 1.5801951785521073
+HGR Accuracy: tensor(0.0782, device='cuda:0')
+ID Accuracy: tensor(0.6327, device='cuda:0')
+Validation HGR Accuracy: tensor(0.0864, device='cuda:0')
+Validation ID Accuracy: tensor(0.5036, device='cuda:0')
+Epoch 38/50
+----------
+ ... (more hidden) ...
+ ... (more hidden) ...
+ ... (more hidden) ...
+Total time:44.93111491203308
+Loss: 1.0635849160859079
+Validation Loss: 1.5513273412531072
+HGR Accuracy: tensor(0.0800, device='cuda:0')
+ID Accuracy: tensor(0.6558, device='cuda:0')
+Validation HGR Accuracy: tensor(0.0845, device='cuda:0')
+Validation ID Accuracy: tensor(0.5227, device='cuda:0')
+Epoch 39/50
+----------
+Total time:244.83097195625305
+Loss: 1.0280818910309764
+Validation Loss: 1.5549232638965953
+HGR Accuracy: tensor(0.0836, device='cuda:0')
+ID Accuracy: tensor(0.6642, device='cuda:0')
+Validation HGR Accuracy: tensor(0.0855, device='cuda:0')
+Validation ID Accuracy: tensor(0.5264, device='cuda:0')
+Epoch 40/50
+----------
+ ... (more hidden) ...
+ ... (more hidden) ...
+ ... (more hidden) ...
+Total time:33.618807792663574
+Loss: 0.9904734490134499
+Validation Loss: 1.5085020191019232
+HGR Accuracy: tensor(0.0830, device='cuda:0')
+ID Accuracy: tensor(0.6867, device='cuda:0')
+Validation HGR Accuracy: tensor(0.0855, device='cuda:0')
+Validation ID Accuracy: tensor(0.5455, device='cuda:0')
+Epoch 41/50
+----------
+ ... (more hidden) ...
+ ... (more hidden) ...
+Total time:36.742759227752686
+Loss: 0.9496230038007101
+Validation Loss: 1.5460133136402476
+HGR Accuracy: tensor(0.0842, device='cuda:0')
+ID Accuracy: tensor(0.7006, device='cuda:0')
+Validation HGR Accuracy: tensor(0.0864, device='cuda:0')
+Validation ID Accuracy: tensor(0.5391, device='cuda:0')
+Epoch 42/50
+----------
+ ... (more hidden) ...
+ ... (more hidden) ...
+Total time:39.36033225059509
+Loss: 0.9204019473538254
+Validation Loss: 1.5303212386911567
+HGR Accuracy: tensor(0.0861, device='cuda:0')
+ID Accuracy: tensor(0.7055, device='cuda:0')
+Validation HGR Accuracy: tensor(0.0845, device='cuda:0')
+Validation ID Accuracy: tensor(0.5509, device='cuda:0')
+Epoch 43/50
+----------
+ ... (more hidden) ...
+ ... (more hidden) ...
+Total time:42.177998781204224
+Loss: 0.877406728701158
+Validation Loss: 1.5321005348725751
+HGR Accuracy: tensor(0.0861, device='cuda:0')
+ID Accuracy: tensor(0.7297, device='cuda:0')
+Validation HGR Accuracy: tensor(0.0873, device='cuda:0')
+Validation ID Accuracy: tensor(0.5464, device='cuda:0')
+Epoch 44/50
+----------
+ ... (more hidden) ...
+ ... (more hidden) ...
+Total time:41.5372314453125
+Loss: 0.8499789208354372
+Validation Loss: 1.5357241132042625
+HGR Accuracy: tensor(0.0830, device='cuda:0')
+ID Accuracy: tensor(0.7430, device='cuda:0')
+Validation HGR Accuracy: tensor(0.0827, device='cuda:0')
+Validation ID Accuracy: tensor(0.5445, device='cuda:0')
+Epoch 45/50
+----------
+ ... (more hidden) ...
+ ... (more hidden) ...
+ ... (more hidden) ...
+Total time:43.01674842834473
+Loss: 0.8209062067667643
+Validation Loss: 1.5428525894338434
+HGR Accuracy: tensor(0.0800, device='cuda:0')
+ID Accuracy: tensor(0.7582, device='cuda:0')
+Validation HGR Accuracy: tensor(0.0836, device='cuda:0')
+Validation ID Accuracy: tensor(0.5445, device='cuda:0')
+Epoch 46/50
+----------
+ ... (more hidden) ...
+ ... (more hidden) ...
+Total time:41.953757524490356
+Loss: 0.8017867430051168
+Validation Loss: 1.5778705436533147
+HGR Accuracy: tensor(0.0867, device='cuda:0')
+ID Accuracy: tensor(0.7618, device='cuda:0')
+Validation HGR Accuracy: tensor(0.0855, device='cuda:0')
+Validation ID Accuracy: tensor(0.5382, device='cuda:0')
+Epoch 47/50
+----------
+ ... (more hidden) ...
+ ... (more hidden) ...
+Total time:44.7859251499176
+Loss: 0.7673615571946809
+Validation Loss: 1.5384147401289507
+HGR Accuracy: tensor(0.0812, device='cuda:0')
+ID Accuracy: tensor(0.7752, device='cuda:0')
+Validation HGR Accuracy: tensor(0.0882, device='cuda:0')
+Validation ID Accuracy: tensor(0.5518, device='cuda:0')
+Epoch 48/50
+----------
+ ... (more hidden) ...
+ ... (more hidden) ...
+Total time:43.24485945701599
+Loss: 0.7445603323705269
+Validation Loss: 1.5644311072609642
+HGR Accuracy: tensor(0.0897, device='cuda:0')
+ID Accuracy: tensor(0.7794, device='cuda:0')
+Validation HGR Accuracy: tensor(0.0909, device='cuda:0')
+Validation ID Accuracy: tensor(0.5527, device='cuda:0')
+Epoch 49/50
+----------
+ ... (more hidden) ...
+Total time:44.72639298439026
+Loss: 0.7255127143859863
+Validation Loss: 1.592803570140492
+HGR Accuracy: tensor(0.0873, device='cuda:0')
+ID Accuracy: tensor(0.7945, device='cuda:0')
+Validation HGR Accuracy: tensor(0.0855, device='cuda:0')
+Validation ID Accuracy: tensor(0.5464, device='cuda:0')
+Epoch 50/50
+----------
+ ... (more hidden) ...
+ ... (more hidden) ...
+ ... (more hidden) ...
+ ... (more hidden) ...
+ ... (more hidden) ...
+ ... (more hidden) ...
+ ... (more hidden) ...
+ ... (more hidden) ...
+ ... (more hidden) ...
+ ... (more hidden) ...
+ ... (more hidden) ...
+ ... (more hidden) ...
+ ... (more hidden) ...
+ ... (more hidden) ...
+ ... (more hidden) ...
+ ... (more hidden) ...
+ ... (more hidden) ...
+ ... (more hidden) ...
+ ... (more hidden) ...
+ ... (more hidden) ...
+ ... (more hidden) ...
+ ... (more hidden) ...
+ ... (more hidden) ...
+Total time:45.853005170822144
+Loss: 0.7451246645233848
+Validation Loss: 1.5132104548540983
+HGR Accuracy: tensor(0.0927, device='cuda:0')
+ID Accuracy: tensor(0.7733, device='cuda:0')
+Validation HGR Accuracy: tensor(0.0827, device='cuda:0')
+AttributeError: 'list' object has no attribute 'cpu'                                  ^^^^^^^^^^^^^^^^^()))
+AttributeError: 'list' object has no attribute 'cpu'                                  ^^^^^^^^^^^^^^^^^()))

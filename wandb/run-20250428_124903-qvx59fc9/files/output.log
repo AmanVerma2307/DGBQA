@@ -1,0 +1,104 @@
+----------------------------------------------------------------
+        Layer (type)         Param #
+================================================================
+            Conv3d-1           1,744
+            conv3d-2           1,744
+            Conv3d-3           6,928
+            conv3d-4           6,928
+            Conv3d-5           6,928
+            conv3d-6           6,928
+            Conv3d-7          13,856
+            conv3d-8          13,856
+            Conv3d-9          27,680
+           conv3d-10          27,680
+           Conv3d-11          27,680
+           conv3d-12          27,680
+           Conv3d-13         128,032
+ tubeletEmbedding-14         137,248
+MultiheadAttention-15           4,224
+          Dropout-16               0
+        LayerNorm-17              64
+           Linear-18           4,224
+          Dropout-19               0
+           Linear-20           4,128
+          Dropout-21               0
+        LayerNorm-22              64
+TransformerEncoderLayer-23          12,704
+MultiheadAttention-24           4,224
+          Dropout-25               0
+        LayerNorm-26              64
+           Linear-27           4,224
+          Dropout-28               0
+           Linear-29           4,128
+          Dropout-30               0
+        LayerNorm-31              64
+TransformerEncoderLayer-32          12,704
+           Linear-33           1,056
+           Linear-34             363
+           Linear-35             330
+================================================================
+Total params: 487,477
+----------------------------------------------------------------
+Total parameters: 249221
+Epoch 1/50
+----------
+  0%|[34m                                                                                                                                                                       [39m| 0/52 [00:00<?, ?it/s]C:\Users\ASUS\anaconda3\envs\gpu_torch_5\Lib\site-packages\torch\nn\functional.py:5476: UserWarning: 1Torch was not compiled with flash attention. (Triggered internally at C:\cb\pytorch_1000000000000\work\aten\src\ATen\native\transformers\cuda\sdp_utils.cpp:263.)
+  attn_output = scaled_dot_product_attention(q, k, v, attn_mask, dropout_p, is_causal)
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|[34m██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████[39m| 52/52 [00:29<00:00,  1.76it/s]
+
+
+
+100%|[32m██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████[39m| 35/35 [00:05<00:00,  5.90it/s]
+Total time:35.482518434524536
+Loss: 2.3174983723958333
+Validation Loss: 2.3078963193026456
+HGR Accuracy: tensor(0.0891, device='cuda:0')
+ID Accuracy: tensor(0.1006, device='cuda:0')
+Validation HGR Accuracy: tensor(0.0909, device='cuda:0')
+Validation ID Accuracy: tensor(0.1000, device='cuda:0')
+Epoch 2/50
+----------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 98%|[34m██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉   [39m| 51/52 [00:35<00:00,  1.45it/s]
+Traceback (most recent call last):
+  File "D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\trainer.py", line 76, in <module>
+    train_metrics, val_metrics = train_val(train_dataLoader,
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\epoch.py", line 149, in train_val
+    loss_hgr_train_curr, loss_id_train_curr, loss_icgd_train_curr, loss_train_curr, acc_hgr_train_curr, acc_id_train_curr = train_epoch(train_loader,
+                                                                                                                            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\epoch.py", line 48, in train_epoch
+    loss_batch.backward()
+  File "C:\Users\ASUS\anaconda3\envs\gpu_torch_5\Lib\site-packages\torch\_tensor.py", line 522, in backward
+    torch.autograd.backward(
+  File "C:\Users\ASUS\anaconda3\envs\gpu_torch_5\Lib\site-packages\torch\autograd\__init__.py", line 266, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+KeyboardInterrupt

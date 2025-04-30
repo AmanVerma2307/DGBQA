@@ -1,0 +1,46 @@
+D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\model.py:68: UserWarning: nn.init.xavier_uniform is now deprecated in favor of nn.init.xavier_uniform_.
+  torch.nn.init.xavier_uniform(self.conv.weight)
+D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\model.py:31: UserWarning: nn.init.xavier_uniform is now deprecated in favor of nn.init.xavier_uniform_.
+  torch.nn.init.xavier_uniform(self.emebdding_layer.weight)
+D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\model.py:143: UserWarning: nn.init.xavier_uniform is now deprecated in favor of nn.init.xavier_uniform_.
+  torch.nn.init.xavier_uniform(self.dense_op.weight)
+D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\model.py:146: UserWarning: nn.init.xavier_uniform is now deprecated in favor of nn.init.xavier_uniform_.
+  torch.nn.init.xavier_uniform(self.dense_hgr.weight)
+D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\model.py:150: UserWarning: nn.init.xavier_uniform is now deprecated in favor of nn.init.xavier_uniform_.
+  torch.nn.init.xavier_uniform(self.dense_id.weight)
+Total parameters: 249221
+Epoch 1/50
+----------
+  0%|[34m                                                                                                                 [39m| 0/52 [00:00<?, ?it/s]C:\Users\ASUS\anaconda3\envs\gpu_torch_5\Lib\site-packages\torch\nn\functional.py:5476: UserWarning: 1Torch was not compiled with flash attention. (Triggered internally at C:\cb\pytorch_1000000000000\work\aten\src\ATen\native\transformers\cuda\sdp_utils.cpp:263.)
+  attn_output = scaled_dot_product_attention(q, k, v, attn_mask, dropout_p, is_causal)
+
+
+
+
+
+
+
+ 62%|[34m████████████████████████████████████████████████████████████████                                        [39m| 32/52 [00:16<00:10,  1.96it/s]
+Traceback (most recent call last):
+  File "D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\trainer.py", line 68, in <module>
+    train_metrics, val_metrics = train_val(train_dataLoader,
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\epoch.py", line 149, in train_val
+    loss_hgr_train_curr, loss_id_train_curr, loss_icgd_train_curr, loss_train_curr, acc_hgr_train_curr, acc_id_train_curr = train_epoch(train_loader,
+                                                                                                                            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\epoch.py", line 42, in train_epoch
+    loss_icgd_batch = obj_icgd(y_hgr,y_id,f_theta) # ICGD Loss
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\envs\gpu_torch_5\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\envs\gpu_torch_5\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\icgd.py", line 62, in forward
+    id_mask = self.get_IDmask(y_id) # ID mask, shape -> (B,B)
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\icgd.py", line 33, in get_IDmask
+    id_mask_dist = torch.logical_not(torch.eye(B).to(torch.bool)).to(device_id,dtype=torch.float32) # Except diagonal entries everything turned high
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

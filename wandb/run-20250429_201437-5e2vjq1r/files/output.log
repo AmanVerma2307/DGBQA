@@ -1,0 +1,217 @@
+Total parameters: 249221
+Epoch 1/50
+----------
+  0%|[34m                                                                  [39m| 0/52 [00:00<?, ?it/s]C:\Users\ASUS\anaconda3\envs\gpu_torch_5\Lib\site-packages\torch\nn\functional.py:5476: UserWarning: 1Torch was not compiled with flash attention. (Triggered internally at C:\cb\pytorch_1000000000000\work\aten\src\ATen\native\transformers\cuda\sdp_utils.cpp:263.)
+  attn_output = scaled_dot_product_attention(q, k, v, attn_mask, dropout_p, is_causal)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|[34m█████████████████████████████████████████████████████████[39m| 52/52 [00:49<00:00,  1.06it/s]
+
+
+ 94%|[32m█████████████████████████████████████████████████████▋   [39m| 33/35 [00:04<00:00,  7.49it/s]
+Total time:53.706891775131226
+Loss: 2.3209738610007546
+Validation Loss: 2.3033428547599097
+HGR Accuracy: tensor(0.0788, device='cuda:0')
+ID Accuracy: tensor(0.1000, device='cuda:0')
+Validation HGR Accuracy: tensor(0.0909, device='cuda:0')
+Validation ID Accuracy: tensor(0.1000, device='cuda:0')
+Epoch 2/50
+100%|[32m█████████████████████████████████████████████████████████[39m| 35/35 [00:04<00:00,  7.53it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|[34m█████████████████████████████████████████████████████████[39m| 52/52 [00:54<00:00,  1.06s/it]
+
+
+ 91%|[32m████████████████████████████████████████████████████     [39m| 32/35 [00:04<00:00,  6.55it/s]
+Total time:60.105366468429565
+Loss: 2.308237587321888
+Validation Loss: 2.302625302401456
+HGR Accuracy: tensor(0.0879, device='cuda:0')
+ID Accuracy: tensor(0.1000, device='cuda:0')
+Validation HGR Accuracy: tensor(0.0909, device='cuda:0')
+Validation ID Accuracy: tensor(0.1118, device='cuda:0')
+Epoch 3/50
+100%|[32m█████████████████████████████████████████████████████████[39m| 35/35 [00:05<00:00,  6.81it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|[34m█████████████████████████████████████████████████████████[39m| 52/52 [00:58<00:00,  1.12s/it]
+
+100%|[32m███████████████████████████████████████████████████[39m| 35/35 [00:05<00:00,  6.57it/s]
+  0%|[34m                                                            [39m| 0/52 [00:00<?, ?it/s]
+Total time:63.694162368774414
+Loss: 2.306223465312611
+Validation Loss: 2.302873242118142
+HGR Accuracy: tensor(0.0873, device='cuda:0')
+ID Accuracy: tensor(0.0933, device='cuda:0')
+Validation HGR Accuracy: tensor(0.0909, device='cuda:0')
+Validation ID Accuracy: tensor(0.1000, device='cuda:0')
+Epoch 4/50
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|[34m███████████████████████████████████████████████████[39m| 52/52 [00:59<00:00,  1.15s/it]
+
+
+ 77%|[32m███████████████████████████████████████▎           [39m| 27/35 [00:04<00:01,  5.85it/s]
+Total time:65.28454947471619
+Loss: 2.3059385866107363
+Validation Loss: 2.302649414756081
+HGR Accuracy: tensor(0.0812, device='cuda:0')
+ID Accuracy: tensor(0.0879, device='cuda:0')
+Validation HGR Accuracy: tensor(0.0909, device='cuda:0')
+Validation ID Accuracy: tensor(0.1000, device='cuda:0')
+Epoch 5/50
+100%|[32m███████████████████████████████████████████████████[39m| 35/35 [00:05<00:00,  6.47it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|[34m███████████████████████████████████████████████████[39m| 52/52 [00:59<00:00,  1.14s/it]
+
+100%|[32m███████████████████████████████████████████████████[39m| 35/35 [00:05<00:00,  6.49it/s]
+  0%|[34m                                                            [39m| 0/52 [00:00<?, ?it/s]
+Total time:64.88343024253845
+Loss: 2.3060538083856756
+Validation Loss: 2.302518013173884
+HGR Accuracy: tensor(0.0818, device='cuda:0')
+ID Accuracy: tensor(0.0897, device='cuda:0')
+Validation HGR Accuracy: tensor(0.0909, device='cuda:0')
+Validation ID Accuracy: tensor(0.1000, device='cuda:0')
+Epoch 6/50
+
+
+
+
+ 12%|[34m██████                                              [39m| 6/52 [00:08<01:03,  1.39s/it]
+Traceback (most recent call last):
+  File "D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\trainer.py", line 85, in <module>
+    train_metrics, val_metrics = train_val(train_dataLoader,
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\epoch.py", line 149, in train_val
+    loss_hgr_train_curr, loss_id_train_curr, loss_icgd_train_curr, loss_train_curr, acc_hgr_train_curr, acc_id_train_curr = train_epoch(train_loader,
+                                                                                                                            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\epoch.py", line 48, in train_epoch
+    loss_batch.backward()
+  File "C:\Users\ASUS\anaconda3\envs\gpu_torch_5\Lib\site-packages\torch\_tensor.py", line 522, in backward
+    torch.autograd.backward(
+  File "C:\Users\ASUS\anaconda3\envs\gpu_torch_5\Lib\site-packages\torch\autograd\__init__.py", line 266, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+KeyboardInterrupt

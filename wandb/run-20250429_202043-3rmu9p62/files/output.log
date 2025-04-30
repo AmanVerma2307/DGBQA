@@ -1,0 +1,335 @@
+Total parameters: 249221
+Epoch 1/50
+----------
+  0%|[34m                                                            [39m| 0/52 [00:00<?, ?it/s]C:\Users\ASUS\anaconda3\envs\gpu_torch_5\Lib\site-packages\torch\nn\functional.py:5476: UserWarning: 1Torch was not compiled with flash attention. (Triggered internally at C:\cb\pytorch_1000000000000\work\aten\src\ATen\native\transformers\cuda\sdp_utils.cpp:263.)
+  attn_output = scaled_dot_product_attention(q, k, v, attn_mask, dropout_p, is_causal)
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|[34m███████████████████████████████████████████████████[39m| 52/52 [00:27<00:00,  1.87it/s]
+
+100%|[32m█[39m| 35/35 [00:05<00:00,
+  0%|[34m [39m| 0/52 [00:00<?, ?it/s
+Total time:33.02508616447449
+Loss: 2.3208307974266282
+Validation Loss: 2.3043313893404873
+HGR Accuracy: tensor(0.0939, device='cuda:0')
+ID Accuracy: tensor(0.1018, device='cuda:0')
+Validation HGR Accuracy: tensor(0.0909, device='cuda:0')
+Validation ID Accuracy: tensor(0.1000, device='cuda:0')
+Epoch 2/50
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|[34m█[39m| 52/52 [00:32<00:00,
+
+
+100%|[32m█[39m| 35/35 [00:05<00:00,
+  0%|[34m [39m| 0/52 [00:00<?, ?it/s
+Total time:38.03308892250061
+Loss: 2.3057090146613843
+Validation Loss: 2.3034361457824706
+HGR Accuracy: tensor(0.0885, device='cuda:0')
+ID Accuracy: tensor(0.0958, device='cuda:0')
+Validation HGR Accuracy: tensor(0.0909, device='cuda:0')
+Validation ID Accuracy: tensor(0.1000, device='cuda:0')
+Epoch 3/50
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|[34m█[39m| 52/52 [00:31<00:00,
+
+
+ 83%|[32m▊[39m| 29/35 [00:04<00:01,
+Total time:37.44782567024231
+Loss: 2.304656518878359
+Validation Loss: 2.303069464076649
+HGR Accuracy: tensor(0.0909, device='cuda:0')
+ID Accuracy: tensor(0.0982, device='cuda:0')
+Validation HGR Accuracy: tensor(0.0909, device='cuda:0')
+Validation ID Accuracy: tensor(0.1000, device='cuda:0')
+Epoch 4/50
+100%|[32m█[39m| 35/35 [00:05<00:00,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|[34m█[39m| 52/52 [00:33<00:00,
+
+
+100%|[32m█████████████████████████████████████████████████████████████████████████[39m| 35/35 [00:05<00:00,  6.01it/s]
+  0%|[34m                                                      [39m| 0/52 [00:00<?, ?it/s]
+Total time:38.96176791191101
+Loss: 2.30593328851642
+Validation Loss: 2.3024584093960847
+HGR Accuracy: tensor(0.0897, device='cuda:0')
+ID Accuracy: tensor(0.0958, device='cuda:0')
+Validation HGR Accuracy: tensor(0.0909, device='cuda:0')
+Validation ID Accuracy: tensor(0.1255, device='cuda:0')
+Epoch 5/50
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|[34m█████████████████████████████████████████████[39m| 52/52 [00:32<00:00,  1.60it/s]
+
+
+ 94%|[32m██████████████████████████████████████████▍  [39m| 33/35 [00:05<00:00,  5.35it/s]
+Total time:38.44542407989502
+Loss: 2.304232938939875
+Validation Loss: 2.3025167950716887
+HGR Accuracy: tensor(0.0861, device='cuda:0')
+ID Accuracy: tensor(0.0848, device='cuda:0')
+Validation HGR Accuracy: tensor(0.0909, device='cuda:0')
+Validation ID Accuracy: tensor(0.1000, device='cuda:0')
+Epoch 6/50
+100%|[32m█████████████████████████████████████████████[39m| 35/35 [00:06<00:00,  5.79it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|[34m█████████████████████████████████████████████[39m| 52/52 [00:33<00:00,  1.57it/s]
+
+
+100%|[32m█████████████████████████████████████████████[39m| 35/35 [00:06<00:00,  5.36it/s]
+  0%|[34m                                                      [39m| 0/52 [00:00<?, ?it/s]
+Total time:39.739136695861816
+Loss: 2.304129316445553
+Validation Loss: 2.3027091052315454
+HGR Accuracy: tensor(0.0964, device='cuda:0')
+ID Accuracy: tensor(0.0927, device='cuda:0')
+Validation HGR Accuracy: tensor(0.0909, device='cuda:0')
+Validation ID Accuracy: tensor(0.1000, device='cuda:0')
+Epoch 7/50
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|[34m█████████████████████████████████████████████[39m| 52/52 [00:34<00:00,  1.52it/s]
+
+
+
+ 91%|[32m█████████████████████████████████████████▏   [39m| 32/35 [00:06<00:00,  5.51it/s]
+Total time:40.62591862678528
+Loss: 2.3035523116949834
+Validation Loss: 2.302455771186135
+HGR Accuracy: tensor(0.0952, device='cuda:0')
+ID Accuracy: tensor(0.0939, device='cuda:0')
+Validation HGR Accuracy: tensor(0.0218, device='cuda:0')
+Validation ID Accuracy: tensor(0.1000, device='cuda:0')
+Epoch 8/50
+100%|[32m█████████████████████████████████████████████[39m| 35/35 [00:06<00:00,  5.39it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|[34m█████████████████████████████████████████████[39m| 52/52 [00:34<00:00,  1.49it/s]
+
+
+100%|[32m█████████████████████████████████████████████[39m| 35/35 [00:06<00:00,  5.44it/s]
+  0%|[34m                                                      [39m| 0/52 [00:00<?, ?it/s]
+Total time:41.28289556503296
+Loss: 2.303524546189742
+Validation Loss: 2.302469434738159
+HGR Accuracy: tensor(0.0964, device='cuda:0')
+ID Accuracy: tensor(0.0988, device='cuda:0')
+Validation HGR Accuracy: tensor(0.0909, device='cuda:0')
+Validation ID Accuracy: tensor(0.1000, device='cuda:0')
+Epoch 9/50
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|[34m█████████████████████████████████████████████[39m| 52/52 [00:36<00:00,  1.41it/s]
+
+
+100%|[32m█████████████████████████████████████████████[39m| 35/35 [00:06<00:00,  5.41it/s]
+  2%|[34m▉                                             [39m| 1/52 [00:00<00:35,  1.43it/s]
+Total time:43.31581473350525
+Loss: 2.3027530673055936
+Validation Loss: 2.302382966821844
+HGR Accuracy: tensor(0.0933, device='cuda:0')
+ID Accuracy: tensor(0.0945, device='cuda:0')
+Validation HGR Accuracy: tensor(0.0991, device='cuda:0')
+Validation ID Accuracy: tensor(0.1000, device='cuda:0')
+Epoch 10/50
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|[34m█████████████████████████████████████████████[39m| 52/52 [00:37<00:00,  1.38it/s]
+
+
+ 83%|[32m█████████████████████████████████████▎       [39m| 29/35 [00:05<00:01,  5.29it/s]
+Total time:44.30202031135559
+Loss: 2.302789828271577
+Validation Loss: 2.303050327301025
+HGR Accuracy: tensor(0.0903, device='cuda:0')
+ID Accuracy: tensor(0.1012, device='cuda:0')
+100%|[32m█████████████████████████████████████████████[39m| 35/35 [00:06<00:00,  5.23it/s]
+  2%|[34m▉                                             [39m| 1/52 [00:00<00:34,  1.47it/s]
+Validation ID Accuracy: tensor(0.1000, device='cuda:0')
+Epoch 11/50
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|[34m█████████████████████████████████████████████[39m| 52/52 [00:35<00:00,  1.47it/s]
+
+ 54%|[32m████████████████████████▍                    [39m| 19/35 [00:03<00:03,  5.06it/s]
+Traceback (most recent call last):
+  File "D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\trainer.py", line 85, in <module>
+    train_metrics, val_metrics = train_val(train_dataLoader,
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\epoch.py", line 166, in train_val
+    loss_hgr_val_curr, loss_id_val_curr, loss_icgd_val_curr, loss_val_curr, acc_hgr_val_curr, acc_id_val_curr = val_epoch(val_loader,
+                                                                                                                ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\epoch.py", line 94, in val_epoch
+    loss_icgd_batch = obj_icgd(y_hgr,y_id,f_theta) # ICGD Loss
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\envs\gpu_torch_5\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\envs\gpu_torch_5\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\icgd.py", line 62, in forward
+    id_mask = self.get_IDmask(y_id) # ID mask, shape -> (B,B)
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\icgd.py", line 33, in get_IDmask
+    id_mask_dist = torch.logical_not(torch.eye(B).to(torch.bool)).to(device_id,dtype=torch.float32) # Except diagonal entries everything turned high
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
