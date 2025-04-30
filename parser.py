@@ -37,7 +37,7 @@ def parse():
                         help="Weight of ICGD loss")
     parser.add_argument('--num_epochs',
                         type=int,
-                        default=150,
+                        default=50,
                         help="Number of training epochs")
     parser.add_argument('--exp_name',
                         type=str,

@@ -7,16 +7,17 @@ from epoch import *
 from icgd import icgdLoss
 from parser import parse
 from dataloader import dataLoader
+from utils.summary import *
 
-seed = 42
+seed = 3047
 
 torch.manual_seed(seed)
 torch.cuda.manual_seed(seed)
-torch.cuda.manual_seed_all(seed)
+#torch.cuda.manual_seed_all(seed)
 random.seed(seed)
 np.random.seed(seed)
-torch.backends.cudnn.deterministic = True
-torch.backends.cudnn.benchmark = False
+#torch.backends.cudnn.deterministic = True
+#torch.backends.cudnn.benchmark = False
 
 ###### Argument parser
 args = parse()
