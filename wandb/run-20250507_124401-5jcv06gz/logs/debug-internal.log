@@ -1,0 +1,202 @@
+2025-05-07 12:44:01,614 INFO    StreamThr :18716 [internal.py:wandb_internal():86] W&B internal server running at pid: 18716, started at: 2025-05-07 12:44:01.614347
+2025-05-07 12:44:01,616 DEBUG   HandlerThread:18716 [handler.py:handle_request():146] handle_request: status
+2025-05-07 12:44:01,619 INFO    WriterThread:18716 [datastore.py:open_for_write():85] open: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250507_124401-5jcv06gz\run-5jcv06gz.wandb
+2025-05-07 12:44:01,620 DEBUG   SenderThread:18716 [sender.py:send():382] send: header
+2025-05-07 12:44:01,656 DEBUG   SenderThread:18716 [sender.py:send():382] send: run
+2025-05-07 12:44:02,510 INFO    SenderThread:18716 [dir_watcher.py:__init__():211] watching files in: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250507_124401-5jcv06gz\files
+2025-05-07 12:44:02,511 INFO    SenderThread:18716 [sender.py:_start_run_threads():1136] run started: 5jcv06gz with start time 1746602041.617349
+2025-05-07 12:44:02,520 DEBUG   HandlerThread:18716 [handler.py:handle_request():146] handle_request: check_version
+2025-05-07 12:44:02,521 DEBUG   SenderThread:18716 [sender.py:send_request():409] send_request: check_version
+2025-05-07 12:44:02,918 DEBUG   HandlerThread:18716 [handler.py:handle_request():146] handle_request: run_start
+2025-05-07 12:44:03,976 DEBUG   HandlerThread:18716 [system_info.py:__init__():32] System info init
+2025-05-07 12:44:03,976 DEBUG   HandlerThread:18716 [system_info.py:__init__():47] System info init done
+2025-05-07 12:44:03,976 INFO    HandlerThread:18716 [system_monitor.py:start():194] Starting system monitor
+2025-05-07 12:44:03,977 INFO    SystemMonitor:18716 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2025-05-07 12:44:03,977 INFO    HandlerThread:18716 [system_monitor.py:probe():214] Collecting system info
+2025-05-07 12:44:03,982 INFO    SystemMonitor:18716 [interfaces.py:start():190] Started cpu monitoring
+2025-05-07 12:44:03,983 INFO    SystemMonitor:18716 [interfaces.py:start():190] Started disk monitoring
+2025-05-07 12:44:03,984 INFO    SystemMonitor:18716 [interfaces.py:start():190] Started gpu monitoring
+2025-05-07 12:44:03,994 INFO    SystemMonitor:18716 [interfaces.py:start():190] Started memory monitoring
+2025-05-07 12:44:04,005 INFO    SystemMonitor:18716 [interfaces.py:start():190] Started network monitoring
+2025-05-07 12:44:04,019 DEBUG   HandlerThread:18716 [system_info.py:probe():196] Probing system
+2025-05-07 12:44:04,020 DEBUG   HandlerThread:18716 [system_info.py:_probe_git():181] Probing git
+2025-05-07 12:44:04,091 DEBUG   HandlerThread:18716 [system_info.py:_probe_git():189] Probing git done
+2025-05-07 12:44:04,091 DEBUG   HandlerThread:18716 [system_info.py:probe():244] Probing system done
+2025-05-07 12:44:04,091 DEBUG   HandlerThread:18716 [system_monitor.py:probe():223] {'os': 'Windows-11-10.0.26100-SP0', 'python': '3.12.9', 'heartbeatAt': '2025-05-07T07:14:04.019085', 'startedAt': '2025-05-07T07:14:01.607344', 'docker': None, 'cuda': None, 'args': ('--exp_name', 'ICGD_repr'), 'state': 'running', 'program': 'D:\\IIT Delhi\\Projects\\Adversarial games\\Experimentation\\codeBase\\trainer.py', 'codePathLocal': 'trainer.py', 'codePath': 'trainer.py', 'git': {'remote': 'https://github.com/AmanVerma2307/DGBQA.git', 'commit': '0a4c8efe9c115660d2b5e9ef5d4a3797707abf8c'}, 'email': 'eez227536@ee.iitd.ac.in', 'root': 'D:/IIT Delhi/Projects/Adversarial games/Experimentation/codeBase', 'host': 'LAPTOP-PANL57F2', 'username': 'ASUS', 'executable': 'C:\\Users\\ASUS\\anaconda3\\envs\\gpu_torch_5\\python.exe', 'cpu_count': 6, 'cpu_count_logical': 12, 'cpu_freq': {'current': 2592.0, 'min': 0.0, 'max': 2592.0}, 'cpu_freq_per_core': [{'current': 2592.0, 'min': 0.0, 'max': 2592.0}], 'disk': {'/': {'total': 238.47265243530273, 'used': 73.29787063598633}}, 'gpu': 'NVIDIA GeForce GTX 1660 Ti', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce GTX 1660 Ti', 'memory_total': 6442450944}], 'memory': {'total': 15.790397644042969}}
+2025-05-07 12:44:04,091 INFO    HandlerThread:18716 [system_monitor.py:probe():224] Finished collecting system info
+2025-05-07 12:44:04,091 INFO    HandlerThread:18716 [system_monitor.py:probe():227] Publishing system info
+2025-05-07 12:44:04,091 DEBUG   HandlerThread:18716 [system_info.py:_save_pip():52] Saving list of pip packages installed into the current environment
+2025-05-07 12:44:04,093 DEBUG   HandlerThread:18716 [system_info.py:_save_pip():68] Saving pip packages done
+2025-05-07 12:44:04,093 DEBUG   HandlerThread:18716 [system_info.py:_save_conda():75] Saving list of conda packages installed into the current environment
+2025-05-07 12:44:04,096 ERROR   HandlerThread:18716 [system_info.py:_save_conda():86] Error saving conda packages: [WinError 2] The system cannot find the file specified
+Traceback (most recent call last):
+  File "C:\Users\ASUS\anaconda3\envs\gpu_torch_5\Lib\site-packages\wandb\sdk\internal\system\system_info.py", line 82, in _save_conda
+    subprocess.call(
+  File "C:\Users\ASUS\anaconda3\envs\gpu_torch_5\Lib\subprocess.py", line 391, in call
+    with Popen(*popenargs, **kwargs) as p:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\envs\gpu_torch_5\Lib\subprocess.py", line 1028, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "C:\Users\ASUS\anaconda3\envs\gpu_torch_5\Lib\subprocess.py", line 1540, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+2025-05-07 12:44:04,098 DEBUG   HandlerThread:18716 [system_info.py:_save_conda():87] Saving conda packages done
+2025-05-07 12:44:04,099 INFO    HandlerThread:18716 [system_monitor.py:probe():229] Finished publishing system info
+2025-05-07 12:44:04,103 DEBUG   SenderThread:18716 [sender.py:send():382] send: files
+2025-05-07 12:44:04,104 INFO    SenderThread:18716 [sender.py:_save_file():1392] saving file wandb-metadata.json with policy now
+2025-05-07 12:44:04,109 DEBUG   HandlerThread:18716 [handler.py:handle_request():146] handle_request: stop_status
+2025-05-07 12:44:04,109 DEBUG   SenderThread:18716 [sender.py:send_request():409] send_request: stop_status
+2025-05-07 12:44:04,110 DEBUG   HandlerThread:18716 [handler.py:handle_request():146] handle_request: internal_messages
+2025-05-07 12:44:04,525 INFO    Thread-16 :18716 [dir_watcher.py:_on_file_created():271] file/dir created: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250507_124401-5jcv06gz\files\requirements.txt
+2025-05-07 12:44:04,526 INFO    Thread-16 :18716 [dir_watcher.py:_on_file_created():271] file/dir created: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250507_124401-5jcv06gz\files\wandb-metadata.json
+2025-05-07 12:44:04,526 INFO    Thread-16 :18716 [dir_watcher.py:_on_file_created():271] file/dir created: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250507_124401-5jcv06gz\files\conda-environment.yaml
+2025-05-07 12:44:04,528 DEBUG   SenderThread:18716 [sender.py:send():382] send: telemetry
+2025-05-07 12:44:04,529 DEBUG   SenderThread:18716 [sender.py:send():382] send: exit
+2025-05-07 12:44:04,529 INFO    SenderThread:18716 [sender.py:send_exit():589] handling exit code: 255
+2025-05-07 12:44:04,529 INFO    SenderThread:18716 [sender.py:send_exit():591] handling runtime: 1
+2025-05-07 12:44:04,531 INFO    SenderThread:18716 [sender.py:_save_file():1392] saving file wandb-summary.json with policy end
+2025-05-07 12:44:04,532 INFO    SenderThread:18716 [sender.py:send_exit():597] send defer
+2025-05-07 12:44:04,532 DEBUG   HandlerThread:18716 [handler.py:handle_request():146] handle_request: defer
+2025-05-07 12:44:04,532 INFO    HandlerThread:18716 [handler.py:handle_request_defer():172] handle defer: 0
+2025-05-07 12:44:04,532 DEBUG   SenderThread:18716 [sender.py:send_request():409] send_request: defer
+2025-05-07 12:44:04,532 INFO    SenderThread:18716 [sender.py:send_request_defer():613] handle sender defer: 0
+2025-05-07 12:44:04,532 INFO    SenderThread:18716 [sender.py:transition_state():617] send defer: 1
+2025-05-07 12:44:04,532 DEBUG   HandlerThread:18716 [handler.py:handle_request():146] handle_request: defer
+2025-05-07 12:44:04,532 INFO    HandlerThread:18716 [handler.py:handle_request_defer():172] handle defer: 1
+2025-05-07 12:44:04,533 DEBUG   SenderThread:18716 [sender.py:send_request():409] send_request: defer
+2025-05-07 12:44:04,533 INFO    SenderThread:18716 [sender.py:send_request_defer():613] handle sender defer: 1
+2025-05-07 12:44:04,533 INFO    SenderThread:18716 [sender.py:transition_state():617] send defer: 2
+2025-05-07 12:44:04,533 DEBUG   HandlerThread:18716 [handler.py:handle_request():146] handle_request: defer
+2025-05-07 12:44:04,533 INFO    HandlerThread:18716 [handler.py:handle_request_defer():172] handle defer: 2
+2025-05-07 12:44:04,533 INFO    HandlerThread:18716 [system_monitor.py:finish():203] Stopping system monitor
+2025-05-07 12:44:04,533 DEBUG   SystemMonitor:18716 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2025-05-07 12:44:04,534 INFO    HandlerThread:18716 [interfaces.py:finish():202] Joined cpu monitor
+2025-05-07 12:44:04,541 DEBUG   SystemMonitor:18716 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2025-05-07 12:44:04,541 INFO    HandlerThread:18716 [interfaces.py:finish():202] Joined disk monitor
+2025-05-07 12:44:04,542 DEBUG   SystemMonitor:18716 [system_monitor.py:_start():183] Publishing last batch of metrics
+2025-05-07 12:44:04,964 INFO    HandlerThread:18716 [interfaces.py:finish():202] Joined gpu monitor
+2025-05-07 12:44:04,964 INFO    HandlerThread:18716 [interfaces.py:finish():202] Joined memory monitor
+2025-05-07 12:44:04,965 INFO    HandlerThread:18716 [interfaces.py:finish():202] Joined network monitor
+2025-05-07 12:44:04,965 DEBUG   SenderThread:18716 [sender.py:send_request():409] send_request: defer
+2025-05-07 12:44:04,965 INFO    SenderThread:18716 [sender.py:send_request_defer():613] handle sender defer: 2
+2025-05-07 12:44:04,965 INFO    SenderThread:18716 [sender.py:transition_state():617] send defer: 3
+2025-05-07 12:44:04,966 DEBUG   SenderThread:18716 [sender.py:send():382] send: stats
+2025-05-07 12:44:04,966 DEBUG   HandlerThread:18716 [handler.py:handle_request():146] handle_request: defer
+2025-05-07 12:44:04,966 INFO    HandlerThread:18716 [handler.py:handle_request_defer():172] handle defer: 3
+2025-05-07 12:44:04,966 DEBUG   SenderThread:18716 [sender.py:send_request():409] send_request: defer
+2025-05-07 12:44:04,966 INFO    SenderThread:18716 [sender.py:send_request_defer():613] handle sender defer: 3
+2025-05-07 12:44:04,967 INFO    SenderThread:18716 [sender.py:transition_state():617] send defer: 4
+2025-05-07 12:44:04,967 DEBUG   HandlerThread:18716 [handler.py:handle_request():146] handle_request: defer
+2025-05-07 12:44:04,967 INFO    HandlerThread:18716 [handler.py:handle_request_defer():172] handle defer: 4
+2025-05-07 12:44:04,967 DEBUG   SenderThread:18716 [sender.py:send_request():409] send_request: defer
+2025-05-07 12:44:04,967 INFO    SenderThread:18716 [sender.py:send_request_defer():613] handle sender defer: 4
+2025-05-07 12:44:04,967 INFO    SenderThread:18716 [sender.py:transition_state():617] send defer: 5
+2025-05-07 12:44:04,967 DEBUG   HandlerThread:18716 [handler.py:handle_request():146] handle_request: defer
+2025-05-07 12:44:04,967 INFO    HandlerThread:18716 [handler.py:handle_request_defer():172] handle defer: 5
+2025-05-07 12:44:04,968 DEBUG   SenderThread:18716 [sender.py:send():382] send: summary
+2025-05-07 12:44:04,968 INFO    SenderThread:18716 [sender.py:_save_file():1392] saving file wandb-summary.json with policy end
+2025-05-07 12:44:04,969 DEBUG   SenderThread:18716 [sender.py:send_request():409] send_request: defer
+2025-05-07 12:44:04,969 INFO    SenderThread:18716 [sender.py:send_request_defer():613] handle sender defer: 5
+2025-05-07 12:44:04,969 INFO    SenderThread:18716 [sender.py:transition_state():617] send defer: 6
+2025-05-07 12:44:04,969 DEBUG   HandlerThread:18716 [handler.py:handle_request():146] handle_request: defer
+2025-05-07 12:44:04,969 INFO    HandlerThread:18716 [handler.py:handle_request_defer():172] handle defer: 6
+2025-05-07 12:44:04,969 DEBUG   SenderThread:18716 [sender.py:send_request():409] send_request: defer
+2025-05-07 12:44:04,970 INFO    SenderThread:18716 [sender.py:send_request_defer():613] handle sender defer: 6
+2025-05-07 12:44:04,975 DEBUG   HandlerThread:18716 [handler.py:handle_request():146] handle_request: status_report
+2025-05-07 12:44:05,150 DEBUG   HandlerThread:18716 [handler.py:handle_request():146] handle_request: poll_exit
+2025-05-07 12:44:05,297 INFO    SenderThread:18716 [sender.py:transition_state():617] send defer: 7
+2025-05-07 12:44:05,297 DEBUG   SenderThread:18716 [sender.py:send_request():409] send_request: poll_exit
+2025-05-07 12:44:05,297 DEBUG   HandlerThread:18716 [handler.py:handle_request():146] handle_request: defer
+2025-05-07 12:44:05,298 INFO    HandlerThread:18716 [handler.py:handle_request_defer():172] handle defer: 7
+2025-05-07 12:44:05,298 DEBUG   SenderThread:18716 [sender.py:send_request():409] send_request: defer
+2025-05-07 12:44:05,298 INFO    SenderThread:18716 [sender.py:send_request_defer():613] handle sender defer: 7
+2025-05-07 12:44:05,518 INFO    wandb-upload_0:18716 [upload_job.py:push():131] Uploaded file C:\Users\ASUS\AppData\Local\Temp\tmpjq4yhooswandb\0it7byff-wandb-metadata.json
+2025-05-07 12:44:05,538 INFO    Thread-16 :18716 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250507_124401-5jcv06gz\files\config.yaml
+2025-05-07 12:44:05,539 INFO    Thread-16 :18716 [dir_watcher.py:_on_file_created():271] file/dir created: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250507_124401-5jcv06gz\files\wandb-summary.json
+2025-05-07 12:44:05,539 INFO    Thread-16 :18716 [dir_watcher.py:_on_file_created():271] file/dir created: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250507_124401-5jcv06gz\files\output.log
+2025-05-07 12:44:06,158 DEBUG   HandlerThread:18716 [handler.py:handle_request():146] handle_request: poll_exit
+2025-05-07 12:44:06,532 INFO    SenderThread:18716 [sender.py:transition_state():617] send defer: 8
+2025-05-07 12:44:06,532 DEBUG   SenderThread:18716 [sender.py:send_request():409] send_request: poll_exit
+2025-05-07 12:44:06,533 DEBUG   HandlerThread:18716 [handler.py:handle_request():146] handle_request: defer
+2025-05-07 12:44:06,533 INFO    HandlerThread:18716 [handler.py:handle_request_defer():172] handle defer: 8
+2025-05-07 12:44:06,533 DEBUG   SenderThread:18716 [sender.py:send_request():409] send_request: defer
+2025-05-07 12:44:06,533 INFO    SenderThread:18716 [sender.py:send_request_defer():613] handle sender defer: 8
+2025-05-07 12:44:06,534 INFO    SenderThread:18716 [job_builder.py:build():298] Attempting to build job artifact
+2025-05-07 12:44:06,535 INFO    SenderThread:18716 [job_builder.py:_get_source_type():428] is repo sourced job
+2025-05-07 12:44:06,549 INFO    Thread-16 :18716 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250507_124401-5jcv06gz\files\output.log
+2025-05-07 12:44:06,570 INFO    SenderThread:18716 [job_builder.py:build():404] adding wandb-job metadata file
+2025-05-07 12:44:06,595 INFO    SenderThread:18716 [sender.py:transition_state():617] send defer: 9
+2025-05-07 12:44:06,595 DEBUG   HandlerThread:18716 [handler.py:handle_request():146] handle_request: defer
+2025-05-07 12:44:06,595 DEBUG   SenderThread:18716 [sender.py:send():382] send: artifact
+2025-05-07 12:44:06,595 INFO    HandlerThread:18716 [handler.py:handle_request_defer():172] handle defer: 9
+2025-05-07 12:44:07,169 DEBUG   HandlerThread:18716 [handler.py:handle_request():146] handle_request: poll_exit
+2025-05-07 12:44:08,874 INFO    wandb-upload_0:18716 [upload_job.py:push():86] Skipped uploading C:\Users\ASUS\AppData\Local\wandb\wandb\artifacts\staging\tmpq_jdmg8d
+2025-05-07 12:44:10,662 INFO    wandb-upload_1:18716 [upload_job.py:push():89] Uploaded file C:\Users\ASUS\AppData\Local\wandb\wandb\artifacts\staging\tmp79z19t4r
+2025-05-07 12:44:12,216 DEBUG   HandlerThread:18716 [handler.py:handle_request():146] handle_request: keepalive
+2025-05-07 12:44:12,887 INFO    SenderThread:18716 [sender.py:send_artifact():1470] sent artifact job-https___github.com_AmanVerma2307_DGBQA.git_trainer.py - {'id': 'QXJ0aWZhY3Q6MTcxNDg1NzMyMQ==', 'state': 'PENDING', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjYyMzM4MzA5Mg==', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MTY5NjU1MDg4MA==', 'versionIndex': 14}}}
+2025-05-07 12:44:12,887 DEBUG   SenderThread:18716 [sender.py:send_request():409] send_request: defer
+2025-05-07 12:44:12,887 INFO    SenderThread:18716 [sender.py:send_request_defer():613] handle sender defer: 9
+2025-05-07 12:44:12,887 DEBUG   HandlerThread:18716 [handler.py:handle_request():146] handle_request: status_report
+2025-05-07 12:44:12,887 INFO    SenderThread:18716 [dir_watcher.py:finish():358] shutting down directory watcher
+2025-05-07 12:44:13,616 INFO    SenderThread:18716 [dir_watcher.py:finish():388] scan: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250507_124401-5jcv06gz\files
+2025-05-07 12:44:13,616 INFO    SenderThread:18716 [dir_watcher.py:finish():402] scan save: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250507_124401-5jcv06gz\files\conda-environment.yaml conda-environment.yaml
+2025-05-07 12:44:13,616 INFO    SenderThread:18716 [dir_watcher.py:finish():402] scan save: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250507_124401-5jcv06gz\files\config.yaml config.yaml
+2025-05-07 12:44:13,616 INFO    SenderThread:18716 [dir_watcher.py:finish():402] scan save: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250507_124401-5jcv06gz\files\output.log output.log
+2025-05-07 12:44:13,616 INFO    SenderThread:18716 [dir_watcher.py:finish():402] scan save: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250507_124401-5jcv06gz\files\requirements.txt requirements.txt
+2025-05-07 12:44:13,617 INFO    SenderThread:18716 [dir_watcher.py:finish():402] scan save: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250507_124401-5jcv06gz\files\wandb-metadata.json wandb-metadata.json
+2025-05-07 12:44:13,618 INFO    SenderThread:18716 [dir_watcher.py:finish():402] scan save: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250507_124401-5jcv06gz\files\wandb-summary.json wandb-summary.json
+2025-05-07 12:44:13,621 INFO    SenderThread:18716 [sender.py:transition_state():617] send defer: 10
+2025-05-07 12:44:13,622 DEBUG   SenderThread:18716 [sender.py:send_request():409] send_request: poll_exit
+2025-05-07 12:44:13,622 DEBUG   HandlerThread:18716 [handler.py:handle_request():146] handle_request: defer
+2025-05-07 12:44:13,622 INFO    HandlerThread:18716 [handler.py:handle_request_defer():172] handle defer: 10
+2025-05-07 12:44:13,624 DEBUG   SenderThread:18716 [sender.py:send_request():409] send_request: defer
+2025-05-07 12:44:13,624 INFO    SenderThread:18716 [sender.py:send_request_defer():613] handle sender defer: 10
+2025-05-07 12:44:13,624 INFO    SenderThread:18716 [file_pusher.py:finish():175] shutting down file pusher
+2025-05-07 12:44:14,374 INFO    wandb-upload_1:18716 [upload_job.py:push():131] Uploaded file D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250507_124401-5jcv06gz\files\output.log
+2025-05-07 12:44:14,392 INFO    wandb-upload_0:18716 [upload_job.py:push():131] Uploaded file D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250507_124401-5jcv06gz\files\config.yaml
+2025-05-07 12:44:14,426 INFO    wandb-upload_3:18716 [upload_job.py:push():131] Uploaded file D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250507_124401-5jcv06gz\files\wandb-summary.json
+2025-05-07 12:44:14,427 INFO    wandb-upload_2:18716 [upload_job.py:push():131] Uploaded file D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250507_124401-5jcv06gz\files\requirements.txt
+2025-05-07 12:44:14,630 INFO    Thread-15 (_thread_body):18716 [sender.py:transition_state():617] send defer: 11
+2025-05-07 12:44:14,630 DEBUG   HandlerThread:18716 [handler.py:handle_request():146] handle_request: defer
+2025-05-07 12:44:14,630 INFO    HandlerThread:18716 [handler.py:handle_request_defer():172] handle defer: 11
+2025-05-07 12:44:14,631 DEBUG   SenderThread:18716 [sender.py:send_request():409] send_request: defer
+2025-05-07 12:44:14,631 INFO    SenderThread:18716 [sender.py:send_request_defer():613] handle sender defer: 11
+2025-05-07 12:44:14,631 INFO    SenderThread:18716 [file_pusher.py:join():181] waiting for file pusher
+2025-05-07 12:44:14,631 INFO    SenderThread:18716 [sender.py:transition_state():617] send defer: 12
+2025-05-07 12:44:14,631 DEBUG   HandlerThread:18716 [handler.py:handle_request():146] handle_request: defer
+2025-05-07 12:44:14,631 INFO    HandlerThread:18716 [handler.py:handle_request_defer():172] handle defer: 12
+2025-05-07 12:44:14,631 DEBUG   SenderThread:18716 [sender.py:send_request():409] send_request: defer
+2025-05-07 12:44:14,631 INFO    SenderThread:18716 [sender.py:send_request_defer():613] handle sender defer: 12
+2025-05-07 12:44:14,631 INFO    SenderThread:18716 [file_stream.py:finish():595] file stream finish called
+2025-05-07 12:44:14,960 INFO    SenderThread:18716 [file_stream.py:finish():599] file stream finish is done
+2025-05-07 12:44:14,960 INFO    SenderThread:18716 [sender.py:transition_state():617] send defer: 13
+2025-05-07 12:44:14,960 DEBUG   HandlerThread:18716 [handler.py:handle_request():146] handle_request: defer
+2025-05-07 12:44:14,960 INFO    HandlerThread:18716 [handler.py:handle_request_defer():172] handle defer: 13
+2025-05-07 12:44:14,961 DEBUG   SenderThread:18716 [sender.py:send_request():409] send_request: defer
+2025-05-07 12:44:14,961 INFO    SenderThread:18716 [sender.py:send_request_defer():613] handle sender defer: 13
+2025-05-07 12:44:14,961 INFO    SenderThread:18716 [sender.py:transition_state():617] send defer: 14
+2025-05-07 12:44:14,961 DEBUG   SenderThread:18716 [sender.py:send():382] send: final
+2025-05-07 12:44:14,961 DEBUG   HandlerThread:18716 [handler.py:handle_request():146] handle_request: defer
+2025-05-07 12:44:14,961 DEBUG   SenderThread:18716 [sender.py:send():382] send: footer
+2025-05-07 12:44:14,961 INFO    HandlerThread:18716 [handler.py:handle_request_defer():172] handle defer: 14
+2025-05-07 12:44:14,962 DEBUG   SenderThread:18716 [sender.py:send_request():409] send_request: defer
+2025-05-07 12:44:14,962 INFO    SenderThread:18716 [sender.py:send_request_defer():613] handle sender defer: 14
+2025-05-07 12:44:14,962 DEBUG   HandlerThread:18716 [handler.py:handle_request():146] handle_request: poll_exit
+2025-05-07 12:44:14,962 DEBUG   HandlerThread:18716 [handler.py:handle_request():146] handle_request: server_info
+2025-05-07 12:44:14,963 DEBUG   HandlerThread:18716 [handler.py:handle_request():146] handle_request: get_summary
+2025-05-07 12:44:14,963 DEBUG   SenderThread:18716 [sender.py:send_request():409] send_request: poll_exit
+2025-05-07 12:44:14,963 DEBUG   HandlerThread:18716 [handler.py:handle_request():146] handle_request: sampled_history
+2025-05-07 12:44:14,963 DEBUG   SenderThread:18716 [sender.py:send_request():409] send_request: server_info
+2025-05-07 12:44:14,963 DEBUG   HandlerThread:18716 [handler.py:handle_request():146] handle_request: internal_messages
+2025-05-07 12:44:14,964 DEBUG   HandlerThread:18716 [handler.py:handle_request():146] handle_request: job_info
+2025-05-07 12:44:15,251 DEBUG   SenderThread:18716 [sender.py:send_request():409] send_request: job_info
+2025-05-07 12:44:15,251 INFO    MainThread:18716 [wandb_run.py:_footer_history_summary_info():3837] rendering history
+2025-05-07 12:44:15,251 INFO    MainThread:18716 [wandb_run.py:_footer_history_summary_info():3869] rendering summary
+2025-05-07 12:44:15,251 INFO    MainThread:18716 [wandb_run.py:_footer_sync_info():3796] logging synced files
+2025-05-07 12:44:15,252 DEBUG   HandlerThread:18716 [handler.py:handle_request():146] handle_request: shutdown
+2025-05-07 12:44:15,252 INFO    HandlerThread:18716 [handler.py:finish():866] shutting down handler
+2025-05-07 12:44:15,966 INFO    WriterThread:18716 [datastore.py:close():294] close: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250507_124401-5jcv06gz\run-5jcv06gz.wandb
+2025-05-07 12:44:16,263 INFO    SenderThread:18716 [sender.py:finish():1548] shutting down sender
+2025-05-07 12:44:16,263 INFO    SenderThread:18716 [file_pusher.py:finish():175] shutting down file pusher
+2025-05-07 12:44:16,263 INFO    SenderThread:18716 [file_pusher.py:join():181] waiting for file pusher

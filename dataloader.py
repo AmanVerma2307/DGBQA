@@ -20,19 +20,19 @@ def dataLoader(args):
 
     if(args.dataset == 'soli'):
         
-        X_train = np.transpose(np.load('./data/soli/X_train_Seen-IAR-NonShuffled_SOLI.npz')['arr_0'],(0,4,1,2,3))
-        X_dev = np.transpose(np.load('./data/soli/X_dev_Seen-IAR-NonShuffled_SOLI.npz')['arr_0'],(0,4,1,2,3))
-        y_train = np.load('./data/soli/y_train_Seen-IAR-NonShuffled_SOLI.npz')['arr_0']
-        y_dev = np.load('./data/soli/y_dev_Seen-IAR-NonShuffled_SOLI.npz')['arr_0']
-        y_train_id = np.load('./data/soli/y_train_id_Seen-IAR-NonShuffled_SOLI.npz')['arr_0']
-        y_dev_id = np.load('./data/soli/y_dev_id_Seen-IAR-NonShuffled_SOLI.npz')['arr_0']
+        #X_train = np.transpose(np.load('./data/soli/X_train_Seen-IAR-NonShuffled_SOLI.npz')['arr_0'],(0,4,1,2,3))
+        #X_dev = np.transpose(np.load('./data/soli/X_dev_Seen-IAR-NonShuffled_SOLI.npz')['arr_0'],(0,4,1,2,3))
+        #y_train = np.load('./data/soli/y_train_Seen-IAR-NonShuffled_SOLI.npz')['arr_0']
+        #y_dev = np.load('./data/soli/y_dev_Seen-IAR-NonShuffled_SOLI.npz')['arr_0']
+        #y_train_id = np.load('./data/soli/y_train_id_Seen-IAR-NonShuffled_SOLI.npz')['arr_0']
+        #y_dev_id = np.load('./data/soli/y_dev_id_Seen-IAR-NonShuffled_SOLI.npz')['arr_0']
 
-        #X_train = np.transpose(np.load('./data/soli/data/X_train_DGBQA-Seen_SOLI.npz')['arr_0'],(0,4,1,2,3))
-        #X_dev = np.transpose(np.load('./data/soli/data/X_dev_DGBQA-Seen_SOLI.npz')['arr_0'],(0,4,1,2,3))
-        #y_train = np.load('./data/soli/data/y_train_DGBQA-Seen_SOLI.npz')['arr_0']
-        #y_dev = np.load('./data/soli/data/y_dev_DGBQA-Seen_SOLI.npz')['arr_0']
-        #y_train_id = np.load('./data/soli/data/y_train_id_DGBQA-Seen_SOLI.npz')['arr_0']
-        #y_dev_id = np.load('./data/soli/data/y_dev_id_DGBQA-Seen_SOLI.npz')['arr_0']
+        X_train = np.transpose(np.load('./data/soli/data/X_train_DGBQA-Seen_SOLI.npz')['arr_0'],(0,4,1,2,3))
+        X_dev = np.transpose(np.load('./data/soli/data/X_dev_DGBQA-Seen_SOLI.npz')['arr_0'],(0,4,1,2,3))
+        y_train = np.load('./data/soli/data/y_train_DGBQA-Seen_SOLI.npz')['arr_0']
+        y_dev = np.load('./data/soli/data/y_dev_DGBQA-Seen_SOLI.npz')['arr_0']
+        y_train_id = np.load('./data/soli/data/y_train_id_DGBQA-Seen_SOLI.npz')['arr_0']
+        y_dev_id = np.load('./data/soli/data/y_dev_id_DGBQA-Seen_SOLI.npz')['arr_0']
 
         X_train, y_train, y_train_id = shuffle(X_train,y_train,y_train_id,random_state=12)
         X_dev, y_dev, y_dev_id = shuffle(X_dev, y_dev, y_dev_id,random_state=12)

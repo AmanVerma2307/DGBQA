@@ -1,0 +1,25 @@
+Traceback (most recent call last):
+  File "D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\trainer.py", line 27, in <module>
+    train_dataLoader, test_dataLoader = dataLoader(args)
+                                        ^^^^^^^^^^^^^^^^
+  File "D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\dataloader.py", line 23, in dataLoader
+    X_train = np.transpose(np.load('./data/soli/X_train_Seen-IAR-NonShuffled_SOLI.npz')['arr_0'],(0,4,1,2,3))
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\envs\gpu_torch_5\Lib\site-packages\numpy\lib\npyio.py", line 256, in __getitem__
+    return format.read_array(bytes,
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\envs\gpu_torch_5\Lib\site-packages\numpy\lib\format.py", line 831, in read_array
+    data = _read_bytes(fp, read_size, "array data")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\envs\gpu_torch_5\Lib\site-packages\numpy\lib\format.py", line 966, in _read_bytes
+    r = fp.read(size - len(data))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\envs\gpu_torch_5\Lib\zipfile\__init__.py", line 992, in read
+    data = self._read1(n)
+           ^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\envs\gpu_torch_5\Lib\zipfile\__init__.py", line 1082, in _read1
+    self._update_crc(data)
+  File "C:\Users\ASUS\anaconda3\envs\gpu_torch_5\Lib\zipfile\__init__.py", line 1007, in _update_crc
+    self._running_crc = crc32(newdata, self._running_crc)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

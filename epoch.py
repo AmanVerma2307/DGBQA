@@ -43,7 +43,7 @@ def train_epoch(dataloader,
 
             #print(loss_hgr_batch.item(),loss_id_batch.item(),loss_icgd_batch.item())
 
-            loss_batch = args.lambda_id*loss_id_batch #+ args.lambda_icgd*loss_icgd_batch
+            loss_batch = loss_hgr_batch + args.lambda_id*loss_id_batch + args.lambda_icgd*loss_icgd_batch
 
             loss_batch.backward()
             optimizer.step()
@@ -95,7 +95,7 @@ def val_epoch(dataloader,
 
             #print(loss_hgr_batch.item(),loss_id_batch.item(),loss_icgd_batch.item())
 
-            loss_batch = args.lambda_id*loss_id_batch #+ args.lambda_icgd*loss_icgd_batch
+            loss_batch = loss_hgr_batch + args.lambda_id*loss_id_batch + args.lambda_icgd*loss_icgd_batch
 
         loss_hgr = loss_hgr + loss_hgr_batch.item()*x.size(0)
         loss_id = loss_id + loss_id_batch.item()*x.size(0)

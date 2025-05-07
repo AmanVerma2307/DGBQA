@@ -38,7 +38,11 @@ class MHSA(torch.nn.Module):
         B = q.size(0) # Batch size: B
         N = q.size(2) # N: max_seq_len
 
-        attn = torch.bmm(q,k.permute((0,1,3,2)))/torch.sqrt(torch.Tensor(self.depth)) # attn -> [B,H,N,N]
+        print(q.size())
+        print(k.permute((0,1,3,2)).size(),k.is_contiguous())
+
+        attn = (q.view(-1,N,self.depth)@(k.permute((0,1,3,2))).view(-1,self.depth,N))/torch.sqrt(torch.Tensor(self.depth)) # attn -> [B*H,N,N]
+        
         attn = torch.nn.functional.softmax(attn,dim=-1) # attn -> [B,H,N,N]
         output = torch.matmul(attn,v) # [B,H,N,depth]
 
