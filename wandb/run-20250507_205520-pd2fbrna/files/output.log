@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\trainer.py", line 75, in <module>
+    optimizer = torch.optim.Rprop(model.parameters(),lr=1e-4,eps=1e-7)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Rprop.__init__() got an unexpected keyword argument 'eps'

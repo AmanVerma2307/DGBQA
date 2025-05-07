@@ -1,5 +1,5 @@
 import torch
-from summary import print_model_summary
+#from summary import print_model_summary
 
 class MHSA(torch.nn.Module):
     
@@ -25,32 +25,9 @@ class MHSA(torch.nn.Module):
         self.value_dense = torch.nn.Linear(self.d_in,
                                            self.d_model)
         
-        self.dense = torch.nn.Linear(self.d_model,
-                                     self.d_model)
+        self.projection_dense = torch.nn.Linear(self.d_model,
+                                                self.d_model)
         
-    def split_heads(self, inputs):
-        batch_size = inputs.size(0) # Batch size
-        inputs = inputs.view(batch_size,-1,self.num_heads,self.depth)
-        return inputs.permute((0,2,1,3)) # shape -> [B,H,T,D]
-    
-    def scaled_dot_product_attention(self, q, k, v):
-        
-        B = q.size(0) # Batch size: B
-        N = q.size(2) # N: max_seq_len
-
-        print(q.size())
-        print(k.permute((0,1,3,2)).size(),k.is_contiguous())
-
-        attn = (q.view(-1,N,self.depth)@(k.permute((0,1,3,2))).view(-1,self.depth,N))/torch.sqrt(torch.Tensor(self.depth)) # attn -> [B*H,N,N]
-        
-        attn = torch.nn.functional.softmax(attn,dim=-1) # attn -> [B,H,N,N]
-        output = torch.matmul(attn,v) # [B,H,N,depth]
-
-        #output = output.permute((0,2,1,3)) # Reshape: [B,H,N,depth] -> [B,N,H,depth]
-        #output = output.view(B,N,-1) # Reshape -> [B,N,d_model]
-        
-        return output
-    
     def forward(self, x):
 
         """
@@ -60,23 +37,26 @@ class MHSA(torch.nn.Module):
         1) x: Input tokens of shape [B,N,d_model]
 
         OUTPUTS:-
-        1) x: Output tokens of shape [B,B,d_model]
+        1) z: Output tokens of shape [B,N,d_model]
         """
 
-        B = x.size(0) # Batch size
-        N = x.size(1) # max_seq_len
+        B, N, d_in = x.shape # Extracting dimensions
 
-        q = self.split_heads(self.query_dense(x)) # Query -> [B,N,H,depth]
-        k = self.split_heads(self.key_dense(x)) # Key -> [B,N,H,depth]
-        v = self.split_heads(self.value_dense(x)) # Value -> [B,N,H,depth]
+        q = self.query_dense(x) # Query -> [B,N,depth]
+        k = self.key_dense(x) # Key -> [B,N,depth]
+        v = self.value_dense(x) # Value -> [B,N,depth]
 
-        x = self.scaled_dot_product_attention(q,k,v) # x -> [B,N,H,depth]
+        q = q.view(B,N,self.num_heads,self.depth).transpose(1,2) # q -> [B,H,N,depth]
+        k = k.view(B,N,self.num_heads,self.depth).transpose(1,2) # k -> [B,H,N,depth]
+        v = v.view(B,N,self.num_heads,self.depth).transpose(1,2) # v -> [B,H,N,depth]
 
-        x = x.permute((0,2,1,3)) # Reshape: [B,H,N,depth] -> [B,N,H,depth]
-        x = x.view(B,N,-1) # Reshape -> [B,N,d_model]
+        attn = q@k.transpose(2,3) # QK^T -> [B,H,N,N]
+        attn = torch.softmax(attn/k.size(-1)**0.5,dim=-1) # Attention matrix -> [B,H,N,N]
 
-        return x
-    
+        z = attn@v # Attention summation -> [B,H,N,depth]
+        z = z.transpose(1,2).contiguous().view(B,N,self.d_model) # Reshape -> [B,N,d_model]
+        z = self.projection_dense(z) # Projection -> [B,N,d_model]
+        return z
 class encoder(torch.nn.Module):
 
     """
@@ -97,12 +77,9 @@ class encoder(torch.nn.Module):
         self.rate = rate
         self.max_seq_len = max_seq_len
 
-        self.att = torch.nn.MultiheadAttention(self.d_model,
-                                               self.num_heads,
-                                               self.rate,
-                                               kdim=self.d_model,
-                                               vdim=self.d_model,
-                                               batch_first=True)
+        self.att = MHSA(self.d_model,
+                        self.d_model,
+                        self.num_heads)
         
         self.ffn = torch.nn.Sequential(
             torch.nn.Linear(self.d_model,self.dff),
@@ -119,7 +96,7 @@ class encoder(torch.nn.Module):
 
     def forward(self,x):
 
-        attn_output, _ = self.att(x,x,x) # MHSA
+        attn_output = self.att(x) # MHSA
         attn_output = self.droput1(attn_output)
         out1 = self.layernorm1(x + attn_output)
         ffn_output = self.ffn(out1)
@@ -129,23 +106,24 @@ class encoder(torch.nn.Module):
 if __name__ == "__main__":
 
     ip = torch.normal(0,1,(10,288,32))
-    ip_head = torch.normal(0,1,(10,288,32))
+    #ip_head = torch.normal(0,1,(10,288,32))
 
-    mhsa = MHSA(32,
-                32,
-                16)
-
-    #encoder_layer = encoder(32,
-    #                        16,
-    #                        128,
-    #                        0.3,
-    #                        288)
+    #mhsa = MHSA(32,32,16)
     
-    print(mhsa(ip_head).size())
-    print_model_summary(mhsa,
-                        (288,16,2))
+    #print(mhsa(ip_head).size())
+    #print_model_summary(mhsa,
+    #                    (288,32))
 
-    total_params = sum(p.numel() for p in mhsa.parameters())
+    encoder_layer = encoder(32,
+                      16,
+                      128,
+                      0.3,
+                      288)
+    
+    op = encoder_layer(ip)
+    print(op.size())
+
+    total_params = sum(p.numel() for p in encoder_layer.parameters())
     print('Total parameters: '+str(total_params))
 
     

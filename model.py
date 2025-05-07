@@ -1,4 +1,5 @@
 import torch
+from utils.encoder import *
 from utils.summary import *
 class tubeletEmbedding(torch.nn.Module):
 
@@ -138,6 +139,11 @@ class res3dViViT(torch.nn.Module):
         self.G = G # Number of gesture classes
         self.I = I # Number of identity classes
 
+        n_t = (((T - patch_size[0])//patch_size[0])+1)
+        n_h = (((H - patch_size[1])//patch_size[1])+1)
+        n_w = (((W - patch_size[2])//patch_size[2])+1)
+        self.max_seq_len = n_t*n_h*n_w
+
         ##### Convolutional layers
         self.conv11 = conv3d(self.C,16,(3,3,3))
         self.conv12 = conv3d(16,16,(3,3,3))
@@ -154,18 +160,18 @@ class res3dViViT(torch.nn.Module):
                                            self.T,
                                            self.H,
                                            self.W)        
-        ##### Encoder layers
-        self.encoder1 = torch.nn.TransformerEncoderLayer(self.embed_dim,
-                                                        self.num_heads,
-                                                        self.dff,
-                                                        self.rate,
-                                                        batch_first=True)
         
-        self.encoder2 = torch.nn.TransformerEncoderLayer(self.embed_dim,
-                                                        self.num_heads,
-                                                        self.dff,
-                                                        self.rate,
-                                                        batch_first=True)
+        self.encoder1 = encoder(self.embed_dim,
+                                self.num_heads,
+                                self.dff,
+                                self.rate,
+                                self.max_seq_len)
+        
+        self.encoder2 = encoder(self.embed_dim,
+                                self.num_heads,
+                                self.dff,
+                                self.rate,
+                                self.max_seq_len)
         
         ##### Output layers
         self.dense_op = torch.nn.Linear(self.embed_dim,32)
@@ -224,7 +230,7 @@ if __name__ == "__main__":
     device = torch.device("cuda:0")
     ip_tensor = torch.normal(mean=0.0,
                              std=1.0,
-                             size = (64,4,60,64,64)).to(device)
+                             size = (64,4,40,32,32)).to(device)
     
     def init_weights(m):
         if (isinstance(m, torch.nn.Linear) or isinstance(m, torch.nn.Conv3d)):
@@ -243,7 +249,10 @@ if __name__ == "__main__":
                        128,
                        0.3,
                        11,
-                       10)    
+                       10)
+
+    total_params = sum(p.numel() for p in model.parameters())
+    print('Total parameters: '+str(total_params))    
 
     print_model_summary(model,(4, 40, 32, 32))    
     #model.apply(init_weights)

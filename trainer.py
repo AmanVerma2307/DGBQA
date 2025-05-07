@@ -72,7 +72,7 @@ if(args.multi_gpu == False):
 criterion_hgr = torch.nn.CrossEntropyLoss()
 criterion_id = torch.nn.CrossEntropyLoss()
 criterion_icgd = icgdLoss(G,I)
-optimizer = torch.optim.Adam(model.parameters(),lr=1e-4,eps=1e-7)
+optimizer = torch.optim.NAdam(model.parameters(),lr=1e-5)
 
 #print_model_summary(model, (C,T,H,W))
 total_params = sum(p.numel() for p in model.parameters())
