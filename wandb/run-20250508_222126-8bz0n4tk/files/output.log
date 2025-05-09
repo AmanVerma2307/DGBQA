@@ -1,0 +1,11 @@
+Total parameters: 322693
+Epoch 1/150
+----------
+Traceback (most recent call last):
+  File "D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\trainer.py", line 85, in <module>
+    train_metrics, val_metrics = train_val(train_dataLoader,
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\epoch.py", line 156, in train_val
+    device,
+    ^^^^^^
+NameError: name 'device' is not defined

@@ -1,0 +1,22 @@
+
+Total parameters: 322693
+Traceback (most recent call last):
+  File "D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\trainer.py", line 81, in <module>
+    model = model.to(device)
+            ^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\envs\gpu_torch_5\Lib\site-packages\torch\nn\modules\module.py", line 1152, in to
+    return self._apply(convert)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\envs\gpu_torch_5\Lib\site-packages\torch\nn\modules\module.py", line 802, in _apply
+    module._apply(fn)
+  File "C:\Users\ASUS\anaconda3\envs\gpu_torch_5\Lib\site-packages\torch\nn\modules\module.py", line 802, in _apply
+    module._apply(fn)
+  File "C:\Users\ASUS\anaconda3\envs\gpu_torch_5\Lib\site-packages\torch\nn\modules\module.py", line 825, in _apply
+    param_applied = fn(param)
+                    ^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\envs\gpu_torch_5\Lib\site-packages\torch\nn\modules\module.py", line 1150, in convert
+    return t.to(device, dtype if t.is_floating_point() or t.is_complex() else None, non_blocking)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\envs\gpu_torch_5\Lib\site-packages\torch\cuda\__init__.py", line 302, in _lazy_init
+    torch._C._cuda_init()
+KeyboardInterrupt

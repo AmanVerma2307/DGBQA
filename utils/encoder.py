@@ -1,5 +1,5 @@
 import torch
-#from summary import print_model_summary
+from utils.summary import print_model_summary
 
 class MHSA(torch.nn.Module):
     

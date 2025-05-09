@@ -29,7 +29,7 @@ def train_epoch(dataloader,
         x = x.to(device)
         y_hgr = y_hgr.type(torch.LongTensor).to(device)
         y_id = y_id.type(torch.LongTensor).to(device)
-
+        
         model.train()
         optimizer.zero_grad()
 
@@ -46,6 +46,9 @@ def train_epoch(dataloader,
             loss_batch = loss_hgr_batch + args.lambda_id*loss_id_batch + args.lambda_icgd*loss_icgd_batch
 
             loss_batch.backward()
+
+            #torch.nn.utils.clip_grad_norm_(model.parameters(),2.0)
+
             optimizer.step()
 
         loss_hgr = loss_hgr + loss_hgr_batch.item()*x.size(0)

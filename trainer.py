@@ -9,7 +9,7 @@ from parser import parse
 from dataloader import dataLoader
 from utils.summary import *
 
-seed = 3047
+seed = 10
 
 torch.manual_seed(seed)
 torch.cuda.manual_seed(seed)
@@ -72,7 +72,7 @@ if(args.multi_gpu == False):
 criterion_hgr = torch.nn.CrossEntropyLoss()
 criterion_id = torch.nn.CrossEntropyLoss()
 criterion_icgd = icgdLoss(G,I)
-optimizer = torch.optim.NAdam(model.parameters(),lr=1e-5)
+optimizer = torch.optim.Adam(model.parameters(),lr=1e-4,eps=4e-3)
 
 #print_model_summary(model, (C,T,H,W))
 total_params = sum(p.numel() for p in model.parameters())

@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\trainer.py", line 27, in <module>
+    train_dataLoader, test_dataLoader = dataLoader(args)
+                                        ^^^^^^^^^^^^^^^^
+  File "D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\dataloader.py", line 37, in dataLoader
+    X_train, y_train, y_train_id = shuffle(X_train,y_train,y_train_id,random_state=12)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\envs\gpu_torch_5\Lib\site-packages\sklearn\utils\__init__.py", line 691, in shuffle
+    return resample(
+           ^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\envs\gpu_torch_5\Lib\site-packages\sklearn\utils\_param_validation.py", line 214, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\envs\gpu_torch_5\Lib\site-packages\sklearn\utils\__init__.py", line 617, in resample
+    resampled_arrays = [_safe_indexing(a, indices) for a in arrays]
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
