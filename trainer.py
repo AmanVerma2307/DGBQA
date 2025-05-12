@@ -4,7 +4,7 @@ import torch
 import numpy as np
 from model import *
 from epoch import *
-from icgd import icgdLoss
+from icgd import icgdLoss, icgdLossIterator
 from parser import parse
 from dataloader import dataLoader
 from utils.summary import *
@@ -71,8 +71,9 @@ if(args.multi_gpu == False):
     device = torch.device(args.device)
 criterion_hgr = torch.nn.CrossEntropyLoss()
 criterion_id = torch.nn.CrossEntropyLoss()
-criterion_icgd = icgdLoss(G,I)
-optimizer = torch.optim.Adam(model.parameters(),lr=1e-4,eps=4e-3)
+criterion_icgd = icgdLossIterator(G,I)
+criterion_icgd.requires_grad_ = False
+optimizer = torch.optim.Adam(model.parameters(),lr=1e-4,eps=1e-7)
 
 #print_model_summary(model, (C,T,H,W))
 total_params = sum(p.numel() for p in model.parameters())

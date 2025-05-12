@@ -44,7 +44,6 @@ def train_epoch(dataloader,
             #print(loss_hgr_batch.item(),loss_id_batch.item(),loss_icgd_batch.item())
 
             loss_batch = loss_hgr_batch + args.lambda_id*loss_id_batch + args.lambda_icgd*loss_icgd_batch
-
             loss_batch.backward()
 
             #torch.nn.utils.clip_grad_norm_(model.parameters(),2.0)

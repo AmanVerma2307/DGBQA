@@ -105,8 +105,6 @@ class ICGD_Loss(tf.keras.losses.Loss):
         y_hgr = y_stash[:,0] # HGR Labels - Useful for Boolean Mask Creation
         y_id = y_stash[:,3:] # Identity Labels - Useful for Disentangling Terms Estimation        
 
-        print(y_id.shape)
-
         ##### L2-Normalization
         f_theta = tf.math.l2_normalize(f_theta,axis=1)
 
@@ -141,9 +139,8 @@ class ICGD_Loss(tf.keras.losses.Loss):
                                                                                       tf.math.multiply(tf.cast(delta_curr,dtype=tf.float32),G_bar)))))
             Normalization_Factor = tf.math.reduce_sum(tf.math.multiply(Gamma_bar,tf.math.multiply(tf.math.multiply(tf.cast(LT_Mask,dtype=tf.float32),tf.cast(delta_bar,dtype=tf.float32)),
                                                                        tf.cast(delta_curr,dtype=tf.float32)))) 
+            
             Loss_CG_ID = Loss_CG_ID + (Loss_CG_ID_curr/(Normalization_Factor+1))
-
-        tf.print(mask_val)
 
         return Loss_CG_ID/self.I
     
@@ -160,7 +157,7 @@ def get_ohot(vec):
     vec_ohot[np.arange(vec.size),vec] = 1
     return vec_ohot
 
-f_theta = np.load('./data/soli/DGBQA_CGID_Res3D-ViViT_1-pt5_SOLI.npz',allow_pickle=True)['arr_0']
+f_theta = np.load('./data/soli/DGBQA_CGID_Res3D-ViViT_1pt5-pt5_SOLI.npz',allow_pickle=True)['arr_0']
 y_hgr = np.load('./data/soli/y_dev_DeltaDistance_SOLI.npz',allow_pickle=True)['arr_0']
 y_id = np.load('./data/soli/y_dev_id_DeltaDistance_SOLI.npz',allow_pickle=True)['arr_0']
 

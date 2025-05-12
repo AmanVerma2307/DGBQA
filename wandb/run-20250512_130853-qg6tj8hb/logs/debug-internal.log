@@ -1,0 +1,5 @@
+2025-05-12 13:08:53,757 INFO    StreamThr :37912 [internal.py:wandb_internal():86] W&B internal server running at pid: 37912, started at: 2025-05-12 13:08:53.757983
+2025-05-12 13:08:53,759 DEBUG   HandlerThread:37912 [handler.py:handle_request():146] handle_request: status
+2025-05-12 13:08:53,763 INFO    WriterThread:37912 [datastore.py:open_for_write():85] open: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250512_130853-qg6tj8hb\run-qg6tj8hb.wandb
+2025-05-12 13:08:53,764 DEBUG   SenderThread:37912 [sender.py:send():382] send: header
+2025-05-12 13:08:53,802 DEBUG   SenderThread:37912 [sender.py:send():382] send: run
