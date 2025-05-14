@@ -1,0 +1,599 @@
+2025-05-13 15:26:59,418 INFO    MainThread:20404 [internal.py:wandb_internal():89] W&B internal server running at pid: 20404, started at: 2025-05-13 15:26:59.416842
+2025-05-13 15:26:59,420 INFO    WriterThread:20404 [datastore.py:open_for_write():77] open: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\run-eh1vp5as.wandb
+2025-05-13 15:26:59,420 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: check_version
+2025-05-13 15:26:59,422 DEBUG   SenderThread:20404 [sender.py:send():235] send: header
+2025-05-13 15:26:59,422 DEBUG   SenderThread:20404 [sender.py:send_request():249] send_request: check_version
+2025-05-13 15:27:00,013 DEBUG   SenderThread:20404 [sender.py:send():235] send: run
+2025-05-13 15:27:00,764 INFO    SenderThread:20404 [dir_watcher.py:__init__():169] watching files in: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files
+2025-05-13 15:27:00,764 INFO    SenderThread:20404 [sender.py:_start_run_threads():809] run started: eh1vp5as with start time 1747130218
+2025-05-13 15:27:00,765 DEBUG   SenderThread:20404 [sender.py:send():235] send: summary
+2025-05-13 15:27:00,765 INFO    SenderThread:20404 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2025-05-13 15:27:00,766 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: run_start
+2025-05-13 15:27:01,020 DEBUG   HandlerThread:20404 [meta.py:__init__():36] meta init
+2025-05-13 15:27:01,020 DEBUG   HandlerThread:20404 [meta.py:__init__():50] meta init done
+2025-05-13 15:27:01,020 DEBUG   HandlerThread:20404 [meta.py:probe():210] probe
+2025-05-13 15:27:01,036 DEBUG   HandlerThread:20404 [meta.py:_setup_git():200] setup git
+2025-05-13 15:27:01,157 DEBUG   HandlerThread:20404 [meta.py:_setup_git():207] setup git done
+2025-05-13 15:27:01,157 DEBUG   HandlerThread:20404 [meta.py:_save_pip():54] save pip
+2025-05-13 15:27:01,160 DEBUG   HandlerThread:20404 [meta.py:_save_pip():68] save pip done
+2025-05-13 15:27:01,160 DEBUG   HandlerThread:20404 [meta.py:_save_conda():75] save conda
+2025-05-13 15:27:01,163 ERROR   HandlerThread:20404 [meta.py:_save_conda():84] Error saving conda packages
+Traceback (most recent call last):
+  File "C:\Users\ASUS\anaconda3\envs\gpu_torch_6\lib\site-packages\wandb\sdk\internal\meta.py", line 80, in _save_conda
+    subprocess.call(
+  File "C:\Users\ASUS\anaconda3\envs\gpu_torch_6\lib\subprocess.py", line 345, in call
+    with Popen(*popenargs, **kwargs) as p:
+  File "C:\Users\ASUS\anaconda3\envs\gpu_torch_6\lib\subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "C:\Users\ASUS\anaconda3\envs\gpu_torch_6\lib\subprocess.py", line 1456, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+2025-05-13 15:27:01,165 DEBUG   HandlerThread:20404 [meta.py:_save_conda():85] save conda done
+2025-05-13 15:27:01,165 DEBUG   HandlerThread:20404 [meta.py:probe():248] probe done
+2025-05-13 15:27:01,173 DEBUG   SenderThread:20404 [sender.py:send():235] send: files
+2025-05-13 15:27:01,173 INFO    SenderThread:20404 [sender.py:_save_file():944] saving file wandb-metadata.json with policy now
+2025-05-13 15:27:01,180 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: stop_status
+2025-05-13 15:27:01,180 DEBUG   SenderThread:20404 [sender.py:send_request():249] send_request: stop_status
+2025-05-13 15:27:01,770 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_created():217] file/dir created: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\requirements.txt
+2025-05-13 15:27:01,771 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_created():217] file/dir created: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\wandb-metadata.json
+2025-05-13 15:27:01,771 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_created():217] file/dir created: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\conda-environment.yaml
+2025-05-13 15:27:01,772 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_created():217] file/dir created: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:27:01,772 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_created():217] file/dir created: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\wandb-summary.json
+2025-05-13 15:27:02,102 INFO    Thread-17 :20404 [upload_job.py:push():137] Uploaded file C:\Users\ASUS\AppData\Local\Temp\tmpc6rataojwandb\y14554ch-wandb-metadata.json
+2025-05-13 15:27:11,831 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:27:15,837 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:27:16,683 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: stop_status
+2025-05-13 15:27:16,683 DEBUG   SenderThread:20404 [sender.py:send_request():249] send_request: stop_status
+2025-05-13 15:27:17,854 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:27:19,860 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:27:21,868 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:27:23,879 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:27:25,884 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:27:27,894 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:27:29,911 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:27:31,719 DEBUG   SenderThread:20404 [sender.py:send():235] send: stats
+2025-05-13 15:27:31,915 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:27:32,119 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: stop_status
+2025-05-13 15:27:32,119 DEBUG   SenderThread:20404 [sender.py:send_request():249] send_request: stop_status
+2025-05-13 15:27:33,945 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:27:35,959 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:27:37,968 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:27:39,971 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:27:41,985 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:27:43,998 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:27:45,206 DEBUG   SenderThread:20404 [sender.py:send():235] send: history
+2025-05-13 15:27:45,228 DEBUG   SenderThread:20404 [sender.py:send():235] send: summary
+2025-05-13 15:27:45,238 INFO    SenderThread:20404 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2025-05-13 15:27:46,004 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\wandb-summary.json
+2025-05-13 15:27:46,004 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:27:47,572 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: stop_status
+2025-05-13 15:27:47,572 DEBUG   SenderThread:20404 [sender.py:send_request():249] send_request: stop_status
+2025-05-13 15:27:48,007 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:27:50,013 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:27:52,017 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:27:54,027 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:27:56,033 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:27:58,042 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:28:00,056 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:28:02,074 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:28:03,033 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: stop_status
+2025-05-13 15:28:03,033 DEBUG   SenderThread:20404 [sender.py:send_request():249] send_request: stop_status
+2025-05-13 15:28:03,957 DEBUG   SenderThread:20404 [sender.py:send():235] send: stats
+2025-05-13 15:28:04,079 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:28:06,095 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:28:08,107 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:28:10,116 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:28:12,134 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:28:14,148 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:28:16,152 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:28:18,182 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:28:18,454 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: stop_status
+2025-05-13 15:28:18,454 DEBUG   SenderThread:20404 [sender.py:send_request():249] send_request: stop_status
+2025-05-13 15:28:20,193 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:28:20,825 DEBUG   SenderThread:20404 [sender.py:send():235] send: history
+2025-05-13 15:28:20,837 DEBUG   SenderThread:20404 [sender.py:send():235] send: summary
+2025-05-13 15:28:20,851 INFO    SenderThread:20404 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2025-05-13 15:28:21,195 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\wandb-summary.json
+2025-05-13 15:28:22,198 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:28:24,211 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:28:26,233 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:28:28,244 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:28:30,247 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:28:32,258 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:28:34,199 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: stop_status
+2025-05-13 15:28:34,199 DEBUG   SenderThread:20404 [sender.py:send_request():249] send_request: stop_status
+2025-05-13 15:28:34,271 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:28:36,241 DEBUG   SenderThread:20404 [sender.py:send():235] send: stats
+2025-05-13 15:28:36,277 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:28:38,289 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:28:40,305 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:28:42,312 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:28:44,331 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:28:46,348 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:28:48,369 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:28:49,597 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: stop_status
+2025-05-13 15:28:49,598 DEBUG   SenderThread:20404 [sender.py:send_request():249] send_request: stop_status
+2025-05-13 15:28:50,382 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:28:52,394 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:28:54,400 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:28:56,409 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:28:57,227 DEBUG   SenderThread:20404 [sender.py:send():235] send: history
+2025-05-13 15:28:57,243 DEBUG   SenderThread:20404 [sender.py:send():235] send: summary
+2025-05-13 15:28:57,259 INFO    SenderThread:20404 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2025-05-13 15:28:57,412 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\wandb-summary.json
+2025-05-13 15:28:58,426 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:29:00,448 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:29:02,455 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:29:04,465 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:29:05,038 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: stop_status
+2025-05-13 15:29:05,038 DEBUG   SenderThread:20404 [sender.py:send_request():249] send_request: stop_status
+2025-05-13 15:29:06,475 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:29:08,482 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:29:08,594 DEBUG   SenderThread:20404 [sender.py:send():235] send: stats
+2025-05-13 15:29:10,495 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:29:12,503 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:29:14,516 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:29:16,518 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:29:18,531 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:29:20,400 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: stop_status
+2025-05-13 15:29:20,400 DEBUG   SenderThread:20404 [sender.py:send_request():249] send_request: stop_status
+2025-05-13 15:29:20,539 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:29:22,556 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:29:24,570 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:29:26,590 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:29:28,599 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:29:30,611 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:29:32,615 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:29:34,627 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:29:35,482 DEBUG   SenderThread:20404 [sender.py:send():235] send: history
+2025-05-13 15:29:35,500 DEBUG   SenderThread:20404 [sender.py:send():235] send: summary
+2025-05-13 15:29:35,512 INFO    SenderThread:20404 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2025-05-13 15:29:35,631 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\wandb-summary.json
+2025-05-13 15:29:35,785 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: stop_status
+2025-05-13 15:29:35,785 DEBUG   SenderThread:20404 [sender.py:send_request():249] send_request: stop_status
+2025-05-13 15:29:36,637 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:29:38,653 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:29:40,663 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:29:40,909 DEBUG   SenderThread:20404 [sender.py:send():235] send: stats
+2025-05-13 15:29:42,672 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:29:44,672 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:29:46,685 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:29:48,690 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:29:50,714 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:29:51,155 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: stop_status
+2025-05-13 15:29:51,155 DEBUG   SenderThread:20404 [sender.py:send_request():249] send_request: stop_status
+2025-05-13 15:29:52,747 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:29:54,757 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:29:56,766 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:29:58,778 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:30:00,792 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:30:02,798 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:30:04,805 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:30:06,609 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: stop_status
+2025-05-13 15:30:06,609 DEBUG   SenderThread:20404 [sender.py:send_request():249] send_request: stop_status
+2025-05-13 15:30:06,818 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:30:08,825 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:30:10,839 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:30:12,846 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:30:13,163 DEBUG   SenderThread:20404 [sender.py:send():235] send: stats
+2025-05-13 15:30:14,862 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:30:15,434 DEBUG   SenderThread:20404 [sender.py:send():235] send: history
+2025-05-13 15:30:15,460 DEBUG   SenderThread:20404 [sender.py:send():235] send: summary
+2025-05-13 15:30:15,479 INFO    SenderThread:20404 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2025-05-13 15:30:15,866 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\wandb-summary.json
+2025-05-13 15:30:15,866 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:30:16,873 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:30:18,884 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:30:20,898 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:30:22,030 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: stop_status
+2025-05-13 15:30:22,030 DEBUG   SenderThread:20404 [sender.py:send_request():249] send_request: stop_status
+2025-05-13 15:30:22,911 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:30:24,940 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:30:26,949 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:30:28,974 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:30:30,982 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:30:32,996 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:30:35,004 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:30:37,017 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:30:37,452 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: stop_status
+2025-05-13 15:30:37,452 DEBUG   SenderThread:20404 [sender.py:send_request():249] send_request: stop_status
+2025-05-13 15:30:39,025 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:30:41,035 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:30:43,053 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:30:45,061 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:30:45,426 DEBUG   SenderThread:20404 [sender.py:send():235] send: stats
+2025-05-13 15:30:47,078 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:30:49,093 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:30:51,105 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:30:52,851 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: stop_status
+2025-05-13 15:30:52,851 DEBUG   SenderThread:20404 [sender.py:send_request():249] send_request: stop_status
+2025-05-13 15:30:53,131 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:30:55,153 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:30:55,974 DEBUG   SenderThread:20404 [sender.py:send():235] send: history
+2025-05-13 15:30:55,991 DEBUG   SenderThread:20404 [sender.py:send():235] send: summary
+2025-05-13 15:30:56,007 INFO    SenderThread:20404 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2025-05-13 15:30:56,162 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\wandb-summary.json
+2025-05-13 15:30:57,171 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:30:58,172 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:30:59,183 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:31:01,198 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:31:03,209 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:31:05,226 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:31:07,236 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:31:08,402 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: stop_status
+2025-05-13 15:31:08,402 DEBUG   SenderThread:20404 [sender.py:send_request():249] send_request: stop_status
+2025-05-13 15:31:09,243 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:31:11,245 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:31:12,260 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:31:14,269 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:31:16,284 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:31:17,781 DEBUG   SenderThread:20404 [sender.py:send():235] send: stats
+2025-05-13 15:31:18,286 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:31:20,296 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:31:22,299 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:31:23,854 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: stop_status
+2025-05-13 15:31:23,854 DEBUG   SenderThread:20404 [sender.py:send_request():249] send_request: stop_status
+2025-05-13 15:31:24,307 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:31:26,318 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:31:28,331 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:31:30,339 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:31:32,352 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:31:34,358 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:31:35,529 DEBUG   SenderThread:20404 [sender.py:send():235] send: history
+2025-05-13 15:31:35,541 DEBUG   SenderThread:20404 [sender.py:send():235] send: summary
+2025-05-13 15:31:35,550 INFO    SenderThread:20404 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2025-05-13 15:31:36,363 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\wandb-summary.json
+2025-05-13 15:31:36,363 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:31:38,384 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:31:39,234 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: stop_status
+2025-05-13 15:31:39,234 DEBUG   SenderThread:20404 [sender.py:send_request():249] send_request: stop_status
+2025-05-13 15:31:40,411 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:31:42,427 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:31:44,438 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:31:46,451 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:31:48,453 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:31:50,190 DEBUG   SenderThread:20404 [sender.py:send():235] send: stats
+2025-05-13 15:31:50,470 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:31:52,479 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:31:54,494 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:31:54,637 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: stop_status
+2025-05-13 15:31:54,637 DEBUG   SenderThread:20404 [sender.py:send_request():249] send_request: stop_status
+2025-05-13 15:31:56,502 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:31:58,521 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:32:00,526 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:32:02,541 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:32:04,552 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:32:06,571 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:32:08,583 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:32:10,017 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: stop_status
+2025-05-13 15:32:10,018 DEBUG   SenderThread:20404 [sender.py:send_request():249] send_request: stop_status
+2025-05-13 15:32:10,596 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:32:12,603 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:32:14,619 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:32:15,235 DEBUG   SenderThread:20404 [sender.py:send():235] send: history
+2025-05-13 15:32:15,257 DEBUG   SenderThread:20404 [sender.py:send():235] send: summary
+2025-05-13 15:32:15,267 INFO    SenderThread:20404 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2025-05-13 15:32:15,627 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\wandb-summary.json
+2025-05-13 15:32:16,637 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:32:18,650 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:32:20,663 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:32:22,523 DEBUG   SenderThread:20404 [sender.py:send():235] send: stats
+2025-05-13 15:32:22,666 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:32:24,683 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:32:25,417 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: stop_status
+2025-05-13 15:32:25,418 DEBUG   SenderThread:20404 [sender.py:send_request():249] send_request: stop_status
+2025-05-13 15:32:26,697 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:32:28,705 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:32:30,713 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:32:32,724 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:32:34,743 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:32:36,749 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:32:38,760 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:32:40,776 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:32:40,827 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: stop_status
+2025-05-13 15:32:40,827 DEBUG   SenderThread:20404 [sender.py:send_request():249] send_request: stop_status
+2025-05-13 15:32:42,793 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:32:44,800 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:32:46,813 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:32:48,821 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:32:50,830 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:32:52,839 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:32:54,726 DEBUG   SenderThread:20404 [sender.py:send():235] send: stats
+2025-05-13 15:32:54,846 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:32:55,950 DEBUG   SenderThread:20404 [sender.py:send():235] send: history
+2025-05-13 15:32:55,968 DEBUG   SenderThread:20404 [sender.py:send():235] send: summary
+2025-05-13 15:32:55,981 INFO    SenderThread:20404 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2025-05-13 15:32:56,465 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: stop_status
+2025-05-13 15:32:56,465 DEBUG   SenderThread:20404 [sender.py:send_request():249] send_request: stop_status
+2025-05-13 15:32:56,891 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\wandb-summary.json
+2025-05-13 15:32:56,891 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:32:58,909 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:33:00,936 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:33:02,954 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:33:04,959 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:33:06,965 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:33:08,966 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:33:10,976 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:33:12,065 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: stop_status
+2025-05-13 15:33:12,065 DEBUG   SenderThread:20404 [sender.py:send_request():249] send_request: stop_status
+2025-05-13 15:33:12,986 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:33:14,999 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:33:17,003 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:33:19,016 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:33:21,030 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:33:23,041 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:33:25,046 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:33:27,060 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:33:27,098 DEBUG   SenderThread:20404 [sender.py:send():235] send: stats
+2025-05-13 15:33:27,531 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: stop_status
+2025-05-13 15:33:27,531 DEBUG   SenderThread:20404 [sender.py:send_request():249] send_request: stop_status
+2025-05-13 15:33:29,071 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:33:31,081 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:33:33,099 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:33:35,106 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:33:36,240 DEBUG   SenderThread:20404 [sender.py:send():235] send: history
+2025-05-13 15:33:36,290 DEBUG   SenderThread:20404 [sender.py:send():235] send: summary
+2025-05-13 15:33:36,294 INFO    SenderThread:20404 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2025-05-13 15:33:37,117 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\wandb-summary.json
+2025-05-13 15:33:37,117 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:33:39,134 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:33:41,142 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:33:42,960 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: stop_status
+2025-05-13 15:33:42,960 DEBUG   SenderThread:20404 [sender.py:send_request():249] send_request: stop_status
+2025-05-13 15:33:43,149 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:33:45,165 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:33:47,185 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:33:49,199 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:33:51,211 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:33:53,215 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:33:55,228 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:33:57,249 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:33:58,488 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: stop_status
+2025-05-13 15:33:58,488 DEBUG   SenderThread:20404 [sender.py:send_request():249] send_request: stop_status
+2025-05-13 15:33:59,265 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:33:59,425 DEBUG   SenderThread:20404 [sender.py:send():235] send: stats
+2025-05-13 15:34:01,272 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:34:03,283 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:34:05,292 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:34:07,311 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:34:09,321 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:34:11,331 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:34:13,374 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:34:14,112 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: stop_status
+2025-05-13 15:34:14,113 DEBUG   SenderThread:20404 [sender.py:send_request():249] send_request: stop_status
+2025-05-13 15:34:15,385 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:34:16,915 DEBUG   SenderThread:20404 [sender.py:send():235] send: history
+2025-05-13 15:34:16,921 DEBUG   SenderThread:20404 [sender.py:send():235] send: summary
+2025-05-13 15:34:16,926 INFO    SenderThread:20404 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2025-05-13 15:34:17,401 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\wandb-summary.json
+2025-05-13 15:34:17,401 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:34:19,414 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:34:21,422 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:34:23,435 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:34:25,444 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:34:27,451 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:34:29,469 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:34:29,642 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: stop_status
+2025-05-13 15:34:29,642 DEBUG   SenderThread:20404 [sender.py:send_request():249] send_request: stop_status
+2025-05-13 15:34:31,475 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:34:31,766 DEBUG   SenderThread:20404 [sender.py:send():235] send: stats
+2025-05-13 15:34:33,485 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:34:35,489 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:34:37,501 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:34:39,512 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:34:41,522 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:34:43,530 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:34:45,204 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: stop_status
+2025-05-13 15:34:45,204 DEBUG   SenderThread:20404 [sender.py:send_request():249] send_request: stop_status
+2025-05-13 15:34:45,546 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:34:47,556 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:34:49,576 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:34:51,590 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:34:53,600 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:34:55,608 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:34:57,624 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:34:58,000 DEBUG   SenderThread:20404 [sender.py:send():235] send: history
+2025-05-13 15:34:58,014 DEBUG   SenderThread:20404 [sender.py:send():235] send: summary
+2025-05-13 15:34:58,025 INFO    SenderThread:20404 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2025-05-13 15:34:58,633 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\wandb-summary.json
+2025-05-13 15:34:59,648 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:35:00,553 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: stop_status
+2025-05-13 15:35:00,553 DEBUG   SenderThread:20404 [sender.py:send_request():249] send_request: stop_status
+2025-05-13 15:35:01,670 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:35:03,677 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:35:04,045 DEBUG   SenderThread:20404 [sender.py:send():235] send: stats
+2025-05-13 15:35:05,691 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:35:07,707 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:35:09,719 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:35:11,730 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:35:13,742 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:35:15,755 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:35:16,077 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: stop_status
+2025-05-13 15:35:16,077 DEBUG   SenderThread:20404 [sender.py:send_request():249] send_request: stop_status
+2025-05-13 15:35:17,760 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:35:19,763 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:35:21,771 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:35:23,782 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:35:25,794 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:35:27,804 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:35:29,816 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:35:31,578 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: stop_status
+2025-05-13 15:35:31,578 DEBUG   SenderThread:20404 [sender.py:send_request():249] send_request: stop_status
+2025-05-13 15:35:31,826 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:35:33,841 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:35:35,851 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:35:36,271 DEBUG   SenderThread:20404 [sender.py:send():235] send: stats
+2025-05-13 15:35:37,863 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:35:39,252 DEBUG   SenderThread:20404 [sender.py:send():235] send: history
+2025-05-13 15:35:39,256 DEBUG   SenderThread:20404 [sender.py:send():235] send: summary
+2025-05-13 15:35:39,261 INFO    SenderThread:20404 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2025-05-13 15:35:39,873 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\wandb-summary.json
+2025-05-13 15:35:39,873 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:35:41,877 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:35:43,892 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:35:45,905 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:35:47,313 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: stop_status
+2025-05-13 15:35:47,313 DEBUG   SenderThread:20404 [sender.py:send_request():249] send_request: stop_status
+2025-05-13 15:35:47,929 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:35:49,946 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:35:51,948 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:35:53,961 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:35:55,972 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:35:57,986 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:35:59,996 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:36:02,006 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:36:02,739 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: stop_status
+2025-05-13 15:36:02,739 DEBUG   SenderThread:20404 [sender.py:send_request():249] send_request: stop_status
+2025-05-13 15:36:04,017 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:36:06,034 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:36:08,043 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:36:08,474 DEBUG   SenderThread:20404 [sender.py:send():235] send: stats
+2025-05-13 15:36:10,050 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:36:12,067 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:36:14,076 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:36:16,093 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:36:18,102 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:36:18,267 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: stop_status
+2025-05-13 15:36:18,267 DEBUG   SenderThread:20404 [sender.py:send_request():249] send_request: stop_status
+2025-05-13 15:36:20,108 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:36:21,089 DEBUG   SenderThread:20404 [sender.py:send():235] send: history
+2025-05-13 15:36:21,089 DEBUG   SenderThread:20404 [sender.py:send():235] send: summary
+2025-05-13 15:36:21,102 INFO    SenderThread:20404 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2025-05-13 15:36:21,110 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\wandb-summary.json
+2025-05-13 15:36:22,113 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:36:23,119 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:36:24,129 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:36:26,142 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:36:28,153 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:36:30,178 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:36:32,197 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:36:33,712 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: stop_status
+2025-05-13 15:36:33,712 DEBUG   SenderThread:20404 [sender.py:send_request():249] send_request: stop_status
+2025-05-13 15:36:34,205 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:36:35,301 WARNING MainThread:20404 [internal.py:wandb_internal():152] Internal process interrupt: 1
+2025-05-13 15:36:35,551 DEBUG   SenderThread:20404 [sender.py:send():235] send: history
+2025-05-13 15:36:35,554 DEBUG   SenderThread:20404 [sender.py:send():235] send: summary
+2025-05-13 15:36:35,554 INFO    SenderThread:20404 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2025-05-13 15:36:36,151 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: poll_exit
+2025-05-13 15:36:36,151 DEBUG   SenderThread:20404 [sender.py:send():235] send: telemetry
+2025-05-13 15:36:36,151 DEBUG   SenderThread:20404 [sender.py:send():235] send: exit
+2025-05-13 15:36:36,151 INFO    SenderThread:20404 [sender.py:send_exit():371] handling exit code: 255
+2025-05-13 15:36:36,151 INFO    SenderThread:20404 [sender.py:send_exit():373] handling runtime: 575
+2025-05-13 15:36:36,159 INFO    SenderThread:20404 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2025-05-13 15:36:36,159 INFO    SenderThread:20404 [sender.py:send_exit():379] send defer
+2025-05-13 15:36:36,159 DEBUG   SenderThread:20404 [sender.py:send_request():249] send_request: poll_exit
+2025-05-13 15:36:36,159 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: defer
+2025-05-13 15:36:36,159 INFO    HandlerThread:20404 [handler.py:handle_request_defer():154] handle defer: 0
+2025-05-13 15:36:36,159 DEBUG   SenderThread:20404 [sender.py:send_request():249] send_request: defer
+2025-05-13 15:36:36,159 INFO    SenderThread:20404 [sender.py:send_request_defer():388] handle sender defer: 0
+2025-05-13 15:36:36,159 INFO    SenderThread:20404 [sender.py:transition_state():392] send defer: 1
+2025-05-13 15:36:36,159 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: defer
+2025-05-13 15:36:36,159 INFO    HandlerThread:20404 [handler.py:handle_request_defer():154] handle defer: 1
+2025-05-13 15:36:36,249 DEBUG   SenderThread:20404 [sender.py:send_request():249] send_request: defer
+2025-05-13 15:36:36,249 INFO    SenderThread:20404 [sender.py:send_request_defer():388] handle sender defer: 1
+2025-05-13 15:36:36,249 INFO    SenderThread:20404 [sender.py:transition_state():392] send defer: 2
+2025-05-13 15:36:36,249 DEBUG   SenderThread:20404 [sender.py:send():235] send: stats
+2025-05-13 15:36:36,249 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: defer
+2025-05-13 15:36:36,249 INFO    HandlerThread:20404 [handler.py:handle_request_defer():154] handle defer: 2
+2025-05-13 15:36:36,249 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\wandb-summary.json
+2025-05-13 15:36:36,249 DEBUG   SenderThread:20404 [sender.py:send_request():249] send_request: defer
+2025-05-13 15:36:36,249 INFO    Thread-12 :20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:36:36,249 INFO    SenderThread:20404 [sender.py:send_request_defer():388] handle sender defer: 2
+2025-05-13 15:36:36,249 INFO    SenderThread:20404 [sender.py:transition_state():392] send defer: 3
+2025-05-13 15:36:36,249 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: defer
+2025-05-13 15:36:36,249 INFO    HandlerThread:20404 [handler.py:handle_request_defer():154] handle defer: 3
+2025-05-13 15:36:36,249 DEBUG   SenderThread:20404 [sender.py:send():235] send: summary
+2025-05-13 15:36:36,259 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: poll_exit
+2025-05-13 15:36:36,259 INFO    SenderThread:20404 [sender.py:_save_file():944] saving file wandb-summary.json with policy end
+2025-05-13 15:36:36,264 DEBUG   SenderThread:20404 [sender.py:send_request():249] send_request: defer
+2025-05-13 15:36:36,264 INFO    SenderThread:20404 [sender.py:send_request_defer():388] handle sender defer: 3
+2025-05-13 15:36:36,264 INFO    SenderThread:20404 [sender.py:transition_state():392] send defer: 4
+2025-05-13 15:36:36,264 DEBUG   SenderThread:20404 [sender.py:send_request():249] send_request: poll_exit
+2025-05-13 15:36:36,264 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: defer
+2025-05-13 15:36:36,264 INFO    HandlerThread:20404 [handler.py:handle_request_defer():154] handle defer: 4
+2025-05-13 15:36:36,264 DEBUG   SenderThread:20404 [sender.py:send_request():249] send_request: defer
+2025-05-13 15:36:36,264 INFO    SenderThread:20404 [sender.py:send_request_defer():388] handle sender defer: 4
+2025-05-13 15:36:36,364 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: poll_exit
+2025-05-13 15:36:36,830 INFO    SenderThread:20404 [sender.py:transition_state():392] send defer: 5
+2025-05-13 15:36:36,830 DEBUG   SenderThread:20404 [sender.py:send_request():249] send_request: poll_exit
+2025-05-13 15:36:36,830 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: defer
+2025-05-13 15:36:36,830 INFO    HandlerThread:20404 [handler.py:handle_request_defer():154] handle defer: 5
+2025-05-13 15:36:36,830 DEBUG   SenderThread:20404 [sender.py:send_request():249] send_request: defer
+2025-05-13 15:36:36,830 INFO    SenderThread:20404 [sender.py:send_request_defer():388] handle sender defer: 5
+2025-05-13 15:36:36,830 INFO    SenderThread:20404 [dir_watcher.py:finish():283] shutting down directory watcher
+2025-05-13 15:36:36,936 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: poll_exit
+2025-05-13 15:36:37,258 INFO    SenderThread:20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\wandb-summary.json
+2025-05-13 15:36:37,258 INFO    SenderThread:20404 [dir_watcher.py:_on_file_modified():230] file/dir modified: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\config.yaml
+2025-05-13 15:36:37,258 INFO    SenderThread:20404 [dir_watcher.py:finish():313] scan: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files
+2025-05-13 15:36:37,258 INFO    SenderThread:20404 [dir_watcher.py:finish():327] scan save: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\conda-environment.yaml conda-environment.yaml
+2025-05-13 15:36:37,258 INFO    SenderThread:20404 [dir_watcher.py:finish():327] scan save: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\config.yaml config.yaml
+2025-05-13 15:36:37,258 INFO    SenderThread:20404 [dir_watcher.py:finish():327] scan save: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log output.log
+2025-05-13 15:36:37,258 INFO    SenderThread:20404 [dir_watcher.py:finish():327] scan save: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\requirements.txt requirements.txt
+2025-05-13 15:36:37,258 INFO    SenderThread:20404 [dir_watcher.py:finish():327] scan save: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\wandb-metadata.json wandb-metadata.json
+2025-05-13 15:36:37,258 INFO    SenderThread:20404 [dir_watcher.py:finish():327] scan save: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\wandb-summary.json wandb-summary.json
+2025-05-13 15:36:37,268 INFO    SenderThread:20404 [sender.py:transition_state():392] send defer: 6
+2025-05-13 15:36:37,268 DEBUG   SenderThread:20404 [sender.py:send_request():249] send_request: poll_exit
+2025-05-13 15:36:37,268 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: defer
+2025-05-13 15:36:37,268 INFO    HandlerThread:20404 [handler.py:handle_request_defer():154] handle defer: 6
+2025-05-13 15:36:37,268 DEBUG   SenderThread:20404 [sender.py:send_request():249] send_request: defer
+2025-05-13 15:36:37,268 INFO    SenderThread:20404 [sender.py:send_request_defer():388] handle sender defer: 6
+2025-05-13 15:36:37,268 INFO    SenderThread:20404 [file_pusher.py:finish():177] shutting down file pusher
+2025-05-13 15:36:37,371 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: poll_exit
+2025-05-13 15:36:37,371 DEBUG   SenderThread:20404 [sender.py:send_request():249] send_request: poll_exit
+2025-05-13 15:36:37,474 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: poll_exit
+2025-05-13 15:36:37,474 DEBUG   SenderThread:20404 [sender.py:send_request():249] send_request: poll_exit
+2025-05-13 15:36:37,586 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: poll_exit
+2025-05-13 15:36:37,586 DEBUG   SenderThread:20404 [sender.py:send_request():249] send_request: poll_exit
+2025-05-13 15:36:37,695 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: poll_exit
+2025-05-13 15:36:37,695 DEBUG   SenderThread:20404 [sender.py:send_request():249] send_request: poll_exit
+2025-05-13 15:36:37,803 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: poll_exit
+2025-05-13 15:36:37,803 DEBUG   SenderThread:20404 [sender.py:send_request():249] send_request: poll_exit
+2025-05-13 15:36:37,908 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: poll_exit
+2025-05-13 15:36:37,908 DEBUG   SenderThread:20404 [sender.py:send_request():249] send_request: poll_exit
+2025-05-13 15:36:38,016 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: poll_exit
+2025-05-13 15:36:38,016 DEBUG   SenderThread:20404 [sender.py:send_request():249] send_request: poll_exit
+2025-05-13 15:36:38,083 INFO    Thread-18 :20404 [upload_job.py:push():137] Uploaded file D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\config.yaml
+2025-05-13 15:36:38,124 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: poll_exit
+2025-05-13 15:36:38,124 DEBUG   SenderThread:20404 [sender.py:send_request():249] send_request: poll_exit
+2025-05-13 15:36:38,225 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: poll_exit
+2025-05-13 15:36:38,225 DEBUG   SenderThread:20404 [sender.py:send_request():249] send_request: poll_exit
+2025-05-13 15:36:38,274 INFO    Thread-19 :20404 [upload_job.py:push():137] Uploaded file D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\output.log
+2025-05-13 15:36:38,274 INFO    Thread-20 :20404 [upload_job.py:push():137] Uploaded file D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\requirements.txt
+2025-05-13 15:36:38,335 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: poll_exit
+2025-05-13 15:36:38,335 DEBUG   SenderThread:20404 [sender.py:send_request():249] send_request: poll_exit
+2025-05-13 15:36:38,413 INFO    Thread-21 :20404 [upload_job.py:push():137] Uploaded file D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\files\wandb-summary.json
+2025-05-13 15:36:38,447 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: poll_exit
+2025-05-13 15:36:38,447 DEBUG   SenderThread:20404 [sender.py:send_request():249] send_request: poll_exit
+2025-05-13 15:36:38,558 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: poll_exit
+2025-05-13 15:36:38,558 DEBUG   SenderThread:20404 [sender.py:send_request():249] send_request: poll_exit
+2025-05-13 15:36:38,614 INFO    Thread-11 (_thread_body):20404 [sender.py:transition_state():392] send defer: 7
+2025-05-13 15:36:38,614 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: defer
+2025-05-13 15:36:38,614 INFO    HandlerThread:20404 [handler.py:handle_request_defer():154] handle defer: 7
+2025-05-13 15:36:38,614 DEBUG   SenderThread:20404 [sender.py:send_request():249] send_request: defer
+2025-05-13 15:36:38,614 INFO    SenderThread:20404 [sender.py:send_request_defer():388] handle sender defer: 7
+2025-05-13 15:36:38,669 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: poll_exit
+2025-05-13 15:36:39,823 INFO    SenderThread:20404 [sender.py:transition_state():392] send defer: 8
+2025-05-13 15:36:39,829 DEBUG   SenderThread:20404 [sender.py:send_request():249] send_request: poll_exit
+2025-05-13 15:36:39,859 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: defer
+2025-05-13 15:36:39,864 INFO    HandlerThread:20404 [handler.py:handle_request_defer():154] handle defer: 8
+2025-05-13 15:36:39,869 DEBUG   SenderThread:20404 [sender.py:send_request():249] send_request: defer
+2025-05-13 15:36:39,872 INFO    SenderThread:20404 [sender.py:send_request_defer():388] handle sender defer: 8
+2025-05-13 15:36:39,878 INFO    SenderThread:20404 [sender.py:transition_state():392] send defer: 9
+2025-05-13 15:36:39,904 DEBUG   SenderThread:20404 [sender.py:send():235] send: final
+2025-05-13 15:36:39,911 DEBUG   SenderThread:20404 [sender.py:send():235] send: footer
+2025-05-13 15:36:39,919 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: defer
+2025-05-13 15:36:39,924 INFO    HandlerThread:20404 [handler.py:handle_request_defer():154] handle defer: 9
+2025-05-13 15:36:39,928 DEBUG   SenderThread:20404 [sender.py:send_request():249] send_request: defer
+2025-05-13 15:36:39,932 INFO    SenderThread:20404 [sender.py:send_request_defer():388] handle sender defer: 9
+2025-05-13 15:36:40,020 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: poll_exit
+2025-05-13 15:36:40,027 DEBUG   SenderThread:20404 [sender.py:send_request():249] send_request: poll_exit
+2025-05-13 15:36:40,033 INFO    SenderThread:20404 [file_pusher.py:join():182] waiting for file pusher
+2025-05-13 15:36:42,078 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: get_summary
+2025-05-13 15:36:42,413 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: sampled_history
+2025-05-13 15:36:42,564 DEBUG   HandlerThread:20404 [handler.py:handle_request():131] handle_request: shutdown
+2025-05-13 15:36:42,567 INFO    HandlerThread:20404 [handler.py:finish():739] shutting down handler
+2025-05-13 15:36:45,692 INFO    WriterThread:20404 [datastore.py:close():281] close: D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\wandb\run-20250513_152657-eh1vp5as\run-eh1vp5as.wandb
+2025-05-13 15:36:45,727 INFO    SenderThread:20404 [sender.py:finish():1075] shutting down sender
+2025-05-13 15:36:45,731 INFO    SenderThread:20404 [file_pusher.py:finish():177] shutting down file pusher
+2025-05-13 15:36:45,734 INFO    SenderThread:20404 [file_pusher.py:join():182] waiting for file pusher
+2025-05-13 15:36:46,691 INFO    MainThread:20404 [internal.py:handle_exit():79] Internal process exited

@@ -20,3 +20,9 @@ config: {}
 2025-05-12 19:41:54,039 INFO    MainThread:10764 [wandb_run.py:_on_init():2263] got version response upgrade_message: "wandb version 0.19.11 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
 
 2025-05-12 19:41:54,039 INFO    MainThread:10764 [wandb_init.py:init():800] starting run threads in backend
+2025-05-12 19:41:55,199 INFO    MainThread:10764 [wandb_run.py:_console_start():2233] atexit reg
+2025-05-12 19:41:55,199 INFO    MainThread:10764 [wandb_run.py:_redirect():2088] redirect: wrap_raw
+2025-05-12 19:41:55,199 INFO    MainThread:10764 [wandb_run.py:_redirect():2153] Wrapping output streams.
+2025-05-12 19:41:55,199 INFO    MainThread:10764 [wandb_run.py:_redirect():2178] Redirects installed.
+2025-05-12 19:41:55,199 INFO    MainThread:10764 [wandb_init.py:init():841] run started, returning control to user process
+2025-05-12 19:42:04,896 INFO    MainThread:10764 [wandb_watch.py:watch():51] Watching

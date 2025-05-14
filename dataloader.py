@@ -34,8 +34,8 @@ def dataLoader(args):
         y_train_id = np.load('./data/soli/data/y_train_id_DGBQA-Seen_SOLI.npz')['arr_0']
         y_dev_id = np.load('./data/soli/data/y_dev_id_DGBQA-Seen_SOLI.npz')['arr_0']
 
-        X_train, y_train, y_train_id = shuffle(X_train,y_train,y_train_id,random_state=12)
-        X_dev, y_dev, y_dev_id = shuffle(X_dev, y_dev, y_dev_id,random_state=12)
+        #X_train, y_train, y_train_id = shuffle(X_train,y_train,y_train_id,random_state=12)
+        #X_dev, y_dev, y_dev_id = shuffle(X_dev, y_dev, y_dev_id,random_state=12)
 
     if(args.dataset == 'scut'):
 

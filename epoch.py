@@ -46,16 +46,19 @@ def train_epoch(dataloader,
             loss_batch = loss_hgr_batch + args.lambda_id*loss_id_batch + args.lambda_icgd*loss_icgd_batch
             loss_batch.backward()
 
+            #loss = torch.tensor([loss_hgr_batch, loss_id_batch, loss_icgd_batch])
+            #loss.backward(gradient=torch.tensor([1.0,args.lambda_id,args.lambda_icgd]))
+
             #torch.nn.utils.clip_grad_norm_(model.parameters(),2.0)
 
             optimizer.step()
 
-        loss_hgr = loss_hgr + loss_hgr_batch.item()*x.size(0)
-        loss_id = loss_id + loss_id_batch.item()*x.size(0)
-        loss_icgd = loss_icgd + loss_icgd_batch.item()*x.size(0)
-        loss = loss + loss_batch.item()*x.size(0)
-        acc_hgr = acc_hgr + torch.sum(y_hgr == torch.argmax(dense_hgr,dim=-1))
-        acc_id = acc_id + torch.sum(y_id == torch.argmax(dense_id,dim=-1))
+        loss_hgr = loss_hgr + loss_hgr_batch.detach().item()*x.size(0)
+        loss_id = loss_id + loss_id_batch.detach().item()*x.size(0)
+        loss_icgd = loss_icgd + loss_icgd_batch.detach().item()*x.size(0)
+        loss = loss + (loss_hgr_batch + args.lambda_id*loss_id_batch + args.lambda_icgd*loss_icgd_batch).detach().item()*x.size(0)
+        acc_hgr = acc_hgr + (torch.sum(y_hgr == torch.argmax(dense_hgr,dim=-1))).detach().item()
+        acc_id = acc_id + (torch.sum(y_id == torch.argmax(dense_id,dim=-1))).detach().item()
         total_samples = total_samples + x.size(0)
 
     return loss_hgr/total_samples, loss_id/total_samples, loss_icgd/total_samples, loss/total_samples, acc_hgr/total_samples, acc_id/total_samples
@@ -97,14 +100,14 @@ def val_epoch(dataloader,
 
             #print(loss_hgr_batch.item(),loss_id_batch.item(),loss_icgd_batch.item())
 
-            loss_batch = loss_hgr_batch + args.lambda_id*loss_id_batch + args.lambda_icgd*loss_icgd_batch
+            #loss_batch = loss_hgr_batch + args.lambda_id*loss_id_batch + args.lambda_icgd*loss_icgd_batch
 
-        loss_hgr = loss_hgr + loss_hgr_batch.item()*x.size(0)
-        loss_id = loss_id + loss_id_batch.item()*x.size(0)
-        loss_icgd = loss_icgd + loss_icgd_batch.item()*x.size(0)
-        loss = loss + loss_batch.item()*x.size(0)
-        acc_hgr = acc_hgr + torch.sum(y_hgr == torch.argmax(dense_hgr,dim=-1))
-        acc_id = acc_id + torch.sum(y_id == torch.argmax(dense_id,dim=-1))
+        loss_hgr = loss_hgr + loss_hgr_batch.detach().item()*x.size(0)
+        loss_id = loss_id + loss_id_batch.detach().item()*x.size(0)
+        loss_icgd = loss_icgd + loss_icgd_batch.detach().item()*x.size(0)
+        loss = loss + (loss_hgr_batch + args.lambda_id*loss_id_batch + args.lambda_icgd*loss_icgd_batch).detach().item()*x.size(0)
+        acc_hgr = acc_hgr + (torch.sum(y_hgr == torch.argmax(dense_hgr,dim=-1))).detach().item()
+        acc_id = acc_id + (torch.sum(y_id == torch.argmax(dense_id,dim=-1))).detach().item()
         total_samples = total_samples + x.size(0)
 
     return loss_hgr/total_samples, loss_id/total_samples, loss_icgd/total_samples, loss/total_samples, acc_hgr/total_samples, acc_id/total_samples

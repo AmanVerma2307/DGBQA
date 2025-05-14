@@ -1,0 +1,29 @@
+{
+    "os": "Windows-10-10.0.26100-SP0",
+    "python": "3.10.16",
+    "heartbeatAt": "2025-05-13T09:27:55.648706",
+    "startedAt": "2025-05-13T09:27:53.411847",
+    "docker": null,
+    "gpu": "NVIDIA GeForce GTX 1660 Ti",
+    "gpu_count": 1,
+    "cpu_count": 12,
+    "cuda": null,
+    "args": [
+        "--exp_name",
+        "ICGD_Iterator-LossProp1",
+        "--num_epochs",
+        "150"
+    ],
+    "state": "running",
+    "program": "D:\\IIT Delhi\\Projects\\Adversarial games\\Experimentation\\codeBase\\trainer.py",
+    "codePath": "trainer.py",
+    "git": {
+        "remote": "https://github.com/AmanVerma2307/DGBQA.git",
+        "commit": "e4920ad35a0cee5f95c5086de4adf5b131019254"
+    },
+    "email": "eez227536@ee.iitd.ac.in",
+    "root": "D:/IIT Delhi/Projects/Adversarial games/Experimentation/codeBase",
+    "host": "LAPTOP-PANL57F2",
+    "username": "ASUS",
+    "executable": "C:\\Users\\ASUS\\anaconda3\\envs\\gpu_torch_6\\python.exe"
+}

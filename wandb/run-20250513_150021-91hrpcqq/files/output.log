@@ -1,0 +1,13 @@
+
+  0%|[34m                                                                                                                                                                       [39m| 0/52 [00:00<?, ?it/s]
+Total parameters: 322693
+Epoch 1/150
+  0%|[34m                                                                                                                                                                       [39m| 0/52 [00:04<?, ?it/s]
+Traceback (most recent call last):
+  File "D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\trainer.py", line 86, in <module>
+    train_metrics, val_metrics = train_val(train_dataLoader,
+  File "D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\epoch.py", line 155, in train_val
+    loss_hgr_train_curr, loss_id_train_curr, loss_icgd_train_curr, loss_train_curr, acc_hgr_train_curr, acc_id_train_curr = train_epoch(train_loader,
+  File "D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\epoch.py", line 52, in train_epoch
+    args.lambda_id*loss_id_batch.backward(retain_graph=True)
+TypeError: unsupported operand type(s) for *: 'float' and 'NoneType'
