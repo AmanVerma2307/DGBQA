@@ -1,0 +1,19 @@
+Total parameters: 322693
+Epoch 1/150
+----------
+  2%|[34m███                                                                                                                                                            [39m| 1/52 [00:02<02:28,  2.91s/it]
+Traceback (most recent call last):
+  File "D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\trainer.py", line 90, in <module>
+    train_metrics, val_metrics = train_val(train_dataLoader,
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\epoch.py", line 154, in train_val
+    loss_hgr_train_curr, loss_id_train_curr, loss_icgd_train_curr, loss_train_curr, acc_hgr_train_curr, acc_id_train_curr = train_epoch(train_loader,
+                                                                                                                            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\epoch.py", line 54, in train_epoch
+    optimizer.step()
+  File "C:\Users\ASUS\anaconda3\envs\gpu_torch_5\Lib\site-packages\torch\optim\optimizer.py", line 385, in wrapper
+    out = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\utils\adamTorch\CustomAdam.py", line 59, in step
+    first_moment_estimate.mul_(param_group["bias_m1"]).add_(gradients * (1.0 - param_group["bias_m1"]))
+RuntimeError: The size of tensor a (10) must match the size of tensor b (3) at non-singleton dimension 4
