@@ -47,8 +47,8 @@ if(args.dataset == 'soli'):
     cm_plot_labels = ['Pinch index','Palm tilt','Finger Slider','Pinch pinky','Slow Swipe','Fast Swipe','Push','Pull','Finger rub','Circle','Palm hold']
     colors = ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd", "#8c564b", "#e377c2", "#7f7f7f", "#bcbd22", "#17becf","yellow"]
 
-    y_dev = np.load('./Datasets/SOLI/Metrics/Delta Distance/y_dev_DeltaDistance_SOLI.npz',allow_pickle=True)['arr_0']
-    y_dev_id = np.load('./Datasets/SOLI/Metrics/Delta Distance/y_dev_id_DeltaDistance_SOLI.npz',allow_pickle=True)['arr_0']
+    y_dev = np.load('./data/soli/data/y_dev_DGBQA-Seen_SOLI.npz',allow_pickle=True)['arr_0']
+    y_dev_id = np.load('./data/soli/data/y_dev_DGBQA-Seen_SOLI.npz',allow_pickle=True)['arr_0']
 
 ###### Model
 if(args.model == 'res3dViViT'):
@@ -66,25 +66,27 @@ if(args.model == 'res3dViViT'):
                        G,
                        I)
     
-model.load_state_dict('./models/'+args.exp_name+'.h5')
-    
+model.load_state_dict(torch.load('./models/'+args.exp_name+'.pth', weights_only=True)) 
+model.eval()
+
 ###### Evaluation
 
 ##### Defining essentials
 if(args.multi_gpu == False):
     device = torch.device(args.device)
+    model = model.to(device)
 
 g_hgr, g_id, f_theta = eval(test_dataLoader,
                             model,
                             device,
                             args)
-f_theta = torch.nn.functional.normalize(f_theta,dim=-1).numpy()
+f_theta = torch.nn.functional.normalize(torch.from_numpy(f_theta),dim=-1).numpy()
 
 _, _, f_theta_ns = eval(test_dataLoader_ns,
                         model,
                         device,
                         args) # Non-shuffled 
-f_theta_ns = torch.nn.functional.normalize(f_theta_ns,dim=-1).numpy()
+f_theta_ns = torch.nn.functional.normalize(torch.from_numpy(f_theta_ns),dim=-1).numpy()
 
 G_bar = np.matmul(f_theta,f_theta.T) # Gram-Matrix
 G_bar_ns = np.matmul(f_theta_ns,f_theta_ns.T) # Gram-matrix non_shuffled

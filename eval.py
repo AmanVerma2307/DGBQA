@@ -33,11 +33,11 @@ def eval(dataloader,
 
         model.eval()
         with torch.set_grad_enabled(False):
-            dense_hgr, dense_id, f_theta = model.forward()
+            dense_hgr, dense_id, embeddings = model(x)
 
         for hgr_item, id_item, f_theta_item in zip(dense_hgr.detach().cpu().numpy(),
                                                    dense_id.detach().cpu().numpy(),
-                                                   f_theta.detach().cpu().numpy()):
+                                                   embeddings.detach().cpu().numpy()):
             
             g_hgr.append(hgr_item)
             g_id.append(id_item)
@@ -50,13 +50,13 @@ def eval(dataloader,
     acc_hgr = acc_hgr/total_samples 
     acc_id = acc_id/total_samples
 
-    print('HGR Acc: '+str(acc_hgr.detach().item())) # HGR Accuracy
-    print('ID Acc: '+str(acc_id.detach().item())) # ID Accuracy
+    print('HGR Acc: '+str(acc_hgr)) # HGR Accuracy
+    print('ID Acc: '+str(acc_id)) # ID Accuracy
 
     if(writer == True):
         result_file = open('./results/'+args.exp_name+'.txt','w')
-        result_file.write('HGR Acc: '+str(acc_hgr.item())+"\n")
-        result_file.write('ID Acc: '+str(acc_id.item())+"\n")
+        result_file.write('HGR Acc: '+str(acc_hgr)+"\n")
+        result_file.write('ID Acc: '+str(acc_id)+"\n")
         result_file.close()
 
     return np.array(hgr_item), np.array(id_item), np.array(f_theta)
