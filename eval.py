@@ -50,10 +50,10 @@ def eval(dataloader,
     acc_hgr = acc_hgr/total_samples 
     acc_id = acc_id/total_samples
 
-    print('HGR Acc: '+str(acc_hgr)) # HGR Accuracy
-    print('ID Acc: '+str(acc_id)) # ID Accuracy
-
     if(writer == True):
+        print('HGR Acc: '+str(acc_hgr)) # HGR Accuracy
+        print('ID Acc: '+str(acc_id)) # ID Accuracy
+
         result_file = open('./results/'+args.exp_name+'.txt','w')
         result_file.write('HGR Acc: '+str(acc_hgr)+"\n")
         result_file.write('ID Acc: '+str(acc_id)+"\n")

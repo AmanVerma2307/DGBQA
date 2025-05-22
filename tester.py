@@ -79,13 +79,15 @@ if(args.multi_gpu == False):
 g_hgr, g_id, f_theta = eval(test_dataLoader,
                             model,
                             device,
-                            args)
+                            args,
+                            writer=True)
 f_theta = torch.nn.functional.normalize(torch.from_numpy(f_theta),dim=-1).numpy()
 
 _, _, f_theta_ns = eval(test_dataLoader_ns,
                         model,
                         device,
-                        args) # Non-shuffled 
+                        args,
+                        writer=False) # Non-shuffled 
 f_theta_ns = torch.nn.functional.normalize(torch.from_numpy(f_theta_ns),dim=-1).numpy()
 
 G_bar = np.matmul(f_theta,f_theta.T) # Gram-Matrix
@@ -148,7 +150,6 @@ plot_GramMatrix(cm=G_bar_ns,filepath=filepath_gram_ns)
 ##### Embedding Function
 col_mean = np.nanmean(f_theta, axis=0)
 inds = np.where(np.isnan(f_theta))
-#print(inds)
 f_theta[inds] = np.take(col_mean, inds[1])
 
 ##### Saving Embeddings
