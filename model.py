@@ -103,6 +103,7 @@ class posEncoding(torch.nn.Module):
         """
         positions = torch.range(0,self.max_seq_len-1,1)
         return x + self.embedding(positions)
+    
 class res3dViViT(torch.nn.Module):
 
     """

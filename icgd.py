@@ -167,7 +167,6 @@ if __name__ == "__main__":
     icgd_loss = icgdLossIterator(11,10).to(device)
     loss = icgd_loss(y_hgr,y_id,f_theta)
     print(loss.item())
-    print('done!')
     
     ##### Gramian matrix
     #a = torch.normal(0,1,size=(10,32))

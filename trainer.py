@@ -9,6 +9,8 @@ from parser import parse
 from dataloader import dataLoader
 from utils.summary import *
 from utils.adamTorch.CustomAdam import *
+from types import SimpleNamespace
+from timm.optim.optim_factory import create_optimizer
 
 seed = 10
 
@@ -74,7 +76,7 @@ criterion_hgr = torch.nn.CrossEntropyLoss()
 criterion_id = torch.nn.CrossEntropyLoss()
 criterion_icgd = icgdLossIterator(G,I)
 criterion_icgd.requires_grad_ = False
-optimizer = torch.optim.Adam(model.parameters(),lr=1e-4,eps=1e-7)
+#optimizer = torch.optim.Adam(model.parameters(),lr=1e-4,eps=1e-7)
 
 #print_model_summary(model, (C,T,H,W))
 total_params = sum(p.numel() for p in model.parameters())
@@ -82,6 +84,16 @@ print('Total parameters: '+str(total_params))
 
 model = model.to(device)
 wandb.watch(model,criterion_id,log="all",log_freq=1)
+
+argsOptim = SimpleNamespace()
+
+argsOptim.weight_decay = 0
+argsOptim.lr = 1e-4
+argsOptim.opt = 'adam'
+argsOptim.momentum = 0.9
+args.eps = 1e-7
+
+optimizer = create_optimizer(argsOptim, model)
 
 ##### Training and validation loop
 train_metrics, val_metrics = train_val(train_dataLoader,
