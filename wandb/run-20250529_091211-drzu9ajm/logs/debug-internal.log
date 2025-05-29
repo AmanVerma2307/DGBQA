@@ -1,0 +1,15 @@
+{"time":"2025-05-29T09:12:11.7378852+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.11","symlink path":"D:\\IIT Delhi\\Projects\\Adversarial games\\Experimentation\\codeBase\\wandb\\run-20250529_091211-drzu9ajm\\logs\\debug-core.log"}
+{"time":"2025-05-29T09:12:13.9277212+05:30","level":"INFO","msg":"created new stream","id":"drzu9ajm"}
+{"time":"2025-05-29T09:12:13.9277212+05:30","level":"INFO","msg":"stream: started","id":"drzu9ajm"}
+{"time":"2025-05-29T09:12:13.9277212+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"drzu9ajm"}
+{"time":"2025-05-29T09:12:13.9277212+05:30","level":"INFO","msg":"sender: started","stream_id":"drzu9ajm"}
+{"time":"2025-05-29T09:12:13.9277212+05:30","level":"INFO","msg":"handler: started","stream_id":"drzu9ajm"}
+{"time":"2025-05-29T09:12:14.3048659+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-05-29T09:12:52.897073+05:30","level":"INFO","msg":"stream: closing","id":"drzu9ajm"}
+{"time":"2025-05-29T09:12:52.897073+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-05-29T09:12:52.897073+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-05-29T09:12:54.1601168+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-05-29T09:12:54.7024258+05:30","level":"INFO","msg":"handler: closed","stream_id":"drzu9ajm"}
+{"time":"2025-05-29T09:12:54.7024258+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"drzu9ajm"}
+{"time":"2025-05-29T09:12:54.7024258+05:30","level":"INFO","msg":"sender: closed","stream_id":"drzu9ajm"}
+{"time":"2025-05-29T09:12:54.7024258+05:30","level":"INFO","msg":"stream: closed","id":"drzu9ajm"}

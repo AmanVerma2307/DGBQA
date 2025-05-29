@@ -57,6 +57,7 @@ class MHSA(torch.nn.Module):
         z = z.transpose(1,2).contiguous().view(B,N,self.d_model) # Reshape -> [B,N,d_model]
         z = self.projection_dense(z) # Projection -> [B,N,d_model]
         return z
+    
 class encoder(torch.nn.Module):
 
     """
