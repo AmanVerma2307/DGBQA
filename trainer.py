@@ -65,7 +65,8 @@ if(args.model == 'res3dViViT'):
                        G,
                        I)
     
-model.apply(init_weights)
+model.load_state_dict(torch.load('./models/timm_optimizer_lambda-icgd-1e-3.pth',weights_only=True))
+#model.apply(init_weights)
     
 ###### Training and validation
 
@@ -106,6 +107,6 @@ train_metrics, val_metrics = train_val(train_dataLoader,
                                        args)
 
 ##### Saving
-np.savez_compressed('./model history/'+args.exp_name+'_trainMetrics.npz',np.array(train_metrics.cpu()))
-np.savez_compressed('./model history/'+args.exp_name+'_valMetrics.npz',np.array(val_metrics.cpu()))
+np.savez_compressed('./model history/'+args.exp_name+'_trainMetrics.npz',np.array(train_metrics))
+np.savez_compressed('./model history/'+args.exp_name+'_valMetrics.npz',np.array(val_metrics))
  
