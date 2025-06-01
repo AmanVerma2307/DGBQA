@@ -1,0 +1,7 @@
+{"time":"2025-06-02T03:48:18.5610598+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.11","symlink path":"D:\\IIT Delhi\\Projects\\Adversarial games\\Experimentation\\codeBase\\wandb\\run-20250602_034818-h8wfruaj\\logs\\debug-core.log"}
+{"time":"2025-06-02T03:48:19.1991659+05:30","level":"INFO","msg":"created new stream","id":"h8wfruaj"}
+{"time":"2025-06-02T03:48:19.1996875+05:30","level":"INFO","msg":"stream: started","id":"h8wfruaj"}
+{"time":"2025-06-02T03:48:19.1996875+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"h8wfruaj"}
+{"time":"2025-06-02T03:48:19.1996875+05:30","level":"INFO","msg":"handler: started","stream_id":"h8wfruaj"}
+{"time":"2025-06-02T03:48:19.1996875+05:30","level":"INFO","msg":"sender: started","stream_id":"h8wfruaj"}
+{"time":"2025-06-02T03:48:19.7343095+05:30","level":"INFO","msg":"Starting system monitor"}
