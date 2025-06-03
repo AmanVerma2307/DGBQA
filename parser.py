@@ -27,6 +27,10 @@ def parse():
                         type=str,
                         default='res3dViViT',
                         help="Model to be used")
+    parser.add_argument('--res3dvivit_heads',
+                        type=int,
+                        default=2,
+                        help="Number of heads to be used")
     parser.add_argument('--lambda_id',
                         type=float,
                         default=1.0,

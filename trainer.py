@@ -39,7 +39,7 @@ if(args.dataset == 'soli'):
     C = 4
     d_model = 32
     dff = 256
-    num_heads = 2
+    num_heads = args.res3dvivit_heads
     rate = 0.1
     G = 11
     I = 10

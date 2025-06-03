@@ -1,6 +1,7 @@
 import torch
 from utils.encoder import *
 from utils.summary import *
+
 class tubeletEmbedding(torch.nn.Module):
 
     def __init__(self,
