@@ -121,14 +121,13 @@ print('nAr: '+str(nAr))
 print('nAr_star_++: '+str(nAr_star_plusplus))
 print('Ar_comp: '+str(Ar_comp))
 
-measure = ['model','r','R','Psi','Cd','nAr*','ArComp']
+measure = ['model','r','R','Psi','Cd','nAr*']
 measureVal = [str(args.exp_name),
               str(round(rank_dev,4)),
               str(round(relevance,4)),
               str(round(d,4)),
               str(round(C_I,4)),
-              str(round(nAr_star_plusplus,4)),
-              str(round(Ar_comp,4))]
+              str(round(nAr_star_plusplus,4))]
 
 # run.summary['r'] = rank_dev
 # run.summary['Relevance'] = relevance
@@ -148,13 +147,13 @@ if(args.init == 1): # True: First writing
             scoreFile.write(str(item)+'                             ')
         elif(item_idx == 1):
             scoreFile.write(str(item)+'             ')
-        elif(item_idx > 1 and item_idx <= 5):
+        elif(item_idx > 1 and item_idx <= 4):
             scoreFile.write(str(item)+'       ')
         else:
             scoreFile.write(str(item)+"\n")
 
     for item_idx, item in enumerate(measureVal):
-        if(item_idx <= 5):
+        if(item_idx <= 4):
             scoreFile.write(str(item)+'     ')
         else:
             scoreFile.write(str(item)+"\n")
@@ -162,7 +161,7 @@ if(args.init == 1): # True: First writing
 if(args.init == 0):
     scoreFile = open('./scoreFiles/'+args.filePath+'.txt','a')
     for item_idx, item in enumerate(measureVal):
-        if(item_idx <= 5):
+        if(item_idx <= 4):
             scoreFile.write(str(item)+'    ')
         else:
             scoreFile.write(str(item)+"\n")
