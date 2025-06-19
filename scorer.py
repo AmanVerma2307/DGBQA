@@ -1,4 +1,5 @@
 ######## Importing libraries
+import wandb
 import argparse
 import numpy as np
 from _scorer.DGBQA_Score import gbqa_delta_dist_compute
@@ -13,13 +14,31 @@ parser = argparse.ArgumentParser()
 parser.add_argument("--exp_name",
                     type=str,
                     help="Name of the Experiment being run, will be used saving the model and correponding outputs")
+parser.add_argument('--filePath',
+                    type=str,
+                    default='',
+                    help="Path to the saver file")
+parser.add_argument('--init',
+                    type=int,
+                    default=0,
+                    help="If true, then the metric writes the measure titles")
 
 args = parser.parse_args()
+
+# api = wandb.Api()
+# runs = api.runs(path="eez227536-iit-delhi/dgbqaCodebase")
+
+# for i in runs:
+#   if(str(i.name) == args.exp_name):
+#      runId = i.id
+#      break
+  
+# run = wandb.init(id=runId,resume=True)
 
 ####### Score estimation
 
 ##### Defining Essentials
-gesture_list = ['Pinch index','Palm tilt','Finger Slider','Pinch pinky','Slow Swipe','Fast Swipe','Push','Pull','Finger rub','Circle','Palm hold']
+gesture_list = ['Pinch index','Palm tilt','Finger slider','Pinch pinky','Slow swipe','Fast swipe','Push','Pull','Finger rub','Circle','Palm hold']
 num_subjects = 10
 num_gestures = 11
 dgbqa_score = []
@@ -101,3 +120,49 @@ print('Ar_max: '+str(Ar_max))
 print('nAr: '+str(nAr))
 print('nAr_star_++: '+str(nAr_star_plusplus))
 print('Ar_comp: '+str(Ar_comp))
+
+measure = ['model','r','R','Psi','Cd','nAr*','ArComp']
+measureVal = [str(args.exp_name),
+              str(round(rank_dev,4)),
+              str(round(relevance,4)),
+              str(round(d,4)),
+              str(round(C_I,4)),
+              str(round(nAr_star_plusplus,4)),
+              str(round(Ar_comp,4))]
+
+# run.summary['r'] = rank_dev
+# run.summary['Relevance'] = relevance
+# run.summary['Psi'] = d
+# run.summary['Cd'] = C_I
+# run.summary['Ar'] = Ar
+# run.summary['nAr*'] = nAr_star_plusplus
+# run.summary['Ar_comp'] = Ar_comp
+
+# run.summary.update()
+
+if(args.init == 1): # True: First writing
+    
+    scoreFile = open('./scoreFiles/'+args.filePath+'.txt','w')
+    for item_idx, item in enumerate(measure):
+        if(item_idx == 0):
+            scoreFile.write(str(item)+'                             ')
+        elif(item_idx == 1):
+            scoreFile.write(str(item)+'             ')
+        elif(item_idx > 1 and item_idx <= 5):
+            scoreFile.write(str(item)+'       ')
+        else:
+            scoreFile.write(str(item)+"\n")
+
+    for item_idx, item in enumerate(measureVal):
+        if(item_idx <= 5):
+            scoreFile.write(str(item)+'     ')
+        else:
+            scoreFile.write(str(item)+"\n")
+
+if(args.init == 0):
+    scoreFile = open('./scoreFiles/'+args.filePath+'.txt','a')
+    for item_idx, item in enumerate(measureVal):
+        if(item_idx <= 5):
+            scoreFile.write(str(item)+'    ')
+        else:
+            scoreFile.write(str(item)+"\n")

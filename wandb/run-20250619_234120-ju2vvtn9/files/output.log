@@ -1,0 +1,30 @@
+==============================================
+GBQA Delta Distance for Pinch index = -0.77804768314772
+==============================================
+GBQA Delta Distance for Palm tilt = -1.0066670158914746
+==============================================
+GBQA Delta Distance for Finger slider = -0.18051772265886779
+==============================================
+GBQA Delta Distance for Pinch pinky = -0.5080117158362509
+==============================================
+GBQA Delta Distance for Slow swipe = -0.7228762004899776
+==============================================
+GBQA Delta Distance for Fast swipe = 0.6697191134654916
+==============================================
+GBQA Delta Distance for Push = -1.1637299378100912
+==============================================
+GBQA Delta Distance for Pull = 0.06203384090532782
+==============================================
+GBQA Delta Distance for Finger rub = -0.6125540762114332
+==============================================
+GBQA Delta Distance for Circle = -0.8649397342881977
+==============================================
+GBQA Delta Distance for Palm hold = -0.5633899521338446
+Traceback (most recent call last):
+  File "D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\scorer.py", line 71, in <module>
+    C_I, C_D = CGID_Score_Calculator(Test_Embeddings,y_dev)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\_scorer\tfICGDScore.py", line 63, in CGID_Score_Calculator
+    f_theta = tf.math.l2_normalize(f_theta,axis=1)
+              ^^^^^^^
+AttributeError: module 'tensorflow' has no attribute 'math'

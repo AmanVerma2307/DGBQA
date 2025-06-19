@@ -1,0 +1,32 @@
+==============================================
+D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\_scorer\DGBQA_Score.py:94: RuntimeWarning: invalid value encountered in scalar divide
+  dgbqa_score = math.exp(d_c_star - d_cs_avg) - (1.0*(d_cs_avg/d_c_star)) # For Seen Identities
+GBQA Delta Distance for Pinch index = nan
+==============================================
+GBQA Delta Distance for Palm tilt = nan
+==============================================
+GBQA Delta Distance for Finger Slider = nan
+==============================================
+GBQA Delta Distance for Pinch pinky = nan
+==============================================
+GBQA Delta Distance for Slow Swipe = nan
+==============================================
+GBQA Delta Distance for Fast Swipe = nan
+==============================================
+GBQA Delta Distance for Push = nan
+==============================================
+GBQA Delta Distance for Pull = nan
+==============================================
+GBQA Delta Distance for Finger rub = nan
+==============================================
+GBQA Delta Distance for Circle = nan
+==============================================
+GBQA Delta Distance for Palm hold = nan
+Traceback (most recent call last):
+  File "D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\scorer.py", line 78, in <module>
+    rank_dev = avg_rank_deviation(e,dgbqa_score,num_gestures)
+  File "D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\_scorer\RankDeviation.py", line 56, in avg_rank_deviation
+    dgbqa_rank_curr = rank_compute(dgbqa_vec,dgbqa_val_curr,False) # DGBQA Rank
+  File "D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\_scorer\RankDeviation.py", line 29, in rank_compute
+    return rank_val
+UnboundLocalError: local variable 'rank_val' referenced before assignment
