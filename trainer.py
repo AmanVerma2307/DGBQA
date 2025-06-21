@@ -37,9 +37,10 @@ if(args.dataset == 'soli'):
     H = 32
     W = 32
     C = 4
-    d_model = 32
-    dff = 256
+    d_model = args.d_model
+    dff = args.dff
     num_heads = args.res3dvivit_heads
+    num_encoders = args.num_encoders
     rate = 0.1
     G = 11
     I = 10
@@ -63,7 +64,8 @@ if(args.model == 'res3dViViT'):
                        dff,
                        rate,
                        G,
-                       I)
+                       I,
+                       num_encoders)
     
 #model.load_state_dict(torch.load('./models/timm_optimizer_lambda-icgd-1e-3.pth',weights_only=True))
 model.apply(init_weights)

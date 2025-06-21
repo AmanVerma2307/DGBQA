@@ -124,7 +124,8 @@ class res3dViViT(torch.nn.Module):
                  dff,
                  rate,
                  G,
-                 I):
+                 I,
+                 num_encoders=2):
         
         super().__init__()
         self.input_dim = input_dim # Input channel dimensions
@@ -140,6 +141,7 @@ class res3dViViT(torch.nn.Module):
         self.rate = rate # Dropout rate
         self.G = G # Number of gesture classes
         self.I = I # Number of identity classes
+        self.num_encoders = num_encoders # Number of encoders
 
         n_t = (((T - patch_size[0])//patch_size[0])+1)
         n_h = (((H - patch_size[1])//patch_size[1])+1)
@@ -162,18 +164,89 @@ class res3dViViT(torch.nn.Module):
                                            self.T,
                                            self.H,
                                            self.W)        
-        
-        self.encoder1 = encoder(self.embed_dim,
-                                self.num_heads,
-                                self.dff,
-                                self.rate,
-                                self.max_seq_len)
-        
-        self.encoder2 = encoder(self.embed_dim,
-                                self.num_heads,
-                                self.dff,
-                                self.rate,
-                                self.max_seq_len)
+        if(num_encoders == 2):
+            self.encoder1 = encoder(self.embed_dim,
+                                    self.num_heads,
+                                    self.dff,
+                                    self.rate,
+                                    self.max_seq_len)
+            
+            self.encoder2 = encoder(self.embed_dim,
+                                    self.num_heads,
+                                    self.dff,
+                                    self.rate,
+                                    self.max_seq_len)
+            
+        if(num_encoders == 4):
+            self.encoder1 = encoder(self.embed_dim,
+                                    self.num_heads,
+                                    self.dff,
+                                    self.rate,
+                                    self.max_seq_len)
+            
+            self.encoder2 = encoder(self.embed_dim,
+                                    self.num_heads,
+                                    self.dff,
+                                    self.rate,
+                                    self.max_seq_len)
+            self.encoder3 = encoder(self.embed_dim,
+                                    self.num_heads,
+                                    self.dff,
+                                    self.rate,
+                                    self.max_seq_len)
+            
+            self.encoder4 = encoder(self.embed_dim,
+                                    self.num_heads,
+                                    self.dff,
+                                    self.rate,
+                                    self.max_seq_len)
+            
+
+        if(num_encoders == 8):
+            self.encoder1 = encoder(self.embed_dim,
+                                    self.num_heads,
+                                    self.dff,
+                                    self.rate,
+                                    self.max_seq_len)
+            
+            self.encoder2 = encoder(self.embed_dim,
+                                    self.num_heads,
+                                    self.dff,
+                                    self.rate,
+                                    self.max_seq_len)
+            self.encoder3 = encoder(self.embed_dim,
+                                    self.num_heads,
+                                    self.dff,
+                                    self.rate,
+                                    self.max_seq_len)
+            
+            self.encoder4 = encoder(self.embed_dim,
+                                    self.num_heads,
+                                    self.dff,
+                                    self.rate,
+                                    self.max_seq_len)
+            self.encoder5 = encoder(self.embed_dim,
+                                    self.num_heads,
+                                    self.dff,
+                                    self.rate,
+                                    self.max_seq_len)
+            
+            self.encoder6 = encoder(self.embed_dim,
+                                    self.num_heads,
+                                    self.dff,
+                                    self.rate,
+                                    self.max_seq_len)
+            self.encoder7 = encoder(self.embed_dim,
+                                    self.num_heads,
+                                    self.dff,
+                                    self.rate,
+                                    self.max_seq_len)
+            
+            self.encoder8 = encoder(self.embed_dim,
+                                    self.num_heads,
+                                    self.dff,
+                                    self.rate,
+                                    self.max_seq_len)
         
         ##### Output layers
         self.dense_op = torch.nn.Linear(self.embed_dim,32)
@@ -215,8 +288,25 @@ class res3dViViT(torch.nn.Module):
         x = self.embedLayer(x)
 
         ###### Transformer layer
-        x = self.encoder1(x)
-        x = self.encoder2(x)
+        if(self.num_encoders == 2):
+            x = self.encoder1(x)
+            x = self.encoder2(x)
+
+        if(self.num_encoders == 4):
+            x = self.encoder1(x)
+            x = self.encoder2(x)
+            x = self.encoder3(x)
+            x = self.encoder4(x)
+
+        if(self.num_encoders == 8):
+            x = self.encoder1(x)
+            x = self.encoder2(x)
+            x = self.encoder3(x)
+            x = self.encoder4(x)
+            x = self.encoder5(x)
+            x = self.encoder6(x)
+            x = self.encoder7(x)
+            x = self.encoder8(x)
 
         ###### Output
         f_theta = torch.nn.functional.relu(self.dense_op(torch.mean(x,dim=1,keepdim=False))) # embeddings

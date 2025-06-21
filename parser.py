@@ -31,6 +31,18 @@ def parse():
                         type=int,
                         default=2,
                         help="Number of heads to be used")
+    parser.add_argument('--num_encoders',
+                        type=int,
+                        default=2,
+                        help="Number of encoders to be used")
+    parser.add_argument('--d_model',
+                        type=int,
+                        default=32,
+                        help="Embedding dimensions")
+    parser.add_argument('--dff',
+                        type=int,
+                        default=256,
+                        help="Embedding hidden dimensions")
     parser.add_argument('--lambda_id',
                         type=float,
                         default=1.0,
