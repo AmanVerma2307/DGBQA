@@ -8,7 +8,6 @@ from icgd import icgdLoss, icgdLossIterator
 from parser import parse
 from dataloader import dataLoader
 from utils.summary import *
-from utils.adamTorch.CustomAdam import *
 from types import SimpleNamespace
 from timm.optim.optim_factory import create_optimizer
 
