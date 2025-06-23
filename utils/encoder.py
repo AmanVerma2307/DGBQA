@@ -1,5 +1,5 @@
 import torch
-from utils.summary import print_model_summary
+#from utils.summary import print_model_summary
 
 class MHSA(torch.nn.Module):
     
@@ -115,14 +115,14 @@ if __name__ == "__main__":
     #print_model_summary(mhsa,
     #                    (288,32))
 
-    encoder_layer = encoder(32,
+    encoder_layer = encoder(512,
                       16,
                       128,
                       0.3,
                       288)
     
-    op = encoder_layer(ip)
-    print(op.size())
+    #op = encoder_layer(ip)
+    #print(op.size())
 
     total_params = sum(p.numel() for p in encoder_layer.parameters())
     print('Total parameters: '+str(total_params))
