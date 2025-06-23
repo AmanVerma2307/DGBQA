@@ -30,7 +30,6 @@ train_dataLoader, test_dataLoader = dataLoader(args)
 
 if(args.dataset == 'soli'):
     input_dim = 32
-    embed_dim = 32
     patch_size = (5,5,5)
     T = 40
     H = 32
@@ -52,7 +51,6 @@ def init_weights(m):
 
 if(args.model == 'res3dViViT'):
     model = res3dViViT(input_dim,
-                       embed_dim,
                        patch_size,
                        T,
                        H,

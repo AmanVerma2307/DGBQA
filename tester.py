@@ -32,7 +32,6 @@ train_dataLoader_ns, test_dataLoader_ns = dataloader_nonShuffled(args)
 
 if(args.dataset == 'soli'):
     input_dim = 32
-    embed_dim = 32
     patch_size = (5,5,5)
     T = 40
     H = 32
@@ -55,7 +54,6 @@ if(args.dataset == 'soli'):
 ###### Model
 if(args.model == 'res3dViViT'):
     model = res3dViViT(input_dim,
-                       embed_dim,
                        patch_size,
                        T,
                        H,

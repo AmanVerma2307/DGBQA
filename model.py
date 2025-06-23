@@ -113,7 +113,6 @@ class res3dViViT(torch.nn.Module):
 
     def __init__(self,
                  input_dim,
-                 embed_dim,
                  patch_size,
                  T,
                  H,
@@ -129,7 +128,7 @@ class res3dViViT(torch.nn.Module):
         
         super().__init__()
         self.input_dim = input_dim # Input channel dimensions
-        self.embed_dim = embed_dim # Processing dimensions
+        self.embed_dim = d_model # Processing dimensions
         self.patch_size = patch_size # Shape of the patches (p_t,p_h,p_w)
         self.T = T # Input temporal dims
         self.H = H # Input height dims
@@ -251,10 +250,10 @@ class res3dViViT(torch.nn.Module):
         ##### Output layers
         self.dense_op = torch.nn.Linear(self.embed_dim,32)
 
-        self.dense_hgr = torch.nn.Linear(self.embed_dim,self.G)
+        self.dense_hgr = torch.nn.Linear(32,self.G)
         self.softmax_hgr = torch.nn.Softmax(dim=-1)
 
-        self.dense_id = torch.nn.Linear(self.embed_dim,self.I)
+        self.dense_id = torch.nn.Linear(32,self.I)
         self.softmax_id = torch.nn.Softmax(dim=-1)
         
     def forward(self,x):
@@ -336,7 +335,7 @@ if __name__ == "__main__":
                        32,
                        32,
                        4,
-                       32,
+                       256,
                        16,
                        128,
                        0.3,
