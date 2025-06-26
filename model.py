@@ -127,7 +127,7 @@ class res3dViViT(torch.nn.Module):
                  num_encoders=2):
         
         super().__init__()
-        self.input_dim = input_dim # Input channel dimensions
+        self.input_dim = input_dim # Input channel dimensions for the ViViT network
         self.embed_dim = d_model # Processing dimensions
         self.patch_size = patch_size # Shape of the patches (p_t,p_h,p_w)
         self.T = T # Input temporal dims
@@ -169,7 +169,6 @@ class res3dViViT(torch.nn.Module):
                                     self.dff,
                                     self.rate,
                                     self.max_seq_len)
-            
             self.encoder2 = encoder(self.embed_dim,
                                     self.num_heads,
                                     self.dff,
@@ -182,7 +181,6 @@ class res3dViViT(torch.nn.Module):
                                     self.dff,
                                     self.rate,
                                     self.max_seq_len)
-            
             self.encoder2 = encoder(self.embed_dim,
                                     self.num_heads,
                                     self.dff,
@@ -193,7 +191,6 @@ class res3dViViT(torch.nn.Module):
                                     self.dff,
                                     self.rate,
                                     self.max_seq_len)
-            
             self.encoder4 = encoder(self.embed_dim,
                                     self.num_heads,
                                     self.dff,
@@ -207,7 +204,6 @@ class res3dViViT(torch.nn.Module):
                                     self.dff,
                                     self.rate,
                                     self.max_seq_len)
-            
             self.encoder2 = encoder(self.embed_dim,
                                     self.num_heads,
                                     self.dff,
@@ -218,7 +214,6 @@ class res3dViViT(torch.nn.Module):
                                     self.dff,
                                     self.rate,
                                     self.max_seq_len)
-            
             self.encoder4 = encoder(self.embed_dim,
                                     self.num_heads,
                                     self.dff,
@@ -229,7 +224,6 @@ class res3dViViT(torch.nn.Module):
                                     self.dff,
                                     self.rate,
                                     self.max_seq_len)
-            
             self.encoder6 = encoder(self.embed_dim,
                                     self.num_heads,
                                     self.dff,
@@ -240,7 +234,6 @@ class res3dViViT(torch.nn.Module):
                                     self.dff,
                                     self.rate,
                                     self.max_seq_len)
-            
             self.encoder8 = encoder(self.embed_dim,
                                     self.num_heads,
                                     self.dff,
