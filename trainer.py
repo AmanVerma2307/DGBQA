@@ -8,8 +8,9 @@ from icgd import icgdLoss, icgdLossIterator
 from parser import parse
 from dataloader import dataLoader
 from utils.summary import *
-from types import SimpleNamespace
-from timm.optim.optim_factory import create_optimizer
+from optimizer import getOptimizer
+#from types import SimpleNamespace
+#from timm.optim.optim_factory import create_optimizer
 
 seed = 10
 
@@ -85,15 +86,7 @@ print('Total parameters: '+str(total_params))
 model = model.to(device)
 wandb.watch(model,criterion_id,log="all",log_freq=1)
 
-argsOptim = SimpleNamespace()
-
-argsOptim.weight_decay = 0
-argsOptim.lr = 1e-4
-argsOptim.opt = 'adam'
-argsOptim.momentum = 0.9
-args.eps = 1e-7
-
-optimizer = create_optimizer(argsOptim, model)
+optimizer = getOptimizer(args, model)
 
 ##### Training and validation loop
 train_metrics, val_metrics = train_val(train_dataLoader,

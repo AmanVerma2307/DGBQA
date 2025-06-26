@@ -1,0 +1,15 @@
+{"time":"2025-06-27T00:40:54.3440338+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.11","symlink path":"D:\\IIT Delhi\\Projects\\Adversarial games\\Experimentation\\codeBase\\wandb\\run-20250627_004054-hzh3g5se\\logs\\debug-core.log"}
+{"time":"2025-06-27T00:40:55.3101186+05:30","level":"INFO","msg":"created new stream","id":"hzh3g5se"}
+{"time":"2025-06-27T00:40:55.3101186+05:30","level":"INFO","msg":"stream: started","id":"hzh3g5se"}
+{"time":"2025-06-27T00:40:55.3101186+05:30","level":"INFO","msg":"sender: started","stream_id":"hzh3g5se"}
+{"time":"2025-06-27T00:40:55.3101186+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"hzh3g5se"}
+{"time":"2025-06-27T00:40:55.310638+05:30","level":"INFO","msg":"handler: started","stream_id":"hzh3g5se"}
+{"time":"2025-06-27T00:40:55.7578364+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-06-27T00:48:20.2233418+05:30","level":"INFO","msg":"stream: closing","id":"hzh3g5se"}
+{"time":"2025-06-27T00:48:20.2233418+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-06-27T00:48:20.2233418+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-06-27T00:48:21.3730673+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-06-27T00:48:21.7817057+05:30","level":"INFO","msg":"handler: closed","stream_id":"hzh3g5se"}
+{"time":"2025-06-27T00:48:21.7817057+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"hzh3g5se"}
+{"time":"2025-06-27T00:48:21.7817057+05:30","level":"INFO","msg":"sender: closed","stream_id":"hzh3g5se"}
+{"time":"2025-06-27T00:48:21.7817057+05:30","level":"INFO","msg":"stream: closed","id":"hzh3g5se"}

@@ -51,6 +51,10 @@ def parse():
                         type=float,
                         default=1.0,
                         help="Weight of ICGD loss")
+    parser.add_argument('--optimizer',
+                        type=str,
+                        default='adam',
+                        help="Optimizer to be used for training.")
     parser.add_argument('--num_epochs',
                         type=int,
                         default=50,
