@@ -18,7 +18,7 @@ def getOptimizer(args, model):
 
     if(args.optimizer == 'adam'):
         argsOptim.weight_decay = 0
-        argsOptim.lr = 1e-4
+        argsOptim.lr = args.lr
         argsOptim.opt = 'adam'
         argsOptim.momentum = 0.9
         args.eps = 1e-7
@@ -28,10 +28,14 @@ def getOptimizer(args, model):
     
     if(args.optimizer == 'nadam'):
         argsOptim.weight_decay = 0
-        argsOptim.lr = 1e-4
+        argsOptim.lr = args.lr
         argsOptim.opt = 'adam'
         argsOptim.momentum = 0.9
         args.eps = 1e-7
 
         optim = create_optimizer(argsOptim, model)
         return optim
+
+    #if(args.optimizer == 'adao')
+    
+    

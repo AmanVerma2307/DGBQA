@@ -59,6 +59,10 @@ def parse():
                         type=str,
                         default='adam',
                         help="Optimizer to be used for training.")
+    parser.add_argument('--lr',
+                        type=float,
+                        default=1e-4,
+                        help="The learning rate to be used in the optimizer.")
     parser.add_argument('--num_epochs',
                         type=int,
                         default=50,
