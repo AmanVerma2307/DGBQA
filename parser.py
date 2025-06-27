@@ -43,6 +43,10 @@ def parse():
                         type=int,
                         default=256,
                         help="Embedding hidden dimensions")
+    parser.add_argument('--lambda_hgr',
+                        type=float,
+                        default=1.0,
+                        help="Weight of HGR loss")
     parser.add_argument('--lambda_id',
                         type=float,
                         default=1.0,

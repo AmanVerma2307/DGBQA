@@ -43,7 +43,7 @@ def train_epoch(dataloader,
 
             #print(loss_hgr_batch.item(),loss_id_batch.item(),loss_icgd_batch.item())
 
-            loss_batch = loss_hgr_batch + args.lambda_id*loss_id_batch + args.lambda_icgd*loss_icgd_batch
+            loss_batch = args.lambda_hgr*loss_hgr_batch + args.lambda_id*loss_id_batch + args.lambda_icgd*loss_icgd_batch
             loss_batch.backward()
 
             #loss = torch.tensor([loss_hgr_batch, loss_id_batch, loss_icgd_batch])
@@ -57,7 +57,7 @@ def train_epoch(dataloader,
         loss_hgr = loss_hgr + loss_hgr_batch.detach().item()*x.size(0)
         loss_id = loss_id + loss_id_batch.detach().item()*x.size(0)
         loss_icgd = loss_icgd + loss_icgd_batch.detach().item()*x.size(0)
-        loss = loss + (loss_hgr_batch + args.lambda_id*loss_id_batch + args.lambda_icgd*loss_icgd_batch).detach().item()*x.size(0)
+        loss = loss + (args.lambda_hgr*loss_hgr_batch + args.lambda_id*loss_id_batch + args.lambda_icgd*loss_icgd_batch).detach().item()*x.size(0)
         acc_hgr = acc_hgr + (torch.sum(y_hgr == torch.argmax(dense_hgr,dim=-1))).detach().item()
         acc_id = acc_id + (torch.sum(y_id == torch.argmax(dense_id,dim=-1))).detach().item()
         total_samples = total_samples + x.size(0)
@@ -106,7 +106,7 @@ def val_epoch(dataloader,
         loss_hgr = loss_hgr + loss_hgr_batch.detach().item()*x.size(0)
         loss_id = loss_id + loss_id_batch.detach().item()*x.size(0)
         loss_icgd = loss_icgd + loss_icgd_batch.detach().item()*x.size(0)
-        loss = loss + (loss_hgr_batch + args.lambda_id*loss_id_batch + args.lambda_icgd*loss_icgd_batch).detach().item()*x.size(0)
+        loss = loss + (args.lambda_hgr*loss_hgr_batch + args.lambda_id*loss_id_batch + args.lambda_icgd*loss_icgd_batch).detach().item()*x.size(0)
         acc_hgr = acc_hgr + (torch.sum(y_hgr == torch.argmax(dense_hgr,dim=-1))).detach().item()
         acc_id = acc_id + (torch.sum(y_id == torch.argmax(dense_id,dim=-1))).detach().item()
         total_samples = total_samples + x.size(0)
