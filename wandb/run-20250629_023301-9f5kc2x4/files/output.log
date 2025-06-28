@@ -1,0 +1,40 @@
+Total parameters: 339333
+AdamW (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    capturable: False
+    differentiable: False
+    eps: 1e-08
+    foreach: None
+    fused: None
+    lr: 0.0001
+    maximize: False
+    weight_decay: 0
+)
+Epoch 1/50
+----------
+ 31%|[34m███████████████████████████████████████████████████████████████████                                                                                                                                                       [0m| 16/52 [00:07<00:17,  2.03it/s][0m
+Traceback (most recent call last):
+  File "D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\trainer.py", line 92, in <module>
+    train_metrics, val_metrics = train_val(train_dataLoader,
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\epoch.py", line 155, in train_val
+    loss_hgr_train_curr, loss_id_train_curr, loss_icgd_train_curr, loss_train_curr, acc_hgr_train_curr, acc_id_train_curr = train_epoch(train_loader,
+                                                                                                                            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\epoch.py", line 42, in train_epoch
+    loss_icgd_batch = obj_icgd(y_hgr,y_id,f_theta) # ICGD Loss
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\envs\gpu_torch_1\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\envs\gpu_torch_1\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\icgd.py", line 151, in forward
+    id_mask = self.get_IDmask(y_id_curr)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\icgd.py", line 110, in get_IDmask
+    id_mask_dist = torch.logical_not(torch.eye(B).to(torch.bool)).to(device_id,dtype=torch.float32) # Except diagonal entries everything turned high
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

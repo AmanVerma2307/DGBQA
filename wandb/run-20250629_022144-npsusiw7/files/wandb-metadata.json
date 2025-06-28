@@ -1,0 +1,48 @@
+{
+  "os": "Windows-11-10.0.26100-SP0",
+  "python": "CPython 3.12.9",
+  "startedAt": "2025-06-28T20:51:44.540346Z",
+  "args": [
+    "--exp_name",
+    "test3",
+    "--optimizer",
+    "adahessian"
+  ],
+  "program": "D:\\IIT Delhi\\Projects\\Adversarial games\\Experimentation\\codeBase\\trainer.py",
+  "codePath": "trainer.py",
+  "git": {
+    "remote": "https://github.com/AmanVerma2307/DGBQA.git",
+    "commit": "bf32ff9afe31779f3b438ab17f7155f7267952cf"
+  },
+  "email": "eez227536@ee.iitd.ac.in",
+  "root": "D:\\IIT Delhi\\Projects\\Adversarial games\\Experimentation\\codeBase",
+  "host": "DESKTOP-SREPL47",
+  "executable": "C:\\Users\\ASUS\\anaconda3\\envs\\gpu_torch_1\\python.exe",
+  "codePathLocal": "trainer.py",
+  "cpu_count": 6,
+  "cpu_count_logical": 12,
+  "gpu": "NVIDIA GeForce GTX 1660 Ti",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "256058060800",
+      "used": "134826151936"
+    }
+  },
+  "memory": {
+    "total": "16954720256"
+  },
+  "cpu": {
+    "count": 6,
+    "countLogical": 12
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA GeForce GTX 1660 Ti",
+      "memoryTotal": "6442450944",
+      "cudaCores": 1536,
+      "architecture": "Turing"
+    }
+  ],
+  "cudaVersion": "12.5"
+}

@@ -21,21 +21,57 @@ def getOptimizer(args, model):
         argsOptim.lr = args.lr
         argsOptim.opt = 'adam'
         argsOptim.momentum = 0.9
-        args.eps = 1e-7
+        argsOptim.eps = 1e-7
 
-        optim = create_optimizer(argsOptim, model)
-        return optim
-    
     if(args.optimizer == 'nadam'):
         argsOptim.weight_decay = 0
         argsOptim.lr = args.lr
-        argsOptim.opt = 'adam'
+        argsOptim.opt = 'nadam'
         argsOptim.momentum = 0.9
-        args.eps = 1e-7
+        argsOptim.eps = 1e-7
 
-        optim = create_optimizer(argsOptim, model)
-        return optim
+    if(args.optimizer == 'adamp'):
+        argsOptim.lr = args.lr
+        argsOptim.weight_decay = 0
+        argsOptim.opt = 'adamp'
+        argsOptim.momentum = 0.9
+        argsOptim.eps = 1e-7
 
-    #if(args.optimizer == 'adao')
-    
-    
+    if(args.optimizer == 'novograd'):
+        argsOptim.lr = args.lr
+        argsOptim.weight_decay = 0
+        argsOptim.opt = 'novograd'
+        argsOptim.momentum = 0.9
+        argsOptim.eps = 1e-7
+
+    if(args.optimizer == 'radam'):
+        argsOptim.lr = args.lr
+        argsOptim.weight_decay = 0
+        argsOptim.opt = 'radam'
+        argsOptim.momentum = 0.9
+        argsOptim.eps = 1e-7
+
+    if(args.optimizer == 'adamw'):
+        argsOptim.lr = args.lr
+        argsOptim.weight_decay = 0
+        argsOptim.opt = 'adamw'
+        argsOptim.momentum = 0.9
+        argsOptim.eps = 1e-7    
+
+    if(args.optimizer == 'adafactor'):
+        argsOptim.lr = args.lr
+        argsOptim.weight_decay = 0
+        argsOptim.opt = 'adafactor'
+        argsOptim.momentum = 0.9
+        argsOptim.eps = 1e-7      
+
+    if(args.optimizer == 'adahessian'):
+        argsOptim.lr = args.lr
+        argsOptim.weight_decay = 0
+        argsOptim.opt = 'adahessian'
+        argsOptim.momentum = 0.9
+        argsOptim.eps = 1e-7
+
+    optim = create_optimizer(argsOptim, model)
+    print(optim)
+    return optim

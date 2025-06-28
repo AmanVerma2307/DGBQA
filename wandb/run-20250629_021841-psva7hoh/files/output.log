@@ -1,0 +1,27 @@
+Total parameters: 339333
+NvNovoGrad (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.95, 0.98)
+    eps: 1e-08
+    grad_averaging: False
+    lr: 0.0001
+    weight_decay: 0
+)
+Epoch 1/50
+----------
+ 23%|[34m██████████████████████████████████████████████████▎                                                                                                                                                                       [0m| 12/52 [00:06<00:23,  1.73it/s][0m
+Traceback (most recent call last):
+  File "D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\trainer.py", line 92, in <module>
+    train_metrics, val_metrics = train_val(train_dataLoader,
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\epoch.py", line 155, in train_val
+    loss_hgr_train_curr, loss_id_train_curr, loss_icgd_train_curr, loss_train_curr, acc_hgr_train_curr, acc_id_train_curr = train_epoch(train_loader,
+                                                                                                                            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\epoch.py", line 47, in train_epoch
+    loss_batch.backward()
+  File "C:\Users\ASUS\anaconda3\envs\gpu_torch_1\Lib\site-packages\torch\_tensor.py", line 522, in backward
+    torch.autograd.backward(
+  File "C:\Users\ASUS\anaconda3\envs\gpu_torch_1\Lib\site-packages\torch\autograd\__init__.py", line 266, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+KeyboardInterrupt

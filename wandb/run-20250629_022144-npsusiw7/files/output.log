@@ -1,0 +1,39 @@
+Total parameters: 339333
+Adahessian (
+Parameter Group 0
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    hessian_power: 1.0
+    lr: 0.0001
+    weight_decay: 0
+)
+Epoch 1/50
+----------
+  0%|[34m                                                                                                                                                                                                                                   [0m| 0/52 [00:01<?, ?it/s][0m
+Traceback (most recent call last):
+  File "D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\trainer.py", line 92, in <module>
+    train_metrics, val_metrics = train_val(train_dataLoader,
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\epoch.py", line 155, in train_val
+    loss_hgr_train_curr, loss_id_train_curr, loss_icgd_train_curr, loss_train_curr, acc_hgr_train_curr, acc_id_train_curr = train_epoch(train_loader,
+                                                                                                                            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\IIT Delhi\Projects\Adversarial games\Experimentation\codeBase\epoch.py", line 54, in train_epoch
+    optimizer.step()
+  File "C:\Users\ASUS\anaconda3\envs\gpu_torch_1\Lib\site-packages\torch\optim\optimizer.py", line 385, in wrapper
+    out = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\envs\gpu_torch_1\Lib\site-packages\torch\utils\_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\envs\gpu_torch_1\Lib\site-packages\timm\optim\adahessian.py", line 115, in step
+    self.set_hessian()
+  File "C:\Users\ASUS\anaconda3\envs\gpu_torch_1\Lib\site-packages\torch\utils\_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\envs\gpu_torch_1\Lib\site-packages\timm\optim\adahessian.py", line 97, in set_hessian
+    h_zs = torch.autograd.grad(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\anaconda3\envs\gpu_torch_1\Lib\site-packages\torch\autograd\__init__.py", line 411, in grad
+    result = Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: element 0 of tensors does not require grad and does not have a grad_fn
