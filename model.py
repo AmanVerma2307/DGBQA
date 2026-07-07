@@ -29,13 +29,13 @@ def getModel(args,
                            )
         
     if(args.model == 'i3d'):
-         model = i3d(args.embedDims)
+         model = i3d()
 
     if(args.model == 'fstanet'):
-         model = fsta(T,args.embedDims)
+         model = fsta(T)
 
     if(args.model == 'videomae'):
-         model = videomae(args.embedDims,modelStyle="B")
+         model = videomae(modelStyle="B")
 
     total_params = sum(p.numel() for p in model.parameters())
     print('++++++++++++++++++')
@@ -92,8 +92,8 @@ class quantModel(torch.nn.Module):
                                      W=W,
                                      C=3)
                 
-        self.dense_hgr = torch.nn.Linear(args.embedDims,G)
-        self.dense_id = torch.nn.Linear(args.embedDims,I)
+        self.dense_hgr = torch.nn.Linear(self.backbone.embedDims,G)
+        self.dense_id = torch.nn.Linear(self.backbone.embedDims,I)
 
     def forward(self,x):
         if(self.args.RGB == 0):

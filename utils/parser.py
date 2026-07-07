@@ -51,10 +51,6 @@ def parse():
                         type=int,
                         default=0,
                         help="If True, then the input has motion maps. Default: False")
-    parser.add_argument('--embedDims',
-                        type=int,
-                        default=32,
-                        help="Output embedding dimensions of the backbone+FC")
 
     ### Res3D-ViViT arguments
     parser.add_argument('--res3dvivit_heads',

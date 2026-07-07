@@ -132,18 +132,17 @@ class Model_FSTANet(torch.nn.Module):
 
 class fsta(torch.nn.Module):
 
-    def __init__(self,numFrames,embedDims):
+    def __init__(self,numFrames):
         super().__init__()
-        self.embedDims = embedDims
         self.numFrames = numFrames
         self.backbone = Model_FSTANet(frame_length=numFrames)
-        self.dense = torch.nn.Linear(512,self.embedDims)
+        self.embedDims = 512
 
     def forward(self,x):
         N,C,T,H,W = x.size()
         x = x.permute(0,2,1,3,4).contiguous().view(-1,C,H,W)
         x, _ = self.backbone(x)
-        x = F.relu(self.dense(x))
+        # x = F.relu(self.dense(x))
         return x
     
     def predict(self,

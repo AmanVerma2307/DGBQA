@@ -362,18 +362,16 @@ def get_videomaeModel(modelStyle="B"):
 class videomae(torch.nn.Module):
     
     def __init__(self,
-                 embedDims,
                  modelStyle="B"):
 
         super().__init__()
-        self.embedDims = embedDims
         model = get_videomaeModel(modelStyle=modelStyle)
         self.patch_embed = model.patch_embed
         self.pos_embed = model.pos_embed
         self.blocks = model.blocks
         self.fc_norm = model.fc_norm
-        self.output_dim = model.embed_dim
-        self.dense = torch.nn.Linear(self.output_dim,self.embedDims)
+        self.embedDims = model.embed_dim
+        #self.dense = torch.nn.Linear(self.output_dim,self.embedDims)
 
     def forward(self,x):
         x = self.patch_embed(x) # Patch Embedding, shape -> [b,thw,d]
@@ -384,7 +382,7 @@ class videomae(torch.nn.Module):
 
         x = self.fc_norm(x) # Layer normalization, shape -> [b,thw,d]
         x = torch.mean(x,dim=1,keepdim=False) # GAP, shape -> [b,d]
-        x = F.relu(self.dense(x))
+        #x = F.relu(self.dense(x))
         return x
     
     def predict(self,

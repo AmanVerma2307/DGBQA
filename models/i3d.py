@@ -9,9 +9,8 @@ class i3d(torch.nn.Module):
     I3D Class: Pretrained weights from KINETICS-400
     """
 
-    def __init__(self,embedDims):
+    def __init__(self):
         super().__init__()
-        self.embedDims = embedDims
         self.backbone = torch.hub.load('facebookresearch/pytorchvideo',
                                        model="i3d_r50",
                                        pretrained=True)
@@ -19,12 +18,12 @@ class i3d(torch.nn.Module):
         modelList = [child for child in ([child for child in self.backbone.children()][0]).children()]
         self.backbone = torch.nn.Sequential(*modelList[:-1])
         self.pool = torch.nn.AdaptiveAvgPool3d(1)
-        self.dense = torch.nn.Linear(in_features=2048,out_features=self.embedDims)
+        self.embedDims = 2048       
 
     def forward(self,x):
         x = self.backbone(x)
         x = self.pool(x).squeeze((2,3,4))
-        x = F.relu(self.dense(x))
+        #x = F.relu(self.dense(x))
         return x
     
     def predict(self,
