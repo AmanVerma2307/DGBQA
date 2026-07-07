@@ -126,7 +126,7 @@ def train_val(train_loader,
     Function to train and validate in a single GPU setting
     """
 
-    model_path = './models/'+args.exp_name+'.pth'
+    model_path = './_store/weights/'+args.exp_name+'.pth'
     loss_best = 1e+6
     device = torch.device(args.device)
 

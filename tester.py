@@ -4,10 +4,10 @@ import itertools
 import numpy as np
 import matplotlib.pyplot as plt
 from loss.icgd import *
-from model import *
+from models.vivit import *
 from epochs.eval import eval
 from utils.parser import parse
-from dataloader import dataLoader, dataloader_nonShuffled
+from data import dataLoader, dataloader_nonShuffled
 from sklearn.manifold import TSNE
 
 args = parse()
@@ -39,8 +39,8 @@ if(args.dataset == 'soli'):
     cm_plot_labels = ['Pinch index','Palm tilt','Finger Slider','Pinch pinky','Slow Swipe','Fast Swipe','Push','Pull','Finger rub','Circle','Palm hold']
     colors = ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd", "#8c564b", "#e377c2", "#7f7f7f", "#bcbd22", "#17becf","yellow"]
 
-    y_dev = np.load('./data/soli/data/y_dev_DGBQA-Seen_SOLI.npz',allow_pickle=True)['arr_0']
-    y_dev_id = np.load('./data/soli/data/y_dev_DGBQA-Seen_SOLI.npz',allow_pickle=True)['arr_0']
+    y_dev = np.load('./_data/soli/data/y_dev_DGBQA-Seen_SOLI.npz',allow_pickle=True)['arr_0']
+    y_dev_id = np.load('./_data/soli/data/y_dev_DGBQA-Seen_SOLI.npz',allow_pickle=True)['arr_0']
 
 train_dataLoader, test_dataLoader = dataLoader(args)
 train_dataLoader_ns, test_dataLoader_ns = dataloader_nonShuffled(args)
@@ -60,7 +60,7 @@ if(args.model == 'res3dViViT'):
                        I,
                        num_encoders)
     
-model.load_state_dict(torch.load('./models/'+args.exp_name+'.pth', weights_only=True)) 
+model.load_state_dict(torch.load('./_store/weights/'+args.exp_name+'.pth', weights_only=True)) 
 model.eval()
 
 if(args.multi_gpu == False):
@@ -131,8 +131,8 @@ def plot_GramMatrix(cm,filepath,cmap=plt.cm.Blues):
 
 #### Heatmap Plotting
 #filepath='./Graphs/Softmax Heatmap/'+args.exp_name+'.png'
-filepath_gram ='./graphs/gramMatrix/'+args.exp_name+'.png'
-filepath_gram_ns ='./graphs/gramMatrix/'+args.exp_name+'_NonShuffled.png'
+filepath_gram ='./_store/graphs/gramMatrix/'+args.exp_name+'.png'
+filepath_gram_ns ='./_store/graphs/gramMatrix/'+args.exp_name+'_NonShuffled.png'
 plot_GramMatrix(cm=G_bar,filepath=filepath_gram)
 plot_GramMatrix(cm=G_bar_ns,filepath=filepath_gram_ns)
 
@@ -144,7 +144,7 @@ inds = np.where(np.isnan(f_theta))
 f_theta[inds] = np.take(col_mean, inds[1])
 
 ##### Saving Embeddings
-np.savez_compressed('./embeddings/'+args.exp_name+'.npz',f_theta)
+np.savez_compressed('./_store/embeddings/'+args.exp_name+'.npz',f_theta)
 
 ##### t-SNE Plots
 #### t-SNE Embeddings
@@ -159,4 +159,4 @@ plt.rcParams["figure.figsize"] = [12,8]
 for idx,color_index in zip(list(np.arange(G)),colors):
     plt.scatter(tsne_X_dev[y_dev == idx, 0],tsne_X_dev[y_dev == idx, 1],s=55,color=color_index,edgecolors='k',marker='h')
 plt.legend(cm_plot_labels,loc='best',prop={'size': 12})
-plt.savefig('./graphs/tsne/'+args.exp_name+'.png')
+plt.savefig('./_store/graphs/tsne/'+args.exp_name+'.png')

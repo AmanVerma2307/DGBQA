@@ -1,11 +1,11 @@
 import random
 import torch
 import numpy as np
-from model import *
+from models.vivit import *
 from epochs.epoch import *
 from loss.icgd import *
 from utils.parser import parse
-from dataloader import dataLoader
+from data import dataLoader
 from utils.optimizer import getOptimizer
 
 args = parse()
@@ -75,6 +75,6 @@ train_metrics, val_metrics = train_val(train_dataLoader,
                                        criterion_icgd,
                                        args)
 
-np.savez_compressed('./model history/'+args.exp_name+'_trainMetrics.npz',np.array(train_metrics))
-np.savez_compressed('./model history/'+args.exp_name+'_valMetrics.npz',np.array(val_metrics))
+np.savez_compressed('./_store/modelHistory/'+args.exp_name+'_trainMetrics.npz',np.array(train_metrics))
+np.savez_compressed('./_store/modelHistory/'+args.exp_name+'_valMetrics.npz',np.array(val_metrics))
  

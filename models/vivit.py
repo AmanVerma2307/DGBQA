@@ -1,5 +1,5 @@
 import torch
-from utils.encoder import *
+from models.utils.encoder import *
 
 class tubeletEmbedding(torch.nn.Module):
 

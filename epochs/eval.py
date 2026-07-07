@@ -54,7 +54,7 @@ def eval(dataloader,
         print('HGR Acc: '+str(acc_hgr)) # HGR Accuracy
         print('ID Acc: '+str(acc_id)) # ID Accuracy
 
-        result_file = open('./results/'+args.exp_name+'.txt','w')
+        result_file = open('./_store/resultFiles/'+args.exp_name+'.txt','w')
         result_file.write('HGR Acc: '+str(acc_hgr)+"\n")
         result_file.write('ID Acc: '+str(acc_id)+"\n")
         result_file.close()
