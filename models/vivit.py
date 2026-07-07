@@ -121,8 +121,6 @@ class res3dViViT(torch.nn.Module):
                  num_heads,
                  dff,
                  rate,
-                 G,
-                 I,
                  num_encoders=2):
         
         super().__init__()
@@ -137,8 +135,6 @@ class res3dViViT(torch.nn.Module):
         self.num_heads = num_heads # Total number of heads
         self.dff = dff # Feed-forward dimension
         self.rate = rate # Dropout rate
-        self.G = G # Number of gesture classes
-        self.I = I # Number of identity classes
         self.num_encoders = num_encoders # Number of encoders
 
         n_t = (((T - patch_size[0])//patch_size[0])+1)
@@ -241,12 +237,6 @@ class res3dViViT(torch.nn.Module):
         
         ##### Output layers
         self.dense_op = torch.nn.Linear(self.embed_dim,32)
-
-        self.dense_hgr = torch.nn.Linear(32,self.G)
-        self.softmax_hgr = torch.nn.Softmax(dim=-1)
-
-        self.dense_id = torch.nn.Linear(32,self.I)
-        self.softmax_id = torch.nn.Softmax(dim=-1)
         
     def forward(self,x):
 
@@ -301,10 +291,7 @@ class res3dViViT(torch.nn.Module):
 
         ###### Output
         f_theta = torch.nn.functional.relu(self.dense_op(torch.mean(x,dim=1,keepdim=False))) # embeddings
-        dense_hgr = self.dense_hgr(f_theta)
-        dense_id = self.dense_id(f_theta)
-
-        return dense_hgr, dense_id, f_theta
+        return f_theta
 
 ###### Model summaries
 
@@ -331,8 +318,7 @@ if __name__ == "__main__":
                        16,
                        128,
                        0.3,
-                       11,
-                       10)
+                      )
 
     total_params = sum(p.numel() for p in model.parameters())
     print('Total parameters: '+str(total_params))    

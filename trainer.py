@@ -54,7 +54,6 @@ if(args.model == 'res3dViViT'):
                        I,
                        num_encoders)
         
-
 if(args.multi_gpu == 0):
     device = torch.device(args.device)
 criterion_hgr = torch.nn.CrossEntropyLoss()
