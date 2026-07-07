@@ -4,7 +4,7 @@ import itertools
 import numpy as np
 import matplotlib.pyplot as plt
 from loss.icgd import *
-from models.vivit import *
+from model import *
 from epochs.eval import eval
 from utils.parser import parse
 from data import dataLoader, dataloader_nonShuffled
@@ -45,21 +45,13 @@ if(args.dataset == 'soli'):
 train_dataLoader, test_dataLoader = dataLoader(args)
 train_dataLoader_ns, test_dataLoader_ns = dataloader_nonShuffled(args)
 
-if(args.model == 'res3dViViT'):
-    model = res3dViViT(input_dim,
-                       patch_size,
-                       T,
-                       H,
-                       W,
-                       C,
-                       d_model,
-                       num_heads,
-                       dff,
-                       rate,
-                       G,
-                       I,
-                       num_encoders)
-    
+model = quantModel(args,
+                   T=T,
+                   H=H,
+                   W=W,
+                   C=C,
+                   G=G,
+                   I=I)
 model.load_state_dict(torch.load('./_store/weights/'+args.exp_name+'.pth', weights_only=True)) 
 model.eval()
 
@@ -85,8 +77,6 @@ G_bar = np.matmul(f_theta,f_theta.T) # Gram-Matrix
 G_bar_ns = np.matmul(f_theta_ns,f_theta_ns.T) # Gram-matrix non_shuffled
 
 ##### Plotting Heatmap
-
-#### Heatmap Plotting Function
 plt.rcParams["figure.figsize"] = [8,12]
 def plot_heatmap(cm,filepath,classes,normalize=False,title='Avg. HGR Probabilities',cmap=plt.cm.Blues):
     
@@ -130,31 +120,23 @@ def plot_GramMatrix(cm,filepath,cmap=plt.cm.Blues):
     plt.close()
 
 #### Heatmap Plotting
-#filepath='./Graphs/Softmax Heatmap/'+args.exp_name+'.png'
 filepath_gram ='./_store/graphs/gramMatrix/'+args.exp_name+'.png'
 filepath_gram_ns ='./_store/graphs/gramMatrix/'+args.exp_name+'_NonShuffled.png'
 plot_GramMatrix(cm=G_bar,filepath=filepath_gram)
 plot_GramMatrix(cm=G_bar_ns,filepath=filepath_gram_ns)
 
 ###### tSNE
-
-##### Embedding Function
 col_mean = np.nanmean(f_theta, axis=0)
 inds = np.where(np.isnan(f_theta))
 f_theta[inds] = np.take(col_mean, inds[1])
-
-##### Saving Embeddings
 np.savez_compressed('./_store/embeddings/'+args.exp_name+'.npz',f_theta)
 
-##### t-SNE Plots
-#### t-SNE Embeddings
 tsne_X_dev = TSNE(n_components=2,
                   perplexity=30,
                   learning_rate=10,
                   n_iter=10000,
                   n_iter_without_progress=50).fit_transform(f_theta) # t-SNE Plots 
 
-#### Plotting
 plt.rcParams["figure.figsize"] = [12,8]
 for idx,color_index in zip(list(np.arange(G)),colors):
     plt.scatter(tsne_X_dev[y_dev == idx, 0],tsne_X_dev[y_dev == idx, 1],s=55,color=color_index,edgecolors='k',marker='h')

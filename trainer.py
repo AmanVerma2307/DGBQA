@@ -1,7 +1,7 @@
 import random
 import torch
 import numpy as np
-from models.vivit import *
+from model import *
 from epochs.epoch import *
 from loss.icgd import *
 from utils.parser import parse
@@ -39,21 +39,14 @@ if(args.dataset == 'soli'):
 
 train_dataLoader, test_dataLoader = dataLoader(args)
 
-if(args.model == 'res3dViViT'):
-    model = res3dViViT(input_dim,
-                       patch_size,
-                       T,
-                       H,
-                       W,
-                       C,
-                       d_model,
-                       num_heads,
-                       dff,
-                       rate,
-                       G,
-                       I,
-                       num_encoders)
-        
+model = quantModel(args,
+                   T=T,
+                   H=H,
+                   W=W,
+                   C=C,
+                   G=G,
+                   I=I)
+
 if(args.multi_gpu == 0):
     device = torch.device(args.device)
 criterion_hgr = torch.nn.CrossEntropyLoss()
