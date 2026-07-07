@@ -104,6 +104,20 @@ def parse():
                         default=1.0,
                         help="Weight of ICGD loss")
     
+    #### Scheduler arguments
+    parser.add_argument('--lrScheduler',
+                        type=int,
+                        default=0,
+                        help="If True, then lrScheduler is used. Default: False")
+    parser.add_argument('--lrScheduler_mode',
+                        type=str,
+                        default='step',
+                        help="Mode of lrScheduler")
+    parser.add_argument('--lrScheduler_stepGamma',
+                        type=float,
+                        default=0.5,
+                        help="The reduction factor for learning rate with each step's iteration")
+    
     
     args = parser.parse_args()
     return args

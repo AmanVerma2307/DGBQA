@@ -5,6 +5,7 @@ from model import *
 from epochs.epoch import *
 from loss.icgd import *
 from utils.parser import parse
+from utils.lrScheduler import getScheduler
 from data import dataLoader
 from utils.optimizer import getOptimizer
 
@@ -58,6 +59,8 @@ model = model.to(device)
 wandb.watch(model,criterion_id,log="all",log_freq=1)
 
 optimizer = getOptimizer(args, model)
+scheduler = getScheduler(optimizer,args)
+
 train_metrics, val_metrics = train_val(train_dataLoader,
                                        test_dataLoader,
                                        model,
@@ -65,7 +68,8 @@ train_metrics, val_metrics = train_val(train_dataLoader,
                                        criterion_hgr,
                                        criterion_id,
                                        criterion_icgd,
-                                       args)
+                                       args,
+                                       scheduler)
 
 np.savez_compressed('./_store/modelHistory/'+args.exp_name+'_trainMetrics.npz',np.array(train_metrics))
 np.savez_compressed('./_store/modelHistory/'+args.exp_name+'_valMetrics.npz',np.array(val_metrics))

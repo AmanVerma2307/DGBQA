@@ -24,13 +24,14 @@ def train_epoch(dataloader,
     acc_id = 0.0
     total_samples = 0.0
 
+    model.train()
+    
     for batch_idx, (x,y_hgr,y_id) in enumerate(tqdm.tqdm(dataloader,colour='blue')):
         
         x = x.to(device)
         y_hgr = y_hgr.type(torch.LongTensor).to(device)
         y_id = y_id.type(torch.LongTensor).to(device)
-        
-        model.train()
+    
         #optimizer.zero_grad()
 
         with torch.set_grad_enabled(True):
@@ -45,12 +46,7 @@ def train_epoch(dataloader,
 
             loss_batch = args.lambda_hgr*loss_hgr_batch + args.lambda_id*loss_id_batch + args.lambda_icgd*loss_icgd_batch
             loss_batch.backward()
-
-            #loss = torch.tensor([loss_hgr_batch, loss_id_batch, loss_icgd_batch])
-            #loss.backward(gradient=torch.tensor([1.0,args.lambda_id,args.lambda_icgd]))
-
-            #torch.nn.utils.clip_grad_norm_(model.parameters(),2.0)
-
+            
             optimizer.step()
             optimizer.zero_grad()
 
@@ -120,7 +116,8 @@ def train_val(train_loader,
               obj_hgr, 
               obj_id,
               obj_icgd,
-              args):
+              args,
+              scheduler=None):
     
     """
     Function to train and validate in a single GPU setting
@@ -160,7 +157,6 @@ def train_val(train_loader,
                                                                                                                                 obj_icgd,
                                                                                                                                 device,
                                                                                                                                 args)
-
         loss_hgr.append(loss_hgr_train_curr)
         loss_id.append(loss_id_train_curr)
         loss_icgd.append(loss_icgd_train_curr)
@@ -177,6 +173,12 @@ def train_val(train_loader,
                                                                                                                             device,
                                                                                                                             args)
         
+        if(args.lrScheduler == 1):
+            if(args.lrScheduler_mode == 'plateau'):
+                scheduler.step(loss_val_curr)
+            else:
+                scheduler.step()
+
         if(loss_val_curr < loss_best):
             loss_best = loss_val_curr
             torch.save(model.state_dict(),model_path)
@@ -228,4 +230,3 @@ def train_val(train_loader,
     val_metrics.append(val_acc_id)
 
     return train_metrics, val_metrics
-
