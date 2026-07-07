@@ -1,34 +1,25 @@
-###### Importing libraries
 import torch
 import random
 import itertools
-import argparse
 import numpy as np
 import matplotlib.pyplot as plt
+from loss.icgd import *
 from model import *
-from eval import eval
-from icgd import icgdLoss, icgdLossIterator
-from parser import parse
+from epochs.eval import eval
+from utils.parser import parse
 from dataloader import dataLoader, dataloader_nonShuffled
 from sklearn.manifold import TSNE
 
-seed = 10
-
-torch.manual_seed(seed)
-torch.cuda.manual_seed(seed)
-torch.cuda.manual_seed_all(seed)
-
-random.seed(seed)
-np.random.seed(seed)
-# torch.backends.cudnn.deterministic = True
-# torch.backends.cudnn.benchmark = False
-
-###### Argument parser
 args = parse()
 
-###### Dataset
-train_dataLoader, test_dataLoader = dataLoader(args)
-train_dataLoader_ns, test_dataLoader_ns = dataloader_nonShuffled(args)
+if(args.reproducibility == 1):
+    torch.manual_seed(args.seed)
+    torch.cuda.manual_seed(args.seed)
+    torch.cuda.manual_seed_all(args.seed)
+    random.seed(args.seed)
+    np.random.seed(args.seed)
+    #torch.backends.cudnn.deterministic = True
+    #torch.backends.cudnn.benchmark = False
 
 if(args.dataset == 'soli'):
     input_dim = 32
@@ -51,7 +42,9 @@ if(args.dataset == 'soli'):
     y_dev = np.load('./data/soli/data/y_dev_DGBQA-Seen_SOLI.npz',allow_pickle=True)['arr_0']
     y_dev_id = np.load('./data/soli/data/y_dev_DGBQA-Seen_SOLI.npz',allow_pickle=True)['arr_0']
 
-###### Model
+train_dataLoader, test_dataLoader = dataLoader(args)
+train_dataLoader_ns, test_dataLoader_ns = dataloader_nonShuffled(args)
+
 if(args.model == 'res3dViViT'):
     model = res3dViViT(input_dim,
                        patch_size,
@@ -70,9 +63,6 @@ if(args.model == 'res3dViViT'):
 model.load_state_dict(torch.load('./models/'+args.exp_name+'.pth', weights_only=True)) 
 model.eval()
 
-###### Evaluation
-
-##### Defining essentials
 if(args.multi_gpu == False):
     device = torch.device(args.device)
     model = model.to(device)

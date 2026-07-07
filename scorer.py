@@ -1,5 +1,4 @@
 ######## Importing libraries
-import wandb
 import argparse
 import numpy as np
 from _scorer.DGBQA_Score import gbqa_delta_dist_compute

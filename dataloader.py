@@ -1,8 +1,6 @@
 import torch
 import argparse
 import numpy as np
-import torch.utils
-import torch.utils.data
 from sklearn.utils import shuffle
 
 def dataLoader(args):

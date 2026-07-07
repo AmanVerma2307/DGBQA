@@ -1,4 +1,0 @@
-model                             r             R       Psi       Cd       nAr*       ArComp
-dgbqa_res3dvivit_1-pt5_soli     1.5455     7.4761     3.039     0.323     0.2159     3.5844
-dgbqa_res3dvivit_1-pt5_soli    1.5455    7.4761    3.039    0.323    0.2159    3.5844
-dgbqa_res3dvivit_1-pt05_soli    1.5455    8.3308    2.714    0.4042    0.2874    4.0327

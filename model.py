@@ -1,6 +1,5 @@
 import torch
 from utils.encoder import *
-from utils.summary import *
 
 class tubeletEmbedding(torch.nn.Module):
 
@@ -337,8 +336,6 @@ if __name__ == "__main__":
 
     total_params = sum(p.numel() for p in model.parameters())
     print('Total parameters: '+str(total_params))    
-
-    print_model_summary(model,(4, 40, 32, 32))    
     #model.apply(init_weights)
     #summary(model, input_size=(4, 40, 32, 32))
     model = model.to(device)
